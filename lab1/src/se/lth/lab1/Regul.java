@@ -119,7 +119,11 @@ public class Regul extends Thread {
                 switch (modeMon.getMode()) {
                     case OFF: {
                         /** Written by you */
-                        shutDown();
+//                        shutDown();
+                        u = 0;
+                        y = 0;
+                        yRef  = 0;
+                        writeOutput(u);
                         break;
                     }
                     case BEAM: {
@@ -128,7 +132,7 @@ public class Regul extends Thread {
                         try {
                             y = analogInPosition.get();
                             u = limit(outer.calculateOutput(y, refGen.getRef()));
-                            analogOut.set(u);
+                            writeOutput(u);
                             outer.updateState(u);
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
@@ -142,7 +146,7 @@ public class Regul extends Thread {
                         try {
                             y = analogInPosition.get();
                             u = limit(inner.calculateOutput(analogInAngle.get(), limit(outer.calculateOutput(y, refGen.getRef()))));
-                            analogOut.set(u);
+                            writeOutput(u);
                             outer.updateState(u);
                             inner.updateState(u);
                         } catch (IOChannelException e) {

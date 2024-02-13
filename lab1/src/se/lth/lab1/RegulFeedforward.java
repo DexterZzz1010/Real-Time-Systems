@@ -125,7 +125,10 @@ public class RegulFeedforward extends Thread {
                 switch (modeMon.getMode()) {
                     case OFF: {
                         /** Written by you */
-                        shutDown();
+                        u = 0;
+                        y = 0;
+                        yRef  = 0;
+                        writeOutput(u);
                         break;
                     }
                     case BEAM: {
@@ -134,7 +137,7 @@ public class RegulFeedforward extends Thread {
                         try {
                             y = analogInPosition.get();
                             u = limit(outer.calculateOutput(y, refGen.getRef())+refGen.getUff());
-                            analogOut.set(u);
+                            writeOutput(u);
                             outer.updateState(u-refGen.getPhiff());
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
@@ -149,9 +152,14 @@ public class RegulFeedforward extends Thread {
                         try {
                             y = analogInPosition.get();
                             u = limit(inner.calculateOutput(analogInAngle.get(),limit(outer.calculateOutput(y, refGen.getRef())+refGen.getUff()))+refGen.getPhiff());
-                            analogOut.set(u);
-                            outer.updateState(u-refGen.getPhiff());
-                            inner.updateState(u-refGen.getPhiff());
+                            writeOutput(u);
+                            if (u == 10 || u == -10){
+                                inner.updateState(u-refGen.getUff());
+                                outer.updateState(analogInAngle.get()-refGen.getPhiff());
+                            }else{
+                                inner.updateState(u-refGen.getUff());
+                                outer.updateState(analogInAngle.get());
+                            }
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
                         }
