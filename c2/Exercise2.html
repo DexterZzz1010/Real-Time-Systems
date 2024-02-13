@@ -1,0 +1,1389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Exercise 2</title>
+	<link rel="stylesheet" type="text/css" href="../expandablesolutions.css">
+    <script src="../expandablesolutions.js"></script>
+	<style type="text/css">
+		.header {
+			text-align: center;
+			color: #3366ff;
+		}
+		.ex {
+			color: #ff0000;
+		}
+	</style>
+</head>
+<body>
+
+<h1 class="header">Real Time Systems</h1>
+<h1 class="header">Exercise 2: Synchronization &amp; Program Decomposition</h1>
+<h3 class="header">2020 Version</h3>
+
+<hr>
+
+<p>The aim of this exercise is:</p>
+
+<ul>
+       <li> to understand the need for mutual exclusion and how this is achieved in Java using synchronization</li>
+       <li> to use semaphores and monitors in Java</li>
+       <li> to structure a small control problem into threads, implement it, and execute against a graphical GUI and a simulated plant</li>
+       <li> to understand priority inversion and inheritance</li>
+</ul>
+
+<p>
+The exercise contains three different parts: Synchronization,
+Buttons, and Producers - Consumers. The
+first two parts, Synchronization and Buttons, are most
+important. The students who have <i>not</i> taken the Real-Time
+Programming course should also do Producers - Consumers.
+</p>
+
+<p>
+In order to avoid class name conflicts we recommend that you create one
+subdirectory for each of the three main parts of this exercise: Synchronization,
+Buttons, and Producers - Consumers.
+</p>
+
+<hr>
+
+<h2>Synchronization</h2>
+
+<p>
+Synchronization and mutual exclusion are important when multiple threads
+access external units or shared variables. In Java mutual exclusion
+is primarily
+achieved  by declaring methods as <tt>synchronized</tt> or by using synchronized
+blocks  within methods.
+</p>
+
+<p>Consider the following code example:</p>
+
+<pre>
+  public class Wrong extends Thread {
+    private volatile int ti = 0;
+
+    public void run() {
+      int e;
+      int u;
+      int loops = 0;
+
+      setPriority(4);
+
+      try {
+        e = 10;
+        while (!Thread.interrupted()) {
+          if (ti != 0) {
+            u = e / ti;
+          } else {
+            u = 0;
+          }
+          loops++;
+        }
+      } catch (Exception ex) {
+        System.out.println("Terminated after " + loops +
+                           " iterations with " + ex);
+        System.exit(1);
+      }
+    }
+
+    public void setTi(int ti) {
+      this.ti = ti;
+    }
+
+    public static void main(String[] args) {
+      Wrong w1 = new Wrong();
+      w1.start();
+      int i = 0;
+      try {
+        while (!Thread.interrupted()) {
+          w1.setTi(0);
+          Thread.sleep(1);
+          w1.setTi(2);
+          Thread.sleep(1);
+          i++;
+          if (i &gt; 100) {
+            System.out.println("Main thread is alive");
+            i = 0;
+          }
+        }
+      } catch (InterruptedException e) {
+        // Requested to stop
+      }
+      System.out.println("Thread stopped.");
+    }
+  }
+</pre>
+
+<ol class="ex" start="1">
+      <li>Save <tt>Wrong</tt> to a file and compile and execute it. What is the result? Why?</li>
+</ol>
+
+
+
+<div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+        It seems to work for a while, but since several threads can access ti at any time, the following may happen: One thread checks that ti!=0, which happens to be true, whereafter another tread sets it to zero, and finally the first thread performs the division.
+</pre>
+     </div>
+</div>
+
+
+<p>
+Notice that the problems do not occur until after a while. This is
+due to the event-driven nature of concurrent real-time systems and one important
+reason why it is difficult to verify the correctness of real-time programs
+by testing alone.
+</p>
+
+<p>
+The <tt>volatile</tt> keyword tells the compiler that the variable
+is manipulated by multiple threads and that once the variable has been
+written it is flushed out of the cache to main memory, so that it
+immediately becomes visible to other threads. It also prevents the
+compiler from allocating the variable in a register instead of in main
+memory. If the keyword is removed (try it) the above example might not
+work as intended.
+</p>
+
+<p>
+<i>Note: It is unspecified and thus up to the Java Virtual Machine (JVM) what happens without <tt>volatile</tt>. The JVM may cache it, not cache it, or even cache it after executing for a while.</i>
+</p>
+
+<h4>Synchronization</h4>
+
+<ol class="ex" start="2">
+      <li>Write the class <tt>WrongWithSynchronization</tt> that uses synchronization
+          to ensure that the access to the shared variables occurs under mutual
+          exclusion. It is not enough to make the <tt>setTi()</tt> method synchronized.
+          Why? Test  and see. Also, it is not a good idea to make the entire <tt>run()</tt>
+          method  synchronized. Why? Test and see. Here, you should instead use a synchronized
+          block.</li>
+</ol>
+
+<div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+		<pre>public class WrongWithSynchronization extends Thread {
+	private volatile int ti = 0;
+
+	public void run() {
+		int e;
+		int u;
+		int loops = 0;
+
+		setPriority(4);
+
+		try {
+			e = 10;
+			while (!Thread.interrupted()) {
+				synchronized (this) {
+					if (ti != 0) {
+						u = e / ti;
+					} else {
+						u = 0;
+					}
+				}
+				loops++;
+			}
+		} catch (Exception ex) {
+			System.out.println("Terminated after " + loops + " iterations with " + ex);
+			System.exit(1);
+		}
+	}
+
+	public synchronized void setTi(int newTi) {
+		ti = newTi;
+	}
+
+	public static void main(String[] args) {
+		WrongWithSynchronization w1 = new WrongWithSynchronization();
+		w1.start();
+		int i = 0;
+		try {
+			while (!Thread.interrupted()) {
+				w1.setTi(0);
+				Thread.sleep(1);
+				w1.setTi(2);
+				Thread.sleep(1);
+				i++;
+				if (i > 100) {
+					System.out.println("Main thread is alive");
+					i = 0;
+				}
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("Thread stopped.");
+	}
+}
+</pre>
+The operations that involve checking ti!=0, and using this result,
+need to be synchronized as well, to avoid the problem above.
+However, if the entire run() method is synchronized, it takes too much
+time to execute without letting other threads proceed.
+</pre>
+     </div>
+</div>
+
+<p>
+As a general rule of thumb you should always use synchronization to
+protect accesses to shared variables, also in the case when you are quite
+sure that the access operations are atomic. The reason is that
+although the operations are atomic, the memory management model within the
+JVM in certain situations does not guarantee that the writing to the physical
+memory occurs in the same order as the order in which the changes take place.
+This may  give confusing results.
+</p>
+
+<p>
+Consider again the class <tt>Periodic</tt> from Exercise 1. (Available
+<a href="Links/Periodic.java">here</a>).
+It should now be modified to make sure that the output from multiple periodic threads is
+not mingled on the screen. You only need to make sure that the print statements
+are treated as a critical section. The question here is what you should
+synchronize on.
+</p>
+
+<ol class="ex" start="3">
+       <li>Why is it not such a good idea to synchronize on <tt>this</tt>? Try and see what happens?</li>
+</ol>
+
+<p>
+The best approach is to introduce a new class, <tt>Screen</tt>, with
+a single synchronized method
+</p>
+
+<pre>
+  public synchronized void writePeriod(int p);
+</pre>
+
+<p>
+that the periodic threads call instead of writing directly to the
+screen.
+
+<ol class="ex" start="4">
+	<li>Implement this class (in a separate file) and modify
+		<tt>Periodic</tt> accordingly. Give the new version the name
+		<tt>PeriodicWithScreen</tt>. It is important that you only have a single
+		instance of the <tt>Screen</tt> class that all the periodic
+		threads access in order to write. Create this single instance in the <tt>main</tt> method
+		of <tt>PeriodicWithScreen</tt> and pass it in to the instances through the constructor.
+	</li>
+</ol>
+
+<div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+public class Screen {
+	public synchronized void writePeriod(int p) {
+		System.out.print(p);
+		System.out.print(", ");
+	}
+}
+</pre>
+<pre>public class PeriodicWithScreen extends Thread {
+	private int period;
+	private Screen screen;
+
+	public PeriodicWithScreen(int period, Screen screen) {
+		this.period = period;
+		this.screen = screen;
+	}
+
+	public void run() {
+		// Uncomment to print default priority
+		//System.out.println("Priority = " + getPriority());
+
+		// Uncomment to set priority
+		//setPriority(getPriority() + 1);
+
+		try {
+			while (!Thread.interrupted()) {
+				screen.writePeriod(period);
+				Thread.sleep(period);
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("Thread stopped.");
+	}
+
+	public static void main(String[] args) {
+		Screen screen = new Screen();
+		for (String arg : args) {
+			PeriodicWithScreen p = new PeriodicWithScreen(Integer.parseInt(arg), screen);
+			p.start();
+		}
+
+		// Uncomment to print the number of active threads.
+		//System.out.println(Thread.activeCount());
+	}
+}
+
+</pre>
+     </div>
+</div>
+
+<p>
+Another approach is to use a static object within <tt>Periodic</tt> as a lock.
+Since the lock is static it will be shared between all instances of <tt>Periodic</tt>. This solution is
+used in <a href="Solutions/Synchronization/PeriodicStaticLock.java"><tt>PeriodicStaticLock</tt></a>. Make sure that you understand this code.
+</p>
+
+<p>
+Another possibility is to instead synchronize directly on the class lock
+of <tt>Periodic</tt>. The class lock is the lock that is acquired when a synchronized static method executes.
+The class lock is a distinct lock that is different from all instance locks.
+It is possible to have a block of code synchronized on the class lock using
+the following notation
+</p>
+
+<pre>
+    synchronized (this.getClass()) {
+      ...
+    }
+</pre>
+
+<h4>Semaphores</h4>
+
+<p>
+A common way to achieve mutual exclusion is to use semaphores.
+Semaphores did not become part of Java until Java 1.5, and then only
+in the <tt>java.util.concurrent</tt> package. However, also before
+that the functionality could easily be implemented using synchronization.
+The  class <tt>se.lth.control.realtime.Semaphore</tt> implements a standard counting
+semaphore.  Study the Java documentation for the class.
+</p>
+
+<ol class="ex" start="5">
+      <li>Write the class <tt>WrongWithSemaphore</tt> that uses the <tt>Semaphore</tt>
+          class to obtain mutual exclusion in the <tt>Wrong</tt> example instead
+          of Java synchronization. Do not forget that you have to import the <tt>Semaphore</tt>
+          class from <tt>se.lth.control.realtime</tt> and that the semaphore must
+          be initialized correctly.. The package can be downloaded here: <tt><a 
+          href="../../jarFiles/regler.jar">regler.jar</a></tt>. You will also need to add it to your
+          java path when compiling the code with the <tt>-cp</tt> option:  </li>
+</ol>
+<pre>
+  &gt; javac -cp .:regler.jar WrongWithSemaphore.java
+  &gt; java -cp .:regler.jar WrongWithSemaphore
+</pre>
+
+The classpath describes a list of places where java will look for external libraries and 
+classes. Here we look in the current directory <tt>.</tt> and in <tt>regler.jar</tt> separated
+by a colon. 
+</br> </br>
+If you are using Windows' terminal the symbol separating the items in list is instead a semicolon:
+<pre>
+  &gt; javac -cp .;regler.jar WrongWithSemaphore.java
+  &gt; java -cp .;regler.jar WrongWithSemaphore
+</pre>
+
+<div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+import se.lth.control.realtime.Semaphore;
+
+public class WrongWithSemaphore extends Thread {
+	private volatile int ti = 0;
+	private Semaphore mutex;
+
+	public WrongWithSemaphore() {
+		mutex = new Semaphore(1);
+	}
+
+	public void run() {
+		int e;
+		int u;
+		int loops = 0;
+
+		setPriority(4);
+
+		try {
+			e = 10;
+			while (!Thread.interrupted()) {
+				mutex.take();
+				if (ti != 0) {
+					u = e / ti;
+				} else {
+					u = 0;
+				}
+				mutex.give();
+				loops++;
+			}
+		} catch (Exception ex) {
+			System.out.println("Terminated after " + loops + " iterations with " + ex);
+			System.exit(1);
+		}
+	}
+
+	public void setTi(int newTi) {
+		mutex.take();
+		ti = newTi;
+		mutex.give();
+	}
+
+	public static void main(String[] args) {
+		WrongWithSemaphore w1 = new WrongWithSemaphore();
+		w1.start();
+		int i = 0;
+		try {
+			while (!Thread.interrupted()) {
+				w1.setTi(0);
+				Thread.sleep(1);
+				w1.setTi(2);
+				Thread.sleep(1);
+				i++;
+				if (i > 100) {
+					System.out.println("Main thread is alive");
+					i = 0;
+				}
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("Thread stopped.");
+	}
+}
+
+</pre>
+     </div>
+</div>
+
+
+<p>
+A drawback with semaphores compared to synchronized method is that
+it is easy to forget to do a <tt>take()</tt> or <tt>give()</tt>. The compiler
+gives no debugging support regarding this. An advantage is that it is possible
+to provide mutual exclusion for scopes that are larger than the scope of
+a single method.
+</p>
+
+<hr>
+
+<h2>Buttons Exercise</h2>
+
+<p>
+<i>Note! It is highly recommended to read through the entire exercise before starting with any implementation. Further down you will be given code skeletons to use.</i>
+</p>
+
+<p>
+As an exercise in real-time programming the following problem
+should be solved. The level in a tank should be controlled with a proportional
+controller. A suitable sampling interval for the controller is 0.1 seconds.
+</p>
+
+<p>
+The reference signal is a square-wave with a period of 20 seconds. This
+should be generated internally in the program. With a set of increase
+and decrease buttons it should be possible to change the square-wave signal
+amplitude with a rate of 10 V per minute. The buttons should be polled periodically
+with a period of 10 ms.
+</p>
+
+<p>
+It should be possible to start and stop the control with on-off buttons.
+Associated with the on-off buttons are status indication lamps.
+</p>
+
+
+<p>
+It should be possible to type in new values of the controller gain K from
+the terminal (No graphical Swing-interface). The set-up is shown in the
+figure  below.
+</p>
+
+<p style="text-align: center;"><img src="Pictures/buttonsfig.png" alt="Overview"></p>
+
+<p>
+The overall task is to write a Java program that solves the problem
+using threads and monitors. Use four public classes: <tt>Regul</tt>,
+<tt>OpCom</tt>, <tt>SquareWave</tt>, and <tt>Buttons</tt>, plus a
+<tt>Main</tt> class for initialization.
+</p>
+
+<h4>Thread decomposition</h4>
+
+<p>
+A first step in the design of the real-time problem is to decide which
+threads that  are needed for the application. Some rules of thumb are:
+</p>
+
+<ul>
+      <li> Use one periodic thread for each periodic activity with a unique period.</li>
+      <li> Use one thread for each activity that involves a blocking call to external I/O.</li>
+</ul>
+
+<ol class="ex" start="6">
+       <li>Define the threads that are needed for this application.
+           Remember that reading from the terminal is a blocking operation.</li>
+       <li>Decide suitable thread priorities.</li>
+</ol>
+
+<h4>Synchronization</h4>
+
+<p>
+The next step in the design is to identify the critical sections that
+need to be protected using monitors. Here we will use Java's
+synchronized methods to achieve the synchronization.
+</p>
+
+<p>
+The <tt>OpCom</tt> thread should update the controller gain <tt>K</tt> when
+the user has entered a new value. The controller gain is also needed
+by the <tt>Regul</tt> thread. Therefore it is necessary to
+protect the controller gain using a separate monitor class,
+<tt>ParameterMonitor</tt>. This class should have two synchronized access
+methods, one set method, <tt>setK()</tt>, and one get method,
+<tt>getK()</tt>, i.e.
+</p>
+
+<pre>
+  public synchronized void setK(double newK);
+  public synchronized double getK();
+</pre>
+
+<p>
+The next item that needs protection is the reference value. It is
+accessed by both the <tt>Regul</tt> thread and by the
+<tt>SquareWave</tt> thread. Again we use a separate monitor class,
+<tt>ReferenceMonitor</tt> with two synchronized access methods:
+</p>
+
+<pre>
+  public synchronized void setRef(double newRef);
+  public synchronized double getRef();
+</pre>
+
+<p>
+We also need a boolean flag that decides whether the
+controller should be on or off. The flag is accessed by both the <tt>Regul</tt> thread
+and by the <tt>Buttons</tt> thread that polls the buttons. Let the monitor for this
+flag be named <tt>OnMonitor</tt>, and have the following access methods:
+</p>
+
+<pre>
+  public synchronized void setOn(boolean value);
+  public synchronized boolean isOn();
+</pre>
+
+<p>
+Finally, we need to represent the amplitude of the square-wave
+reference signal. This value needs to be accessed both by the
+<tt>SquareWave</tt> thread and by the <tt>Buttons</tt> thread. Again we
+introduce a monitor class, <tt>AmplitudeMonitor</tt>,
+with two synchronized access methods:
+</p>
+
+<pre>
+  public synchronized void setAmp(double newAmp);
+  public synchronized double getAmp();
+</pre>
+
+<p>
+Hence, we need four monitors, each represented as a separate object
+with synchronized access methods. Instead of using four separate
+monitors one could instead use a single monitor. However, this would
+create unnecessary blocking among the threads. For example, the <tt>OpCom</tt>
+thread calling <tt>setK()</tt> would block a call from the
+<tt>SquareWave</tt> thread to <tt>setRef</tt>, which is not
+necessary from a synchronization point of view.
+</p>
+
+<h4>Modularization</h4>
+
+<p>
+The next step in the design is to define the public interfaces between
+the different code modules. Here we will use the public classes <tt>Regul</tt>,
+<tt>OpCom</tt>, <tt>SquareWave</tt>, and <tt>Buttons</tt> as code modules. In
+order to minimize the number of top-level classes, and hence the
+number of files, we will implement the four  monitor classes as
+internal classes within the top-level module classes.
+</p>
+
+<p>
+Since it is quite natural to let the controller gain be the
+responsibility of the <tt>Regul</tt>  class, we will implement
+<tt>ParameterMonitor</tt> as an internal class inside <tt>Regul</tt>. Quite
+arbitrarily, we also decide that the <tt>ReferenceMonitor</tt> and the
+<tt>OnMonitor</tt> should be internal classes of <tt>Regul</tt>.
+The <tt>AmplitudeMonitor</tt>, finally, we implement as an internal
+class of <tt>SquareWave</tt>.
+</p>
+
+<p>
+When encapsulating the monitors as internal classes we need extra
+methods at the module class level that simply redirect the call to
+the corresponding monitor access method. However, these
+redirection methods should not be synchronized. If they are, we can
+again create situations where the threads block each other in
+unnecessary ways.
+</p>
+
+<p>
+Finally, we decide to implement all our thread classes by inheriting
+from the <tt> Thread</tt> class.
+</p>
+
+<h4>External Interfaces</h4>
+
+<p>
+Analog and digital input and output are implemented in the classes
+<tt>AnalogIn</tt>, <tt>AnalogOut</tt>, <tt> DigitalIn</tt>, and <tt>DigitalOut</tt> in <tt>se.lth.control.realtime</tt>.
+The classes are used as in the code example below.
+</p>
+
+<pre>
+  public class IODemo {
+    public static void main(String[] args) {
+      AnalogIn yIn = null;
+      AnalogOut uOut = null;
+      DigitalIn digIn = null;
+      DigitalOut digOut = null;
+
+      try {
+        yIn = new AnalogIn(1);
+        uOut = new AnalogOut(1);
+        digIn = new DigitalIn(1);
+        digOut = new DigitalOut(1);
+      } catch (IOChannelException e) {
+        e.printStackTrace();
+        System.exit(1);
+      }
+
+      try {
+        double y = yIn.get();
+        uOut.set(0.0);
+        digOut.set(true);
+        boolean b = digIn.get();
+      } catch (IOChannelException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+</pre>
+
+<h4>Simulation Interface</h4>
+
+<p>
+During the exercise you should, however, <b>not</b> use the physical IO. Instead you should run
+against a real-time simulation of a first-order system and you should use
+a graphical buttons box implemented as a Swing GUI.
+</p>
+
+<p style="text-align: center;"><img src="Pictures/ButtonBox.png" alt="Buttons GUI"></p>
+
+<p>
+Each button is connected to one digital input. Each indicator
+lamp is connected to one digital output.
+</p>
+
+<p>
+The buttons box is provided by the class <tt>Box</tt>. (Download
+<a href="Solutions/Buttons/Box.java">Box.java</a>
+to your current directory. It is not necessary for you to open and
+study the code of this class.) The class provides six methods that each
+either returns a subclass to digital input representing a button or
+returns a subclass to digital output representing an indicator lamp.
+The implementation of <tt>Box</tt>
+is thread-safe and therefore the methods can be called
+without any monitor protection. The methods are the following:
+</p>
+
+<pre>
+  public DigitalButtonIn  getOnButtonInput();   // On button input
+  public DigitalButtonOut getOnButtonLamp();    // On lamp output
+  public DigitalButtonIn  getOffButtonInput();  // Off button input
+  public DigitalButtonOut getOffButtonLamp();   // Off lamp output
+  public DigitalButtonIn  getIncButtonInput();  // Inc button input
+  public DigitalButtonIn  getDecButtonInput();  // Dec button input
+</pre>
+
+<p>
+<tt>DigitalButtonIn</tt> and <tt>DigitalButtonOut</tt> have the same interface as <tt>DigitalIn</tt> and <tt>DigitalOut</tt> respectively.
+</p>
+
+<p>
+Let <tt>Regul</tt> manipulate the lamp outputs and <tt>Buttons</tt> handle the button inputs.
+</p>
+
+<p>
+The simulated process is provided by the class <tt>FirstOrderProcess</tt> (Download
+<a href="Links/FirstOrderProcess.java">FirstOrderProcess.java</a>
+to your current directory. It is not necessary for you to open and
+study the code of this class.). This class provides the following
+methods:
+</p>
+
+<pre>
+  // i = 0: Returns the AnalogSource for the tank output.
+  public AnalogSource getSource(int i);
+
+  // i = 0: Returns the AnalogSink for tank input.
+  // i = 1: Returns the AnalogSink for the reference signal.
+  public AnalogSink getSink(int i);
+</pre>
+
+<p>
+<tt>AnalogSource</tt> and <tt>AnalogSink</tt> have the same interface as <tt>AnalogIn</tt> and <tt>AnalogOut</tt> respectively.
+</p>
+
+<p>
+The simulated process is displayed by a window containing a plot of the
+control signal to the tank (red), the output (level) of the tank (black), and the reference
+signal of the controller (green).
+</p>
+
+<p style="text-align: center;"><img src="Pictures/plot.png" alt="Simulated Process Plot"></p>
+
+<h4>Class Interfaces</h4>
+
+<p>
+The public interface to a code module can be defined in different,
+more or less formal, ways in Java.
+</p>
+
+<ul>
+      <li>The easiest way is to specify, either on paper or using some graphical
+          formalism such as UML, how the interface should look like and to enforce
+          the development of the different modules to be implemented like this.</li>
+
+       <li>The second way is to define the interface as abstract methods
+           (<tt>AbstractRegul</tt>, <tt>AbstractSquareWave</tt>, ...) and then require that
+           the application classes extend the abstract classes.</li>
+
+       <li>The third way is to use Java interfaces, i.e. to define the
+           Java interfaces <tt>RegulInterface</tt>, <tt>SquareWaveInterface</tt>, etc., and
+           then require  that the implementation classes implement the corresponding interface.</li>
+</ul>
+
+<p>
+In this example we will use the first, informal, approach.
+The interfaces of our four top level module classes, including their associated
+internal classes, should be as follows:
+</p>
+
+<ul>
+      <li><a href="Links/Regul.java">Regul code skeleton</a></li>
+      <li><a href="Links/Buttons.java">Buttons code skeleton</a></li>
+      <li><a href="Links/SquareWave.java">SquareWave code skeleton</a></li>
+      <li><a href="Links/OpCom.java">OpCom code skeleton</a></li>
+</ul>
+
+<p>
+In addition to these classes the following <tt>Main</tt> class should
+be used to initialize the application.
+</p>
+
+<pre>
+  public class Main {
+    public static void main(String[] args) {
+      final int regulPriority   = 8;
+      final int buttonsPriority = 7;
+      final int squarePriority  = 6;
+      final int opcomPriority   = 5;
+
+      Box box = new Box();
+
+      FirstOrderProcess simulatedProcess = new FirstOrderProcess();
+
+      Regul regul = new Regul(regulPriority, box, simulatedProcess);
+      OpCom opcom = new OpCom(regul, opcomPriority);
+      SquareWave squarewave = new SquareWave(regul, squarePriority);
+      Buttons buttons = new Buttons(regul, squarewave, buttonsPriority, box);
+
+      regul.start();
+      opcom.start();
+      squarewave.start();
+      buttons.start();
+    }
+  }
+</pre>
+
+<p>
+A nice overview is provided if the structure is illustrated graphically. Here
+each module is represented by a bold rectangle.
+A monitor inside the module is represented by a rectangle inside the
+module. Public methods of the module are represented as rectangles that
+are aligned with the module border. Synchronized methods of the monitor
+are represented as rectangles that are aligned with the monitor border. Threads
+are represented as dashed ellipses. Finally, arrows represent function calls. The graph for our application is shown
+below:
+</p>
+
+<p style="text-align: center;"><img src="Pictures/modules.png" alt="Module Overview"></p>
+
+<h4>Class <tt>Buttons</tt></h4>
+
+<ol class="ex" start="8">
+      <li>Implement the class <tt>Buttons</tt>. Use the given code skeleton.</li>
+</ol>
+
+
+<div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+import SimEnvironment.*;
+
+public class Buttons extends Thread {
+	private Regul regul;
+	private SquareWave square;
+
+	// Inputs and outputs
+	private DigitalButtonIn onInput;
+	private DigitalButtonIn offInput;
+	private DigitalButtonIn incInput;
+	private DigitalButtonIn decInput;
+
+	// Constructor
+	public Buttons(Regul regul, SquareWave square, int priority, Box b) {
+		this.regul = regul;
+		this.square = square;
+
+		onInput = b.getOnButtonInput();
+		offInput = b.getOffButtonInput();
+		incInput = b.getIncButtonInput();
+		decInput = b.getDecButtonInput();
+
+		setPriority(priority);
+	}
+
+	// run method
+	public void run() {
+		final int h = 10; // period (ms)
+		final double delta = 10.0 / (60.0 * 1000.0) * h; // 10V per minute
+		try {
+			while (!Thread.interrupted()) {
+				if (onInput.get()) {
+					regul.turnOn();
+				}
+				if (offInput.get()) {
+					regul.turnOff();
+				}
+				if (incInput.get()) {
+					square.incAmp(delta);
+				}
+				if (decInput.get()) {
+					square.decAmp(delta);
+				}
+				Thread.sleep(h);
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("Buttons stopped.");
+	}
+}
+
+</pre>
+     </div>
+</div>
+
+
+<h4>Class <tt>SquareWave</tt></h4>
+
+<ol class="ex" start="9">
+      <li>Implement the class <tt>SquareWave</tt>. Use the given code skeleton.
+          Let the signal be represented by its amplitude multiplied by its sign. Change the
+          sign every half period. Call <tt>setRef()</tt> in <tt>Regul</tt>
+          every time the sign or the amplitude is changed.</li>
+</ol>
+
+ <div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+public class SquareWave extends Thread {
+	private Regul regul;
+	private int sign = 1;
+
+	private AmplitudeMonitor ampMon = new AmplitudeMonitor();
+
+	// Internal AmplitudeMonitor class
+	// Constructor not necessary
+	private class AmplitudeMonitor {
+		private double amp = 0.0;
+
+		// Synchronized access methods. The amplitude should always be non-negative.
+		public synchronized double getAmp() {
+			return amp;
+		}
+		public synchronized void setAmp(double amp) {
+			this.amp = Math.max(amp, 0);
+		}
+	}
+
+	// Constructor
+	public SquareWave(Regul regul, int priority) {
+		this.regul = regul;
+		setPriority(priority);
+	}
+
+	// Public methods to decrease and increase the amplitude by delta. Called from Buttons
+	// Should be synchronized on ampMon. Should also call the setRef method in Regul
+	public void incAmp(double delta) {
+		synchronized (ampMon) {
+			ampMon.setAmp(ampMon.getAmp() + delta);
+		}
+		setRef();
+	}
+
+	public void decAmp(double delta) {
+		incAmp(-delta);
+	}
+
+	private void setRef() {
+		regul.setRef(sign*ampMon.getAmp());
+	}
+
+	// run method
+	public void run() {
+		final long h = 10000; // period (ms)
+		try {
+			while (!Thread.interrupted()) {
+				sign = -sign;
+				setRef();
+				Thread.sleep(h);
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("SquareWave stopped.");
+	}
+}
+
+
+</pre>
+     </div>
+</div>
+
+
+<h4>Class <tt>OpCom</tt></h4>
+
+<ol class="ex" start="10">
+      <li>Implement the class <tt>OpCom</tt>. Use the given code skeleton.
+          Use the following code to read from the terminal:</li>
+</ol>
+
+<pre>
+  BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+  ...
+  System.out.print("K = ");
+  try {
+    regul.setK(Double.parseDouble(in.readLine()));
+  } catch (IOException e) {
+    e.printStackTrace();
+  } catch (NumberFormatException e) {
+    System.out.println("Not a number.");
+  }
+</pre>
+
+ <div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class OpCom extends Thread {
+	private Regul regul;
+
+	// Constructor
+	public OpCom(Regul regul, int priority) {
+		this.regul = regul;
+		setPriority(priority);
+	}
+
+	// run method
+	public void run() {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		while (!Thread.interrupted()) {
+			System.out.print("K = ");
+			try {
+				regul.setK(Double.parseDouble(in.readLine()));
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (NumberFormatException e) {
+				System.out.println("Not a number.");
+			}
+		}
+		System.out.println("OpCom stopped.");
+	}
+}
+
+</pre>
+     </div>
+</div>
+
+
+<h4>Class <tt>Regul</tt></h4>
+
+<ol class="ex" start="11">
+      <li>Implement the class <tt>Regul</tt>. Use the given code skeleton.</li>
+</ol>
+
+
+
+
+ <div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+import SimEnvironment.*;
+
+public class Regul extends Thread {
+	// Analog inputs and outputs
+	private AnalogSource yIn;
+	private AnalogSink uOut;
+	private AnalogSink rOut;
+
+	// Box lamp outputs
+	private DigitalButtonOut onButtonLamp;
+	private DigitalButtonOut offButtonLamp;
+
+	// Internal Monitors
+	private ParameterMonitor paramMon = new ParameterMonitor();
+	private ReferenceMonitor refMon = new ReferenceMonitor();
+	private OnMonitor onMon = new OnMonitor();
+
+	// Constructor
+	// Here the internal monitor objects should be created and
+	// the inputs and outputs should be initialized.
+	public Regul(int priority, Box b, FirstOrderProcess proc) {
+		yIn = proc.getSource(0);
+		uOut = proc.getSink(0);
+		rOut = proc.getSink(1);
+		onButtonLamp = b.getOnButtonLamp();
+		offButtonLamp = b.getOffButtonLamp();
+		updateLamps();
+		setPriority(priority);
+	}
+
+	// Public method to set K. Should not be synchronized.
+	public void setK(double K) {
+		paramMon.setK(K);
+	}
+
+	// Public method to set the reference. Should not be synchronized.
+	public void setRef(double ref) {
+		refMon.setRef(ref);
+	}
+
+	// Method to check if the controller  is on. Should be private
+	// since it is only called from Regul itself.
+	private boolean isOn() {
+		return onMon.isOn();
+	}
+
+	// Public methods to turn off and on the controller
+	// Should not be synchronized. Should update the button lamps
+	public void turnOff() {
+		onMon.setOn(false);
+		updateLamps();
+	}
+
+	public void turnOn() {
+		onMon.setOn(true);
+		updateLamps();
+	}
+
+	private void updateLamps() {
+		boolean isOn = isOn();
+		onButtonLamp.set(isOn);
+		offButtonLamp.set(!isOn);
+	}
+
+	// Class definition for internal ParameterMonitor
+	private class ParameterMonitor {
+		private double K = 1.0;
+
+		// Synchronized access methods. K should always be non-negative.
+		public synchronized double getK() {
+			return K;
+		}
+
+		public synchronized void setK(double K) {
+			if (K >= 0) {
+				this.K = K;
+			} else {
+				System.out.println("Illegal K value ignored: " + K);
+			}
+		}
+	}
+
+	// Class definition for internal ReferenceMonitor
+	private class ReferenceMonitor {
+		private double ref = 0.0;
+
+		// Synchronized access methods
+		public synchronized double getRef() {
+			return ref;
+		}
+
+		public synchronized void setRef(double ref) {
+			this.ref = ref;
+		}
+	}
+
+	// Class definition for internal OnMonitor
+	private class OnMonitor {
+		private boolean on = false;
+
+		// Synchronized access methods
+		public synchronized boolean isOn() {
+			return on;
+		}
+
+		public synchronized void setOn(boolean on) {
+			this.on = on;
+		}
+	}
+
+	// Run method
+	public void run() {
+		final long h = 100; // period (ms)
+		try {
+			while (!Thread.interrupted()) {
+				// Get inputs
+				double y = yIn.get();
+				double r = refMon.getRef();
+				double K = paramMon.getK();
+
+				// Compute control signal
+				double u = 0.0;
+				if (isOn()) {
+					u = K * (r - y); // P controller
+				}
+
+				// Set outputs
+				uOut.set(u);
+				rOut.set(r);
+
+				Thread.sleep(h);
+			}
+		} catch (InterruptedException e) {
+			// Requested to stop
+		}
+		System.out.println("Regul stopped.");
+	}
+}
+
+
+</pre>
+     </div>
+</div>
+
+
+
+
+
+
+
+<h4>Execute</h4>
+
+<ol class="ex" start="12">
+      <li>Compile and run the application. In order to do this you must
+          first download <a href="../../jarFiles/virtualsimulator.jar">virtualsimulator.jar</a>
+          and <a href="../../jarFiles/regler.jar">regler.jar</a>
+          to your current directory. When you compile and run your program you must
+          explicitly include this in the class path used by the JVM, i.e. as</li>
+</ol>
+
+<pre>
+  &gt; javac -classpath .:virtualsimulator.jar:regler.jar *.java
+  &gt; java -classpath .:virtualsimulator.jar:regler.jar Main
+</pre>
+
+<p>
+Try with different values of the gain K. Does the result correspond
+to what you remember from the basic course in control (Reglerteknik AK)?
+What about the stationary error?
+</p>
+
+<ol class="ex" start="13">
+      <li>Instead of your own <tt>OpCom</tt>, try to use the graphical GUI
+          provided  by <tt><a href="Solutions/Buttons/GUIOpCom.java">GUIOpCom.java</a></tt>.
+      </li>
+</ol>
+
+<hr>
+
+<h2>Producers - Consumers</h2>
+
+<p>
+This exercise is primarily intended for those students who have <b>not</b>
+taken the Real-Time Programming course.
+</p>
+
+<ol class="ex" start="14">
+      <li>Implement a synchronized bounded ring buffer (also known as circular buffer) without internal
+          copying. Use the class name <tt>RingBuffer</tt>. Use Java's synchronized
+          methods and <tt>notifyAll()</tt> to achieve the synchronization. Use
+          the code example on page 64 in RTCS as an inspiration, i.e., data should not be overwritten when the buffer is full. The public interface
+          of the class should  be</li>
+</ol>
+
+<pre>
+  public class RingBuffer {
+    public RingBuffer(int bufSize);
+    public synchronized Object get();
+    public synchronized void put(Object o);
+  }
+</pre>
+
+<p>
+Implement the ring buffer as an array, a counter that contains the current
+number of elements in the buffer and two indexing variables that tell where
+data should be read and written respectively.
+</p>
+
+<p><img src="Pictures/ringbuffer.png" alt="RingBuffer"></p>
+
+<p>
+Represent the buffer as an array of <tt>Object</tt> references
+</p>
+
+<pre>
+  private Object[] elements;
+</pre>
+
+<p>
+Use increment modulus the size of the buffer when updating an indexing variable, i.e.
+</p>
+
+<pre>
+  nextRead = (nextRead + 1) % bufSize;
+</pre>
+
+ <div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+<pre>
+public class RingBuffer {
+	private final int bufSize;
+	private Object[] elements;
+	private int nextRead = 0;
+	private int nextWrite = 0;
+	private int curSize = 0;
+
+	public RingBuffer(int bufSize) {
+		this.bufSize = bufSize;
+		elements = new Object[bufSize];
+	}
+
+	public synchronized Object get() throws InterruptedException {
+		while (curSize == 0) {
+			wait();
+		}
+		Object ret = elements[nextRead];
+		elements[nextRead] = null;
+		nextRead = (nextRead + 1) % bufSize;
+		curSize--;
+		notifyAll();
+		return ret;
+	}
+
+	public synchronized void put(Object o) throws InterruptedException {
+		while (curSize == bufSize) {
+			wait();
+		}
+		elements[nextWrite] = o;
+		nextWrite = (nextWrite + 1) % bufSize;
+		curSize++;
+		notifyAll();
+	}
+}
+
+
+</pre>
+     </div>
+</div>
+
+<ol class="ex" start="15">
+       <li>Download the classes <tt><a href="Solutions/ProducersConsumers/Main.java">Main.java</a></tt>, <tt>
+           <a href="Solutions/ProducersConsumers/Producer.java">Producer.java</a></tt>,
+           and <tt><a href="Solutions/ProducersConsumers/Consumer.java">Consumer.java</a></tt>.
+           Compile all files and test it.</li>
+
+       <li>Discuss what would happen if <tt>notify()</tt> was used instead of <tt>notifyAll()</tt>.</li>
+
+       <li>Write a new class, <tt>RingBufferWithSemaphore</tt>, that uses
+           the <tt>Semaphore</tt>  class and the <tt>ConditionVariable</tt> class (<tt>se.lth.control.realtime</tt>)
+           to implement the synchronization  instead of synchronized methods.</li>
+</ol>
+
+
+ <div class="solutionbox">
+     <div class="solutionlink">[ <a onclick="return solutiontoggle(this);">Expand solution</a> ]</div>
+     <div class="solution">
+
+<pre>
+import se.lth.control.realtime.ConditionVariable;
+import se.lth.control.realtime.Semaphore;
+
+public class RingBufferWithSemaphore {
+	private final int bufSize;
+	private Object[] elements;
+	private int nextRead = 0;
+	private int nextWrite = 0;
+	private int curSize = 0;
+
+	private Semaphore sem;
+	private ConditionVariable nonEmpty;
+	private ConditionVariable nonFull;
+
+	public RingBufferWithSemaphore(int bufSize) {
+		this.bufSize = bufSize;
+		elements = new Object[bufSize];
+
+		sem = new Semaphore(1);
+		nonEmpty = new ConditionVariable(sem);
+		nonFull = new ConditionVariable(sem);
+	}
+
+	public Object get() {
+		sem.take();
+		while (curSize == 0) {
+			nonEmpty.cvWait();
+		}
+		Object ret = elements[nextRead];
+		elements[nextRead] = null;
+		nextRead = (nextRead + 1) % bufSize;
+		curSize--;
+		nonFull.cvNotifyAll();
+		sem.give();
+		return ret;
+	}
+
+	public void put(Object o) {
+		sem.take();
+		while (curSize == bufSize) {
+			nonFull.cvWait();
+		}
+		elements[nextWrite] = o;
+		nextWrite = (nextWrite + 1) % bufSize;
+		curSize++;
+		nonEmpty.cvNotifyAll();
+		sem.give();
+	}
+}
+
+</pre>
+     </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

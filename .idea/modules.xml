@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RealTimeSystemExercise.iml" filepath="$PROJECT_DIR$/RealTimeSystemExercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c0/c0.iml" filepath="$PROJECT_DIR$/c0/c0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c1/c1.iml" filepath="$PROJECT_DIR$/c1/c1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c2/c2.iml" filepath="$PROJECT_DIR$/c2/c2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c3/c3.iml" filepath="$PROJECT_DIR$/c3/c3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab1/lab1.iml" filepath="$PROJECT_DIR$/lab1/lab1.iml" />
+    </modules>
+  </component>
+</project>
