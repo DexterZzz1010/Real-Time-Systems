@@ -55,7 +55,7 @@ public class PID {
             I = 0.0;
         }
         double ad = p.Td / (p.Td + p.N * p.H);
-        this.D = (ad * D) - ((p.K * ad * p.N) * (y - this.yOld));
+        this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
 //        this.D = ad * D - (p.K * ad * p.N) * (e - this.eOld);
         this.yOld = y;
         this.eOld = e;
