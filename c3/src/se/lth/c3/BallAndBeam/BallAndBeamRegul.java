@@ -68,17 +68,15 @@ public class BallAndBeamRegul extends Thread {
 
             //TODO C3.E3: Write code for control computation here //
 
-            synchronized (Innercontroller) {
-                angleRef = Outercontroller.calculateOutput(yP, refGen.getRef());
-                u = limit(Innercontroller.calculateOutput(yA, angleRef));
-//                u = limit(Innercontroller.calculateOutput(yA,
-//                        limit(Outercontroller.calculateOutput(yP, ref))));
-//                u = limit(Innercontroller.calculateOutput(yA,
-//                        Outercontroller.calculateOutput(yP, ref)));
+            synchronized (Outercontroller) {
+                angleRef = limit(Outercontroller.calculateOutput(yP, refGen.getRef()));
+                synchronized (Innercontroller){
+                    u = limit(Innercontroller.calculateOutput(yA, angleRef));
+                    Innercontroller.updateState(u);
+                    analogOut.set(u);
+                }
                 // Set output
-                analogOut.set(u);
-                Outercontroller.updateState(u);
-                Innercontroller.updateState(u);
+                Outercontroller.updateState(angleRef);
             }
 
             // Set reference in gui

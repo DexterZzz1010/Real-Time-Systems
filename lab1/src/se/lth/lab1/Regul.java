@@ -108,27 +108,28 @@ public class Regul extends Thread {
         long duration;
         long t = System.currentTimeMillis();
         double yRef = 0.0;
+        double angleRef = 0.0;
         double y = 0.0;
         double u = 0.0;
         startTime = t;
 
         while (shouldRun) {
             /** Written by you */
-            synchronized (outer) {
-                yRef = refGen.getRef();
-                switch (modeMon.getMode()) {
-                    case OFF: {
-                        /** Written by you */
-//                        shutDown();
-                        u = 0;
-                        y = 0;
-                        yRef = 0;
-                        writeOutput(u);
-                        break;
-                    }
-                    case BEAM: {
-                        /** Written by you */
 
+            yRef = refGen.getRef();
+            switch (modeMon.getMode()) {
+                case OFF: {
+                    /** Written by you */
+//                        shutDown();
+                    u = 0;
+                    y = 0;
+                    yRef = 0;
+                    writeOutput(u);
+                    break;
+                }
+                case BEAM: {
+                    /** Written by you */
+                    synchronized (outer){
                         try {
                             y = analogInPosition.get();
                             u = limit(outer.calculateOutput(y, refGen.getRef()));
@@ -138,31 +139,38 @@ public class Regul extends Thread {
                             throw new RuntimeException(e);
                         }
 
-                        break;
                     }
-                    case BALL: {
-                        /** Written by you */
 
+                    break;
+                }
+                case BALL: {
+                    /** Written by you */
+                    synchronized (outer){
                         try {
                             y = analogInPosition.get();
-                            u = limit(inner.calculateOutput(analogInAngle.get(), limit(outer.calculateOutput(y, refGen.getRef()))));
-                            writeOutput(u);
+                            angleRef = limit(outer.calculateOutput(y, refGen.getRef()));
+                            synchronized (inner){
+                                u = limit(inner.calculateOutput(analogInAngle.get(), angleRef));
+                                writeOutput(u);
+                                inner.updateState(u);
+                            }
                             outer.updateState(u);
-                            inner.updateState(u);
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
                         }
 
-                        break;
                     }
-                    default: {
-                        System.out.println("Error: Illegal mode.");
-                        break;
-                    }
+
+                    break;
                 }
-
-
+                default: {
+                    System.out.println("Error: Illegal mode.");
+                    break;
+                }
             }
+
+
+
 
 
             sendDataToOpCom(yRef, y, u);
