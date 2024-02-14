@@ -6,6 +6,7 @@ package se.lth.lab1;
  * @File ：RegulFeedforward.java
  * @IDE ：IntelliJ IDEA
  */
+
 import se.lth.control.realtime.AnalogIn;
 import se.lth.control.realtime.AnalogOut;
 import se.lth.control.realtime.IOChannelException;
@@ -113,21 +114,21 @@ public class RegulFeedforward extends Thread {
 
         long duration;
         long t = System.currentTimeMillis();
-        double yRef=0.0;
-        double y=0.0;
-        double u=0.0;
+        double yRef = 0.0;
+        double y = 0.0;
+        double u = 0.0;
         startTime = t;
 
         while (shouldRun) {
             /** Written by you */
             yRef = refGen.getRef();
-            synchronized (outer){
+            synchronized (outer) {
                 switch (modeMon.getMode()) {
                     case OFF: {
                         /** Written by you */
                         u = 0;
                         y = 0;
-                        yRef  = 0;
+                        yRef = 0;
                         writeOutput(u);
                         break;
                     }
@@ -136,9 +137,9 @@ public class RegulFeedforward extends Thread {
 
                         try {
                             y = analogInPosition.get();
-                            u = limit(outer.calculateOutput(y, refGen.getRef())+refGen.getUff());
+                            u = limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff());
                             writeOutput(u);
-                            outer.updateState(u-refGen.getPhiff());
+                            outer.updateState(u - refGen.getPhiff());
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
                         }
@@ -151,13 +152,13 @@ public class RegulFeedforward extends Thread {
 
                         try {
                             y = analogInPosition.get();
-                            u = limit(inner.calculateOutput(analogInAngle.get(),limit(outer.calculateOutput(y, refGen.getRef())+refGen.getUff()))+refGen.getPhiff());
+                            u = limit(inner.calculateOutput(analogInAngle.get(), limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff())) + refGen.getPhiff());
                             writeOutput(u);
-                            if (u == 10 || u == -10){
-                                inner.updateState(u-refGen.getUff());
-                                outer.updateState(analogInAngle.get()-refGen.getPhiff());
-                            }else{
-                                inner.updateState(u-refGen.getUff());
+                            if (u == 10 || u == -10) {
+                                inner.updateState(u - refGen.getUff());
+                                outer.updateState(analogInAngle.get() - refGen.getPhiff());
+                            } else {
+                                inner.updateState(u - refGen.getUff());
                                 outer.updateState(analogInAngle.get());
                             }
                         } catch (IOChannelException e) {
@@ -190,10 +191,10 @@ public class RegulFeedforward extends Thread {
             } else {
                 System.out.println("Lagging behind...");
             }
-            u=0.0;
+
         }
         /** Written by you: Set control signal to zero before exiting run loop */
-
+        u = 0.0;
 
     }
 

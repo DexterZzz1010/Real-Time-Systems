@@ -107,14 +107,14 @@ public class Regul extends Thread {
 
         long duration;
         long t = System.currentTimeMillis();
-        double yRef=0.0;
+        double yRef = 0.0;
         double y = 0.0;
-        double u=0.0;
+        double u = 0.0;
         startTime = t;
 
         while (shouldRun) {
             /** Written by you */
-            synchronized (outer){
+            synchronized (outer) {
                 yRef = refGen.getRef();
                 switch (modeMon.getMode()) {
                     case OFF: {
@@ -122,7 +122,7 @@ public class Regul extends Thread {
 //                        shutDown();
                         u = 0;
                         y = 0;
-                        yRef  = 0;
+                        yRef = 0;
                         writeOutput(u);
                         break;
                     }
@@ -178,10 +178,10 @@ public class Regul extends Thread {
             } else {
                 System.out.println("Lagging behind...");
             }
-            u=0.0;
+
         }
         /** Written by you: Set control signal to zero before exiting run loop */
-
+        u = 0.0;
 
     }
 
