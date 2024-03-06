@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/map_2_0.dtd">
+<map version="2.0">
+<mapID target="top" url="html/JGrafchart.html">
+	<mapID target="Introduction" url="html/Introduction.html"/>
+	<mapID target="ReleaseNotes" url="html/ReleaseNotes.html"/>
+	<mapID target="Glossary" url="html/Glossary.html"/>
+	
+	<mapID target="LanguageOverview_StepsAndTransitions" url="html/LanguageOverview_StepsAndTransitions.html"/>
+	<mapID target="LanguageOverview_ParallelAndAlternativePaths" url="html/LanguageOverview_ParallelAndAlternativePaths.html"/>
+	<mapID target="LanguageOverview_MacroSteps" url="html/LanguageOverview_MacroSteps.html"/>
+	<mapID target="LanguageOverview_Procedures" url="html/LanguageOverview_Procedures.html"/>
+	<mapID target="LanguageOverview_WorkspaceObjects" url="html/LanguageOverview_WorkspaceObjects.html"/>
+	<mapID target="LanguageOverview_TypesAndVariables" url="html/LanguageOverview_TypesAndVariables.html"/>
+	<mapID target="LanguageOverview_ActionLanguage" url="html/LanguageOverview_ActionLanguage.html"/>
+	<mapID target="LanguageOverview_Execution" url="html/LanguageOverview_Execution.html"/>
+	<mapID target="LanguageOverview_ScopingRules" url="html/LanguageOverview_ScopingRules.html"/>
+	
+	<mapID target="Editor_Workspaces" url="html/Editor_Workspaces.html"/>
+	<mapID target="Editor_Overview" url="html/Editor_Overview.html"/>
+	<mapID target="Editor_MouseInteraction" url="html/Editor_MouseInteraction.html"/>
+	
+	<mapID target="Editor_FileMenu" url="html/Editor_FileMenu.html"/>
+	<mapID target="Editor_FileMenu_New" url="html/Editor_FileMenu.html#New"/>
+	<mapID target="Editor_FileMenu_Open" url="html/Editor_FileMenu.html#Open"/>
+	<mapID target="Editor_FileMenu_Close" url="html/Editor_FileMenu.html#Close"/>
+	<mapID target="Editor_FileMenu_Save" url="html/Editor_FileMenu.html#Save"/>
+	<mapID target="Editor_FileMenu_SaveAs" url="html/Editor_FileMenu.html#SaveAs"/>
+	<mapID target="Editor_FileMenu_OpenAll" url="html/Editor_FileMenu.html#OpenAll"/>
+	<mapID target="Editor_FileMenu_SaveAll" url="html/Editor_FileMenu.html#SaveAll"/>
+	<mapID target="Editor_FileMenu_SaveAllAs" url="html/Editor_FileMenu.html#SaveAllAs"/>
+	<mapID target="Editor_FileMenu_Print" url="html/Editor_FileMenu.html#Print"/>
+	<mapID target="Editor_FileMenu_Exit" url="html/Editor_FileMenu.html#Exit"/>
+	
+	<mapID target="Editor_EditMenu" url="html/Editor_EditMenu.html"/>
+	<mapID target="Editor_EditMenu_Undo" url="html/Editor_EditMenu.html#Undo"/>
+	<mapID target="Editor_EditMenu_Redo" url="html/Editor_EditMenu.html#Redo"/>
+	<mapID target="Editor_EditMenu_Cut" url="html/Editor_EditMenu.html#Cut"/>
+	<mapID target="Editor_EditMenu_Copy" url="html/Editor_EditMenu.html#Copy"/>
+	<mapID target="Editor_EditMenu_Paste" url="html/Editor_EditMenu.html#Paste"/>
+	<mapID target="Editor_EditMenu_Delete" url="html/Editor_EditMenu.html#Delete"/>
+	<mapID target="Editor_EditMenu_SelectAll" url="html/Editor_EditMenu.html#SelectAll"/>
+	<mapID target="Editor_EditMenu_Properties" url="html/Editor_EditMenu.html#Properties"/>
+	<mapID target="Editor_EditMenu_Grid" url="html/Editor_EditMenu.html#WorkspaceProperties"/>
+	<mapID target="Editor_EditMenu_Group" url="html/Editor_EditMenu.html#Group"/>
+	<mapID target="Editor_EditMenu_ToggleObjectify" url="html/Editor_EditMenu.html#ToggleObjectify"/>
+	<mapID target="Editor_EditMenu_ToggleBorder" url="html/Editor_EditMenu.html#ToggleBorder"/>
+	<mapID target="Editor_EditMenu_Ungroup" url="html/Editor_EditMenu.html#Ungroup"/>
+	<mapID target="Editor_EditMenu_MoveToFront" url="html/Editor_EditMenu.html#MoveToFront"/>
+	<mapID target="Editor_EditMenu_MoveToBack" url="html/Editor_EditMenu.html#MoveToBack"/>
+	
+	<mapID target="Editor_ViewMenu" url="html/Editor_ViewMenu.html"/>	
+	<mapID target="Editor_ViewMenu_ZoomIn" url="html/Editor_ViewMenu.html#ZoomIn"/>
+	<mapID target="Editor_ViewMenu_ZoomOut" url="html/Editor_ViewMenu.html#ZoomOut"/>
+	<mapID target="Editor_ViewMenu_ZoomReset" url="html/Editor_ViewMenu.html#ZoomReset"/>
+	<mapID target="Editor_ViewMenu_ZoomToFit" url="html/Editor_ViewMenu.html#ZoomToFit"/>
+	<mapID target="Editor_ViewMenu_TreeView" url="html/Editor_ViewMenu.html#TreeView"/>
+	<mapID target="Editor_ViewMenu_Overview" url="html/Editor_ViewMenu.html#Overview"/>
+	<mapID target="Editor_ViewMenu_ShowPalette" url="html/Editor_ViewMenu.html#ShowPalette"/>
+	<mapID target="Editor_ViewMenu_HidePalette" url="html/Editor_ViewMenu.html#HidePalette"/>
+	<mapID target="Editor_ViewMenu_ShowToolbar" url="html/Editor_ViewMenu.html#ShowToolbar"/>
+	<mapID target="Editor_ViewMenu_HideToolbar" url="html/Editor_ViewMenu.html#HideToolbar"/>
+	
+	<mapID target="Editor_ExecuteMenu" url="html/Editor_ExecuteMenu.html"/>
+	<mapID target="Editor_ExecuteMenu_Compile" url="html/Editor_ExecuteMenu.html#Compile"/>
+	<mapID target="Editor_ExecuteMenu_CompileAll" url="html/Editor_ExecuteMenu.html#CompileAll"/>
+	<mapID target="Editor_ExecuteMenu_Execute" url="html/Editor_ExecuteMenu.html#Execute"/>
+	<mapID target="Editor_ExecuteMenu_ExecuteAll" url="html/Editor_ExecuteMenu.html#ExecuteAll"/>
+	<mapID target="Editor_ExecuteMenu_Stop" url="html/Editor_ExecuteMenu.html#Stop"/>
+	<mapID target="Editor_ExecuteMenu_StopAll" url="html/Editor_ExecuteMenu.html#StopAll"/>
+	<mapID target="Editor_ExecuteMenu_Step" url="html/Editor_ExecuteMenu.html#Step"/>
+	<mapID target="Editor_ExecuteMenu_Pause" url="html/Editor_ExecuteMenu.html#Pause"/>
+	<mapID target="Editor_ExecuteMenu_Resume" url="html/Editor_ExecuteMenu.html#Resume"/>
+	<mapID target="Editor_ExecuteMenu_ShutDownClient" url="html/Editor_ExecuteMenu.html#ShutDownClient"/>
+	
+	<mapID target="Editor_MiscMenu" url="html/Editor_MiscMenu.html"/>
+	<mapID target="Editor_MiscMenu_ConnectCCOM" url="html/Editor_MiscMenu.html#ConnectCCOM"/>
+	<mapID target="Editor_MiscMenu_DisconnectCCOM" url="html/Editor_MiscMenu.html#DisconnectCCOM"/>
+	<mapID target="Editor_MiscMenu_CCOMServer" url="html/Editor_MiscMenu.html#CCOMServer"/>
+	<mapID target="Editor_MiscMenu_EnableSlideMode" url="html/Editor_MiscMenu.html#EnableSlideMode"/>
+	<mapID target="Editor_MiscMenu_DisableSlideMode" url="html/Editor_MiscMenu.html#DisableSlideMode"/>
+	<mapID target="Editor_MiscMenu_DPWSServices" url="html/Editor_MiscMenu.html#DPWSServices"/>
+	
+	<mapID target="Editor_SamplesMenu" url="html/Editor_SamplesMenu.html"/>
+	<mapID target="Editor_SamplesMenu_InteractivePIDBasic" url="html/Editor_SamplesMenu.html#InteractivePIDBasic"/>
+	
+	<mapID target="Editor_HelpMenu" url="html/Editor_HelpMenu.html"/>
+	<mapID target="Editor_HelpMenu_OnlineHelp" url="html/Editor_HelpMenu.html#OnlineHelp"/>
+	<mapID target="Editor_HelpMenu_ObjectHelp" url="html/Editor_HelpMenu.html#ObjectHelp"/>
+	<mapID target="Editor_HelpMenu_OpenTutorial" url="html/Editor_HelpMenu.html#OpenTutorial"/>
+	<mapID target="Editor_HelpMenu_CloseTutorial" url="html/Editor_HelpMenu.html#CloseTutorial"/>
+	<mapID target="Editor_HelpMenu_About" url="html/Editor_HelpMenu.html#About"/>
+	
+	<mapID target="LangRef_FC_InitialStep" url="html/LangRef_FC_InitialStep.html"/>
+	<mapID target="LangRef_FC_Step" url="html/LangRef_FC_Step.html"/>
+	<mapID target="LangRef_FC_Transition" url="html/LangRef_FC_Transition.html"/>
+	<mapID target="LangRef_FC_ParallelSplit" url="html/LangRef_FC_ParallelSplit.html"/>
+	<mapID target="LangRef_FC_ParallelJoin" url="html/LangRef_FC_ParallelJoin.html"/>
+	<mapID target="LangRef_FC_WorkspaceObject" url="html/LangRef_FC_WorkspaceObject.html"/>
+	<mapID target="LangRef_FC_MacroStep" url="html/LangRef_FC_MacroStep.html"/>
+	<mapID target="LangRef_FC_EnterStep" url="html/LangRef_FC_EnterStep.html"/>
+	<mapID target="LangRef_FC_ExitStep" url="html/LangRef_FC_ExitStep.html"/>
+	<mapID target="LangRef_FC_ExceptionTransition" url="html/LangRef_FC_ExceptionTransition.html"/>
+	<mapID target="LangRef_FC_Procedure" url="html/LangRef_FC_Procedure.html"/>
+	<mapID target="LangRef_FC_ProcedureStep" url="html/LangRef_FC_ProcedureStep.html"/>
+	<mapID target="LangRef_FC_ProcessStep" url="html/LangRef_FC_ProcessStep.html"/>
+	<mapID target="LangRef_FC_ConnectionPosts" url="html/LangRef_FC_ConnectionPosts.html"/>
+	<mapID target="LangRef_FC_StepFusionSet" url="html/LangRef_FC_StepFusionSet.html"/>
+	<mapID target="LangRef_FC_Group" url="html/LangRef_FC_Group.html"/>
+	
+	<mapID target="LangRef_Var" url="html/LangRef_Var.html"/>
+	<mapID target="LangRef_Var_BooleanVariable" url="html/LangRef_Var_BooleanVariable.html"/>
+	<mapID target="LangRef_Var_IntegerVariable" url="html/LangRef_Var_IntegerVariable.html"/>
+	<mapID target="LangRef_Var_RealVariable" url="html/LangRef_Var_RealVariable.html"/>
+	<mapID target="LangRef_Var_StringVariable" url="html/LangRef_Var_StringVariable.html"/>
+	<mapID target="LangRef_Var_BooleanList" url="html/LangRef_Var_BooleanList.html"/>
+	<mapID target="LangRef_Var_IntegerList" url="html/LangRef_Var_IntegerList.html"/>
+	<mapID target="LangRef_Var_RealList" url="html/LangRef_Var_RealList.html"/>
+	<mapID target="LangRef_Var_StringList" url="html/LangRef_Var_StringList.html"/>
+	
+	<mapID target="LangRef_IO_DigitalInput" url="html/LangRef_IO_DigitalInput.html"/>
+	<mapID target="LangRef_IO_DigitalInputInverse" url="html/LangRef_IO_DigitalInputInverseLogic.html"/>
+	<mapID target="LangRef_IO_DigitalOutput" url="html/LangRef_IO_DigitalOutput.html"/>
+	<mapID target="LangRef_IO_DigitalOutputInverse" url="html/LangRef_IO_DigitalOutputInverseLogic.html"/>
+	<mapID target="LangRef_IO_AnalogInput" url="html/LangRef_IO_AnalogInput.html"/>
+	<mapID target="LangRef_IO_AnalogOutput" url="html/LangRef_IO_AnalogOutput.html"/>
+	
+	<mapID target="LangRef_IO_Socket" url="html/LangRef_IO_Socket.html"/>
+	<mapID target="LangRef_IO_Socket_BoolIn" url="html/LangRef_IO_Socket_BoolIn.html"/>
+	<mapID target="LangRef_IO_Socket_IntIn" url="html/LangRef_IO_Socket_IntIn.html"/>
+	<mapID target="LangRef_IO_Socket_RealIn" url="html/LangRef_IO_Socket_RealIn.html"/>
+	<mapID target="LangRef_IO_Socket_StringIn" url="html/LangRef_IO_Socket_StringIn.html"/>
+	<mapID target="LangRef_IO_Socket_BoolOut" url="html/LangRef_IO_Socket_BoolOut.html"/>
+	<mapID target="LangRef_IO_Socket_IntOut" url="html/LangRef_IO_Socket_IntOut.html"/>
+	<mapID target="LangRef_IO_Socket_RealOut" url="html/LangRef_IO_Socket_RealOut.html"/>
+	<mapID target="LangRef_IO_Socket_StringOut" url="html/LangRef_IO_Socket_StringOut.html"/>
+	
+	<mapID target="LangRef_IO_ByteStream_In" url="html/LangRef_IO_ByteStream_In.html"/>
+	<mapID target="LangRef_IO_ByteStream_Out" url="html/LangRef_IO_ByteStream_Out.html"/>
+	
+	<mapID target="LangRef_IO_DPWSObject" url="html/LangRef_IO_DPWSObject.html"/>
+	<mapID target="LangRef_IO_LabCommObject" url="html/LangRef_IO_LabCommObject.html"/>
+	
+	<mapID target="LangRef_XML" url="html/LangRef_XML.html"/>
+	<mapID target="LangRef_XML_RepresentingStructures" url="html/LangRef_XML_RepresentingStructures.html"/>
+	<mapID target="LangRef_XML_ConnectingToCCOM" url="html/LangRef_XML_ConnectingToCCOM.html"/>
+	<mapID target="LangRef_XML_PublishingDataMessages" url="html/LangRef_XML_PublishingDataMessages.html"/>
+	<mapID target="LangRef_XML_SendingDataMessages" url="html/LangRef_XML_SendingDataMessages.html"/>
+	<mapID target="LangRef_XML_Subscriptions" url="html/LangRef_XML_Subscriptions.html"/>
+	<mapID target="LangRef_XML_ReceivingDataMessages" url="html/LangRef_XML_ReceivingDataMessages.html"/>
+	<mapID target="LangRef_XML_DetectingMessageArrival" url="html/LangRef_XML_DetectingMessageArrival.html"/>
+	<mapID target="LangRef_XML_SendingReplyMessages" url="html/LangRef_XML_SendingReplyMessages.html"/>
+	<mapID target="LangRef_XML_ReceivingReplyMessages" url="html/LangRef_XML_ReceivingReplyMessages.html"/>
+	<mapID target="LangRef_XML_RemoveProcedureCalls" url="html/LangRef_XML_RemoteProcedureCalls.html"/>
+	<mapID target="LangRef_XML_ExternalCallsToJGProcs" url="html/LangRef_XML_ExternalCallsToJGProcs.html"/>
+	<mapID target="LangRef_XML_CallingExternalRPCs" url="html/LangRef_XML_CallingExternalRPCs.html"/>
+	<mapID target="LangRef_XML_RPCLibraries" url="html/LangRef_XML_RPCLibraries.html"/>
+	
+	<mapID target="LangRef_XML_Object_XMLMessageIn" url="html/LangRef_XML_Object_MessageIn.html"/>
+	<mapID target="LangRef_XML_Object_XMLMessageOut" url="html/LangRef_XML_Object_MessageOut.html"/>
+	<mapID target="LangRef_XML_Object_IntegerAttribute" url="html/LangRef_XML_Object_IntegerAttribute.html"/>
+	<mapID target="LangRef_XML_Object_RealAttribute" url="html/LangRef_XML_Object_RealAttribute.html"/>
+	<mapID target="LangRef_XML_Object_StringAttribute" url="html/LangRef_XML_Object_StringAttribute.html"/>
+	<mapID target="LangRef_XML_Object_IndexVariable" url="html/LangRef_XML_Object_IndexVariable.html"/>
+	
+	<mapID target="LangRef_GUI_Text" url="html/LangRef_GUI_Text.html"/>
+	<mapID target="LangRef_GUI_Rectangle" url="html/LangRef_GUI_Rectangle.html"/>
+	<mapID target="LangRef_GUI_Ellipse" url="html/LangRef_GUI_Ellipse.html"/>
+	<mapID target="LangRef_GUI_Polygon" url="html/LangRef_GUI_Polygon.html"/>
+	<mapID target="LangRef_GUI_3DRectangle" url="html/LangRef_GUI_3DRectangle.html"/>
+	<mapID target="LangRef_GUI_Line" url="html/LangRef_GUI_Line.html"/>
+	<mapID target="LangRef_GUI_Spline" url="html/LangRef_GUI_Spline.html"/>
+	<mapID target="LangRef_GUI_Icon" url="html/LangRef_GUI_Icon.html"/>
+	<mapID target="LangRef_GUI_ActionButton" url="html/LangRef_GUI_ActionButton.html"/>
+	<mapID target="LangRef_GUI_GraphicalActionButton" url="html/LangRef_GUI_GraphicalActionButton.html"/>
+	<mapID target="LangRef_GUI_Plotter" url="html/LangRef_GUI_Plotter.html"/>
+	<mapID target="LangRef_GUI_Browser" url="html/LangRef_GUI_Browser.html"/>
+	<mapID target="LangRef_GUI_ShowWorkspaceButton" url="html/LangRef_GUI_ShowWorkspaceButton.html"/>
+	<mapID target="LangRef_GUI_CHEMIcon" url="html/LangRef_GUI_CHEMIcon.html"/>
+	<mapID target="LangRef_GUI_LUCASIcon" url="html/LangRef_GUI_LUCASIcon.html"/>
+	
+	<mapID target="LangRef_TextLang" url="html/LangRef_TextLang.html"/>
+	<mapID target="LangRef_TextLang_Actions" url="html/LangRef_TextLang_Actions.html"/>
+	<mapID target="LangRef_TextLang_Conditions" url="html/LangRef_TextLang_Conditions.html"/>
+	<mapID target="LangRef_TextLang_CallParameters" url="html/LangRef_TextLang_CallParameters.html"/>
+	<mapID target="LangRef_TextLang_Functions" url="html/LangRef_TextLang_Functions.html"/>
+	<mapID target="LangRef_TextLang_Methods" url="html/LangRef_TextLang_Methods.html"/>
+	<mapID target="LangRef_TextLang_EvaluationRules" url="html/LangRef_TextLang_EvaluationRules.html"/>
+	
+	<mapID target="LangRef_ExecutionModel" url="html/LangRef_ExecutionModel.html"/>
+	
+	<mapID target="CustomIO" url="html/CustomIO.html"/>
+	
+	<mapID target="CommandLine" url="html/CommandLine.html"/>
+	
+	
+	
+	<mapID target="LangRef_TextLang_Functions_abs" url="html/LangRef_TextLang_Functions.html#abs"/>
+	<mapID target="LangRef_TextLang_Functions_addPalette" url="html/LangRef_TextLang_Functions.html#addPalette"/>
+	<mapID target="LangRef_TextLang_Functions_applyStaticMethod" url="html/LangRef_TextLang_Functions.html#applyStaticMethod"/>
+	<mapID target="LangRef_TextLang_Functions_clearMessages" url="html/LangRef_TextLang_Functions.html#clearMessages"/>
+	<mapID target="LangRef_TextLang_Functions_compile" url="html/LangRef_TextLang_Functions.html#compile"/>
+	<mapID target="LangRef_TextLang_Functions_connectCCOM" url="html/LangRef_TextLang_Functions.html#connectCCOM"/>
+	<mapID target="LangRef_TextLang_Functions_cos" url="html/LangRef_TextLang_Functions.html#cos"/>
+	<mapID target="LangRef_TextLang_Functions_currentTime" url="html/LangRef_TextLang_Functions.html#currentTime"/>
+	<mapID target="LangRef_TextLang_Functions_delete" url="html/LangRef_TextLang_Functions.html#delete"/>
+	<mapID target="LangRef_TextLang_Functions_disconnectCCOM" url="html/LangRef_TextLang_Functions.html#disconnectCCOM"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsGetEvent" url="html/LangRef_TextLang_Functions.html#dpwsGetEvent"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsGetFault" url="html/LangRef_TextLang_Functions.html#dpwsGetFault"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsHasEvent" url="html/LangRef_TextLang_Functions.html#dpwsHasEvent"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsHasFault" url="html/LangRef_TextLang_Functions.html#dpwsHasFault"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsSubscribe" url="html/LangRef_TextLang_Functions.html#dpwsSubscribe"/>
+	<mapID target="LangRef_TextLang_Functions_dpwsUnsubscribe" url="html/LangRef_TextLang_Functions.html#dpwsUnsubscribe"/>
+	<mapID target="LangRef_TextLang_Functions_evaluateAll" url="html/LangRef_TextLang_Functions.html#evaluateAll"/>
+	<mapID target="LangRef_TextLang_Functions_exec" url="html/LangRef_TextLang_Functions.html#exec"/>
+	<mapID target="LangRef_TextLang_Functions_format" url="html/LangRef_TextLang_Functions.html#format"/>
+	<mapID target="LangRef_TextLang_Functions_freeMemory" url="html/LangRef_TextLang_Functions.html#freeMemory"/>
+	<mapID target="LangRef_TextLang_Functions_getCCOMLoginName" url="html/LangRef_TextLang_Functions.html#getCCOMLoginName"/>
+	<mapID target="LangRef_TextLang_Functions_getCCOMPort" url="html/LangRef_TextLang_Functions.html#getCCOMPort"/>
+	<mapID target="LangRef_TextLang_Functions_getCCOMServer" url="html/LangRef_TextLang_Functions.html#getCCOMServer"/>
+	<mapID target="LangRef_TextLang_Functions_getTickTime" url="html/LangRef_TextLang_Functions.html#getTickTime"/>
+	<mapID target="LangRef_TextLang_Functions_getTimestamp" url="html/LangRef_TextLang_Functions.html#getTimestamp"/>
+	<mapID target="LangRef_TextLang_Functions_intToBlue" url="html/LangRef_TextLang_Functions.html#intToBlue"/>
+	<mapID target="LangRef_TextLang_Functions_intToGreen" url="html/LangRef_TextLang_Functions.html#intToGreen"/>
+	<mapID target="LangRef_TextLang_Functions_intToRed" url="html/LangRef_TextLang_Functions.html#intToRed"/>
+	<mapID target="LangRef_TextLang_Functions_isConnectedToCCOM" url="html/LangRef_TextLang_Functions.html#isConnectedToCCOM"/>
+	<mapID target="LangRef_TextLang_Functions_lcReceived" url="html/LangRef_TextLang_Functions.html#lcReceived"/>
+	<mapID target="LangRef_TextLang_Functions_lcSend" url="html/LangRef_TextLang_Functions.html#lcSend"/>
+	<mapID target="LangRef_TextLang_Functions_load" url="html/LangRef_TextLang_Functions.html#load"/>
+	<mapID target="LangRef_TextLang_Functions_loadCompile" url="html/LangRef_TextLang_Functions.html#loadCompile"/>
+	<mapID target="LangRef_TextLang_Functions_loadCompileStart" url="html/LangRef_TextLang_Functions.html#loadCompileStart"/>
+	<mapID target="LangRef_TextLang_Functions_max" url="html/LangRef_TextLang_Functions.html#max"/>
+	<mapID target="LangRef_TextLang_Functions_maxMemory" url="html/LangRef_TextLang_Functions.html#maxMemory"/>
+	<mapID target="LangRef_TextLang_Functions_min" url="html/LangRef_TextLang_Functions.html#min"/>
+	<mapID target="LangRef_TextLang_Functions_new" url="html/LangRef_TextLang_Functions.html#new"/>
+	<mapID target="LangRef_TextLang_Functions_println" url="html/LangRef_TextLang_Functions.html#println"/>
+	<mapID target="LangRef_TextLang_Functions_random" url="html/LangRef_TextLang_Functions.html#random"/>
+	<mapID target="LangRef_TextLang_Functions_removePalette" url="html/LangRef_TextLang_Functions.html#removePalette"/>
+	<mapID target="LangRef_TextLang_Functions_RGBToInt" url="html/LangRef_TextLang_Functions.html#RGBToInt"/>
+	<mapID target="LangRef_TextLang_Functions_setCCOMLoginName" url="html/LangRef_TextLang_Functions.html#setCCOMLoginName"/>
+	<mapID target="LangRef_TextLang_Functions_setCCOMPort" url="html/LangRef_TextLang_Functions.html#setCCOMPort"/>
+	<mapID target="LangRef_TextLang_Functions_setCCOMServer" url="html/LangRef_TextLang_Functions.html#setCCOMServer"/>
+	<mapID target="LangRef_TextLang_Functions_sin" url="html/LangRef_TextLang_Functions.html#sin"/>
+	<mapID target="LangRef_TextLang_Functions_sqrt" url="html/LangRef_TextLang_Functions.html#sqrt"/>
+	<mapID target="LangRef_TextLang_Functions_start" url="html/LangRef_TextLang_Functions.html#start"/>
+	<mapID target="LangRef_TextLang_Functions_stop" url="html/LangRef_TextLang_Functions.html#stop"/>
+	<mapID target="LangRef_TextLang_Functions_stringApply" url="html/LangRef_TextLang_Functions.html#stringApply"/>
+	<mapID target="LangRef_TextLang_Functions_subscribe" url="html/LangRef_TextLang_Functions.html#subscribe"/>
+	<mapID target="LangRef_TextLang_Functions_totalMemory" url="html/LangRef_TextLang_Functions.html#totalMemory"/>
+	<mapID target="LangRef_TextLang_Functions_unsubscribe" url="html/LangRef_TextLang_Functions.html#unsubscribe"/>
+	<mapID target="LangRef_TextLang_Functions_writeMessage" url="html/LangRef_TextLang_Functions.html#writeMessage"/>
+	<mapID target="LangRef_TextLang_Functions_xmlAdd" url="html/LangRef_TextLang_Functions.html#xmlAdd"/>
+	<mapID target="LangRef_TextLang_Functions_xmlFetch" url="html/LangRef_TextLang_Functions.html#xmlFetch"/>
+	
+	
+	
+	
+	<mapID target="LangRef_TextLang_Methods_BasicList_add" url="html/LangRef_TextLang_Methods.html#BasicList_add"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_add_2" url="html/LangRef_TextLang_Methods.html#BasicList_add_2"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_addFirst" url="html/LangRef_TextLang_Methods.html#BasicList_addFirst"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_addItem" url="html/LangRef_TextLang_Methods.html#Browser_addItem"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_addItem_2" url="html/LangRef_TextLang_Methods.html#Browser_addItem_2"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_append" url="html/LangRef_TextLang_Methods.html#BasicList_append"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_clear" url="html/LangRef_TextLang_Methods.html#BasicList_clear"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_clear" url="html/LangRef_TextLang_Methods.html#Browser_clear"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_contains" url="html/LangRef_TextLang_Methods.html#BasicList_contains"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_echo" url="html/LangRef_TextLang_Methods.html#JGoText_echo"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_get" url="html/LangRef_TextLang_Methods.html#BasicList_get"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_getBkColor" url="html/LangRef_TextLang_Methods.html#JGoText_getBkColor"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_getDestination" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_getDestination"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getFillColor" url="html/LangRef_TextLang_Methods.html#Browser_getFillColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_getFillColor" url="html/LangRef_TextLang_Methods.html#JGoDrawable_getFillColor"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getFont" url="html/LangRef_TextLang_Methods.html#Browser_getFont"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_getFontSize" url="html/LangRef_TextLang_Methods.html#JGoText_getFontSize"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageX_getHandle" url="html/LangRef_TextLang_Methods.html#XMLMessageX_getHandle"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_getHeight" url="html/LangRef_TextLang_Methods.html#Referencable_getHeight"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getItem" url="html/LangRef_TextLang_Methods.html#Browser_getItem"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageX_getMustReply" url="html/LangRef_TextLang_Methods.html#XMLMessageX_getMustReply"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getNumItems" url="html/LangRef_TextLang_Methods.html#Browser_getNumItems"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageX_getOrigin" url="html/LangRef_TextLang_Methods.html#XMLMessageX_getOrigin"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_getPenColor" url="html/LangRef_TextLang_Methods.html#JGoDrawable_getPenColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_getPenStyle" url="html/LangRef_TextLang_Methods.html#JGoDrawable_getPenStyle"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_getPenWidth" url="html/LangRef_TextLang_Methods.html#JGoDrawable_getPenWidth"/>
+	<mapID target="LangRef_TextLang_Methods_JGoStroke_getPointX" url="html/LangRef_TextLang_Methods.html#JGoStroke_getPointX"/>
+	<mapID target="LangRef_TextLang_Methods_JGoStroke_getPointY" url="html/LangRef_TextLang_Methods.html#JGoStroke_getPointY"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_getPublish" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_getPublish"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getSelectedIndex" url="html/LangRef_TextLang_Methods.html#Browser_getSelectedIndex"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getSelectedItem" url="html/LangRef_TextLang_Methods.html#Browser_getSelectedItem"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_getSendHandle" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_getSendHandle"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_getText" url="html/LangRef_TextLang_Methods.html#JGoText_getText"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getTextColor" url="html/LangRef_TextLang_Methods.html#Browser_getTextColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_getTextColor" url="html/LangRef_TextLang_Methods.html#JGoText_getTextColor"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_getTextSize" url="html/LangRef_TextLang_Methods.html#Browser_getTextSize"/>
+	<mapID target="LangRef_TextLang_Methods_Workspace_getTickTime" url="html/LangRef_TextLang_Methods.html#Workspace_getTickTime"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_getTopic" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_getTopic"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageX_getType" url="html/LangRef_TextLang_Methods.html#XMLMessageX_getType"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_getWidth" url="html/LangRef_TextLang_Methods.html#Referencable_getWidth"/>
+	<mapID target="LangRef_TextLang_Methods_Hierarchical_getWorkspaceColor" url="html/LangRef_TextLang_Methods.html#Hierarchical_getWorkspaceColor"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_getXLocation" url="html/LangRef_TextLang_Methods.html#Referencable_getXLocation"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageX_getXML" url="html/LangRef_TextLang_Methods.html#XMLMessageX_getXML"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_getYLocation" url="html/LangRef_TextLang_Methods.html#Referencable_getYLocation"/>
+	<mapID target="LangRef_TextLang_Methods_Hierarchical_hideWorkspace" url="html/LangRef_TextLang_Methods.html#Hierarchical_hideWorkspace"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_indexOf" url="html/LangRef_TextLang_Methods.html#BasicList_indexOf"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_isBold" url="html/LangRef_TextLang_Methods.html#Browser_isBold"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_isEmpty" url="html/LangRef_TextLang_Methods.html#BasicList_isEmpty"/>
+	<mapID target="LangRef_TextLang_Methods_InternalVariable_isUpdated" url="html/LangRef_TextLang_Methods.html#InternalVariable_isUpdated"/>
+	<mapID target="LangRef_TextLang_Methods_Icon_loadFile" url="html/LangRef_TextLang_Methods.html#Icon_loadFile"/>
+	<mapID target="LangRef_TextLang_Methods_Icon_loadURL" url="html/LangRef_TextLang_Methods.html#Icon_loadURL"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_outputMessage" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_outputMessage"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_publishMessage" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_publishMessage"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_remove" url="html/LangRef_TextLang_Methods.html#BasicList_remove"/>
+	<mapID target="LangRef_TextLang_Methods_GUIX_remove" url="html/LangRef_TextLang_Methods.html#GUIX_remove"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_removeItem" url="html/LangRef_TextLang_Methods.html#Browser_removeItem"/>
+	<mapID target="LangRef_TextLang_Methods_InputVariable_sample" url="html/LangRef_TextLang_Methods.html#InputVariable_sample"/>
+	<mapID target="LangRef_TextLang_Methods_Workspace_sampleAll" url="html/LangRef_TextLang_Methods.html#Workspace_sampleAll"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_sendMessage" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_sendMessage"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_set" url="html/LangRef_TextLang_Methods.html#BasicList_set"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_setBkColor" url="html/LangRef_TextLang_Methods.html#JGoText_setBkColor"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setBold" url="html/LangRef_TextLang_Methods.html#Browser_setBold"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setDestination" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setDestination"/>
+	<mapID target="LangRef_TextLang_Methods_WorkspaceObject_setEnabled" url="html/LangRef_TextLang_Methods.html#WorkspaceObject_setEnabled"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setFillColor" url="html/LangRef_TextLang_Methods.html#Browser_setFillColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_setFillColor" url="html/LangRef_TextLang_Methods.html#JGoDrawable_setFillColor"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setFont" url="html/LangRef_TextLang_Methods.html#Browser_setFont"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_setFontSize" url="html/LangRef_TextLang_Methods.html#JGoText_setFontSize"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setHandle" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setHandle"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_setHeight" url="html/LangRef_TextLang_Methods.html#Referencable_setHeight"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setItem" url="html/LangRef_TextLang_Methods.html#Browser_setItem"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_setLocation" url="html/LangRef_TextLang_Methods.html#Referencable_setLocation"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setMustReply" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setMustReply"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setOrigin" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setOrigin"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_setPenColor" url="html/LangRef_TextLang_Methods.html#JGoDrawable_setPenColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_setPenStyle" url="html/LangRef_TextLang_Methods.html#JGoDrawable_setPenStyle"/>
+	<mapID target="LangRef_TextLang_Methods_JGoDrawable_setPenWidth" url="html/LangRef_TextLang_Methods.html#JGoDrawable_setPenWidth"/>
+	<mapID target="LangRef_TextLang_Methods_JGoStroke_setPoint" url="html/LangRef_TextLang_Methods.html#JGoStroke_setPoint"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setPublish" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setPublish"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_setText" url="html/LangRef_TextLang_Methods.html#JGoText_setText"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setTextColor" url="html/LangRef_TextLang_Methods.html#Browser_setTextColor"/>
+	<mapID target="LangRef_TextLang_Methods_JGoText_setTextColor" url="html/LangRef_TextLang_Methods.html#JGoText_setTextColor"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_setTextSize" url="html/LangRef_TextLang_Methods.html#Browser_setTextSize"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setTopic" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setTopic"/>
+	<mapID target="LangRef_TextLang_Methods_XMLMessageOut_setType" url="html/LangRef_TextLang_Methods.html#XMLMessageOut_setType"/>
+	<mapID target="LangRef_TextLang_Methods_InternalVariable_setUpdated" url="html/LangRef_TextLang_Methods.html#InternalVariable_setUpdated"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_setVisible" url="html/LangRef_TextLang_Methods.html#Referencable_setVisible"/>
+	<mapID target="LangRef_TextLang_Methods_Referencable_setWidth" url="html/LangRef_TextLang_Methods.html#Referencable_setWidth"/>
+	<mapID target="LangRef_TextLang_Methods_Hierarchical_setWorkspaceColor" url="html/LangRef_TextLang_Methods.html#Hierarchical_setWorkspaceColor"/>
+	<mapID target="LangRef_TextLang_Methods_Hierarchical_showWorkspace" url="html/LangRef_TextLang_Methods.html#Hierarchical_showWorkspace"/>
+	<mapID target="LangRef_TextLang_Methods_Hierarchical_showWorkspaceAt" url="html/LangRef_TextLang_Methods.html#Hierarchical_showWorkspaceAt"/>
+	<mapID target="LangRef_TextLang_Methods_BasicList_size" url="html/LangRef_TextLang_Methods.html#BasicList_size"/>
+	<mapID target="LangRef_TextLang_Methods_Procedure_spawn" url="html/LangRef_TextLang_Methods.html#Procedure_spawn"/>
+	<mapID target="LangRef_TextLang_Methods_Browser_writeFile" url="html/LangRef_TextLang_Methods.html#Browser_writeFile"/>
+	
+	<mapID target="Lib_ControlLib" url="html/Lib_ControlLib.html"/>
+</mapID>
+</map>

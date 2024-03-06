@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Textual Language - Actions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Textual Language - Actions</h1>
+
+<hr>
+
+<p>
+The action language syntax is defined by the following abstract grammar:
+</p>
+
+<pre><b>
+actions ::= (action ';')*
+
+action ::=   (('S' | 'P' | 'X', 'A') stmt)
+           | ('N' expr8) // expr8 must reference a digital output or a boolean variable
+
+stmt ::=   assignment
+         | callStmt
+
+assignment ::= expr8 '=' expr // expr8 may not reference an input or constant variable
+
+callStmt ::= expr8 // must be a call expression
+
+expr  ::= expr1 ('?' expr ':' expr)? // conditional expression
+expr1 ::= expr2 ('&amp;' expr2)* // boolean and
+expr2 ::= expr3 ('|' expr3)* // boolean or
+expr3 ::= expr4 (('==' | '!=') expr4)* // equality, non-equality
+// numerical operations: less than, greater than, less than or equal, greater than or equal
+expr4 ::= expr5 (('&lt;' | '&gt;' | '&lt;=' | '&gt;=') expr5)*
+expr5 ::= expr6 (('+' | '-') expr6)* // addition or string concatenation, subtraction
+expr6 ::= expr7 (('*' | '/' | '%') expr7)* // multiplication, division, modulo (a % b = a - int(a / b)*b)
+expr7 ::= ('-' | '!') expr7 | expr8 // numerical negation, boolean negation
+expr8 ::= expr9 ('.' expr9)*
+expr9 ::=   string
+          | number
+          | function
+          | idRefs
+          | '(' expr ')'
+          
+// Ordinary strings with support for escape sequences.
+string ::= '"' (~['"','\\','\n','\r'] | '\\' (
+                 ['n','t','b','r','f','\\','\'','"'] |
+                 ['0'-'7'] (['0'-'7'])? | ['0'-'3'] ['0'-'7'] ['0'-'7'])
+               )* '"'
+
+number ::= (digit)+ ('.' (digit)+)?
+
+function ::= id '(' (argumentList)? ')'
+
+argumentList ::= expr (',' expr)*
+
+idRefs ::= id ('^')*
+
+id = (letter)+ (digit | letter)*
+
+digit = ['0'-'9']
+
+letter = ['a'-'z' | 'A'-'Z' | '_']
+</b></pre>
+
+<p>where</p>
+
+<ul>
+	<li><tt><b>()</b></tt> one occurrence</li>
+	<li><tt><b>()?</b></tt> zero or one occurrence</li>
+	<li><tt><b>()*</b></tt> any number of occurrences</li>
+	<li><tt><b>()+</b></tt> one or more occurances</li>
+	<li><tt><b>|</b></tt> or</li>
+	<li><tt><b>[c1-c2]</b></tt> an ASCII sequence from c1 to c2</li>
+	<li><tt><b>//</b></tt> line comment</li>
+</ul>
+
+<p>
+	C++-style line comments are also supported, e.g.<br>
+	<tt>S var = 42; // The answer to life the universe and everything</tt>
+</p>
+
+<p>
+Comments:
+</p>
+
+<ul>
+	<li>
+		There are some special method calls for steps that
+		do not require argument list parentheses and have no arguments:
+		<ul>
+			<li>
+				<tt>x</tt> returns true if the step is active, false otherwise.
+			</li>
+			<li>
+				<tt>t</tt> returns the number of scan cycles that the step has been active, 0 if the step is inactive.
+			</li>
+			<li>
+				<tt>s</tt> returns the number of seconds that the step has been active, 0 if the step is inactive.
+			</li>
+		</ul>
+	</li>
+	<li>
+		Both upper and lower case
+		<tt><b>A</b></tt>,
+		<tt><b>N</b></tt>,
+		<tt><b>P</b></tt>,
+		<tt><b>R</b></tt>,
+		<tt><b>S</b></tt>,
+		<tt><b>V</b></tt>, and
+		<tt><b>X</b></tt>
+		are reserved and may not be used as identifiers.
+	</li>
+	<li>
+		<tt>^</tt> is a lookup operator that acts on a string and returns the element whose name matches the string. For example you can use a string variable called <tt>Ref</tt> to set the width of a dynamically determined object to 50 by writing <tt>Ref^.setWidth(50)</tt>. If for example the value of <tt>Ref</tt> is Obj1, then <tt>setWidth(50)</tt> will be called on the element named Obj1.
+	</li>
+</ul>
+
+</body>
+</html>

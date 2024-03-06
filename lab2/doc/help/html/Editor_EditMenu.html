@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Editor - Edit Menu</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Editor - Edit Menu</h1>
+
+<hr>
+
+<ul>
+	<li>
+		<p><a name="Undo"></a><b>Undo</b></p>
+		<p>
+			Undo the last editor operation. Only operations that are of
+			graphical nature can be undone. Every workspace has its own undo
+			history. The undo history is limited to 100 operations. Recording
+			of undoable operations is turned off during execution. All operations
+			are not undoable.
+		</p>
+		<p>
+			<i>Note: The Undo/Redo feature is experimental and disabled by default. Use the command line argument <tt>-undo</tt> to enable it.</i>
+		</p>
+	</li>
+	<li>
+		<p><a name="Redo"></a><b>Redo</b></p>
+		<p>Redo the last undone operation. It is not possible to redo all operations.</p>
+		<p>
+			<i>Note: The Undo/Redo feature is experimental and disabled by default. Use the command line argument <tt>-undo</tt> to enable it.</i>
+		</p>
+	</li>
+	<li>
+		<p><a name="Cut"></a><b>Cut</b></p>
+		<p>Cut the current selection to the clipboard.</p>
+	</li>
+	<li>
+		<p><a name="Copy"></a><b>Copy</b></p>
+		<p>Copy the current selection to the clipboard.</p>
+	</li>
+	<li>
+		<p><a name="Paste"></a><b>Paste</b></p>
+		<p>
+			Paste the content of the clipboard to the workspace.
+			The default pasting position is one grid point down and one grid
+			point to the right of the original location. To get another
+			pasting position, click at the desired position before pasting.
+		</p>
+	</li>
+	<li>
+		<p><a name="Delete"></a><b>Delete</b></p>
+		<p>Delete the current selection.</p>
+	</li>
+	<li>
+		<p><b><a name="SelectAll"></a>Select All</b></p>
+		<p>Select all objects in the current workspace.</p>
+	</li>
+	<li>
+		<p><a name="Properties"></a><b>Application Properties</b></p>
+		<p>
+			Open the application properties dialog. Only accessible from the
+			application's top-level workspace.
+		</p>
+		
+		<p><img src="Figures/ApplicationProperties.png" alt="Application Properties Dialog"></p>
+
+		<p>
+			<b>Application Name:</b> The name of the application.
+		</p>
+
+		<p>
+			<b>Scan Cycle Time:</b> The period of the execution
+			thread associated with the application in milliseconds. (Default: 40)
+		</p>
+
+		<p>
+			<a name="simulatorMode"></a>
+			<b>Simulator Mode:</b>
+			
+			In simulator mode the digital and analog IO are disconnected from the real IO and
+			the inputs may instead be set in the editor. (Default: Checked)
+		</p>
+
+		<p>
+			<b>Token Luminance &amp; Luminance scan cycles:</b> Token luminance
+			is useful for animating the execution of a function chart at high
+			execution speeds when the token indicating the currently active step(s)
+			moves rapidly between steps. Token luminance creates a trail of outlined
+			and shaded tokens that follows the normal token. The luminance scan cycles decides
+			how many scan cycles that the outlined token should be visible after the
+			deactivation of a step. Token luminance is only supported for simple
+			function chart objects such as steps and macro steps. (Default: Disabled, 25)
+		</p>
+		
+		<p>
+			<b>Socket Server:</b> The IP address of the TCP socket server
+			connected to the application. If the string is empty no connection
+			is attempted for the application. See <a href="LangRef_IO_Socket.html">Socket IO</a> for details. (Default: &lt;empty&gt;)
+		</p>
+		
+		<p>
+			<b>Be Socket Server:</b> Determines if acting as server or client, see <a href="LangRef_IO_Socket.html">Socket IO</a> for details. (Default: Unchecked)
+		</p>
+		
+		<p>
+			<b>Socket Port:</b> The port number of the TCP socket server
+			connected to the application. If it is -1 no connection
+			is attempted for the application. See <a href="LangRef_IO_Socket.html">Socket IO</a> for details. (Default: -1)
+		</p>
+		
+		<p>
+			<b>DPWS Event Interface:</b> The network interface to use for DPWS event callbacks.
+			If empty, DPWS eventing is disabled. (Default: &lt;empty&gt;)
+		</p>
+		
+		<p>
+			<b>DPWS Event Port:</b> The port to use for DPWS event callbacks.
+			If -1, DPWS eventing is disabled. (Default: -1)
+		</p>
+		
+		<p>
+			<b>Locked:</b> Determines if the application is locked. (Default: Unchecked)
+		</p>
+	</li>
+	<li>
+		<p><a name="WorkspaceProperties"></a><b>Workspace Properties</b></p>
+		<p>
+			Open the workspace properties dialog for the current workspace.
+		</p>
+		
+		<p><img src="Figures/GridProps.png" alt="Workspace Properties Dialog"></p>
+
+		<p>
+		<b>Grid Size:</b> Integers determining the width and height of the grid of the workspace. (Default: 10, 10)
+		</p>
+
+		<p><b>Grid Style:</b> Decides how the grid is drawn. (Default: Invisible)</p>
+
+		<p>
+			<b>Snap on Move:</b>
+			Determines when moved objects are snapped to the grid. (Default: Jump)
+			<ul>
+				<li><b>No snap</b> does not snap the object to the grid.</li>
+				<li><b>Jump</b> snaps to the grid continuously during the move.</li>
+				<li><b>Afterwards</b> snaps to the grid when the object is released.</li>
+			</ul>
+		</p>
+
+		<p>
+			<b>Snap on Resize:</b>
+			Determines when resized objects are snapped to the grid. See Snap on Move above for details. (Default: No Snap)
+		</p>
+
+		<p>
+			<b>Horizontal Scrollbar:</b>
+			Determines if the workspace has a horizontal scrollbar. (Default: Checked)
+		</p>
+
+		<p>
+			<b>Vertical Scrollbar:</b>
+			Determines if the workspace has a vertical scrollbar. (Default: Checked)
+		</p>
+
+		<p>
+			<b>Paper Color:</b>
+			Decides the background color of the workspace.
+		</p>
+		
+		<p>
+			<b>Socket Send Mode:</b>
+			The default socket send mode for objects in the workspace. See <a href="LangRef_IO_Socket.html">Socket IO</a> for details. (Default for top-level: Changed, Default otherwise: &lt;Inherit&gt;)
+		</p>
+	</li>
+	<li>
+		<p><a name="Group"></a><b>Group</b></p>
+		<p>
+			Group the selected objects into a single object.
+			Grouping is still quite error-prone.
+		</p>
+	</li>
+	<li>
+		<p><a name="ToggleObjectify"></a><b>Toggle Objectify</b></p>
+		<p>
+			Toggle objectification of a group. An objectified group has hidden
+			contents and looks like a separate object, rather than a group of objects.
+		</p>
+	</li>
+	<li>
+		<p><a name="ToggleBorder"></a><b>Toggle Border</b></p>
+		<p>
+			Toggle group border visibility. Only applicable when not objectified.
+		</p>
+	</li>
+	<li>
+		<p><a name="Ungroup"></a><b>Ungroup</b></p>
+		<p>Ungroup the selected group.</p>
+	</li>
+	<li>
+		<p><a name="MoveToFront"></a><b>Move to Front</b></p>
+		<p>
+			Move the selected objects in front of any other objects
+			in the workspace.
+		</p>
+	</li>
+	<li>
+		<p><a name="MoveToBack"></a><b>Move to Back</b></p>
+		<p>
+			Move the selected objects behind any other objects
+			in the workspace.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

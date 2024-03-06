@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Textual Language - Evaluation Rules</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Textual Language - Evaluation Rules</h1>
+
+<hr>
+
+<p>
+The JGrafchart textual language uses loose typing and automatic type-casting.
+It is the context that decides how an expression is evaluated.
+An expression can be evaluated as a bool, an int, a real, or a string.
+</p>
+
+<ul>
+	<li>A transition condition is evaluated as a bool expression.</li>
+	<li>
+		<p>
+			In an assignment action it is the type of the assigned
+			variable that decides how the expression for the value is evaluated.
+		</p>
+		
+		<p>
+			For example, consider the stored action: <b><tt>S Variable = 0;</tt></b>
+		</p>
+		<p>
+			If Variable is a bool the expression is evaluated as the bool value false.<br>
+			If Variable is an int the expression is evaluated as the int value 0.<br>
+			If Variable is a real the expression is evaluated as the real value 0.0.<br>
+			If Variable is a string the expression is evaluated as the string "0".
+		</p>
+	</li>
+	<li>
+		A call action is evaluated as a real expression.
+	</li>
+</ul>
+
+<h2>Type Conversions</h2>
+
+<table>
+<tr>
+	<th>From</th>
+	<th>To</th>
+	<th>Conversion rules</th>
+</tr>
+<tr>
+	<td>bool</td>
+	<td>int</td>
+	<td>false &rarr; 0, true &rarr; 1.</td>
+</tr>
+<tr>
+	<td>bool</td>
+	<td>real</td>
+	<td>false &rarr; 0.0, true &rarr; 1.0.</td>
+</tr>
+<tr>
+	<td>bool</td>
+	<td>string</td>
+	<td>false &rarr; "0", true &rarr; "1".</td>
+</tr>
+<tr>
+	<td>int</td>
+	<td>bool</td>
+	<td>1 &rarr; true, false otherwise.</td>
+</tr>
+<tr>
+	<td>int</td>
+	<td>real</td>
+	<td>Ordinary cast.</td>
+</tr>
+<tr>
+	<td>int</td>
+	<td>string</td>
+	<td>The int value as a string.</td>
+</tr>
+<tr>
+	<td>real</td>
+	<td>bool</td>
+	<td>If the value cast to an int is 1 then true, otherwise false.</td>
+</tr>
+<tr>
+	<td>real</td>
+	<td>int</td>
+	<td>Ordinary cast.</td>
+</tr>
+<tr>
+	<td>real</td>
+	<td>string</td>
+	<td>The real value as a string.</td>
+</tr>
+<tr>
+	<td>string</td>
+	<td>bool</td>
+	<td>"1" &rarr; true, false otherwise.</td>
+</tr>
+<tr>
+	<td>string</td>
+	<td>int</td>
+	<td>The parsed int value if possible, 0 otherwise.</td>
+</tr>
+<tr>
+	<td>string</td>
+	<td>real</td>
+	<td>The parsed real value if possible, 0.0 otherwise.</td>
+</tr>
+</table>
+
+</body>
+</html>
+

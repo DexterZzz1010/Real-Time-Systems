@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GCDocument color="-1" dimTicks="25" dpwsInterface="" dpwsPort="-1" height="212" horizontalScrollBar="1" modifiable="1" name="ControlLib" saveVersion="8" scale="1.0" simulationMode="1" socketHost="" socketIsServer="0" socketPort="-1" socketSendMode="Changed" threadSpeed="1000" tokenLuminance="0" verticalScrollBar="1" viewPositionX="0" viewPositionY="-15" width="721" x="0" y="0">
+  <GrafcetProcedure height="60" name="PID_Pos" simulationMode="1" threadSpeed="40" width="60" x="110" y="40">
+    <GCDocument color="-1" height="584" scale="1.0" socketSendMode="Inherit" viewPositionX="0" viewPositionY="0" width="966" x="131" y="73">
+      <GCRectangle draggable="1" fillColor="-52429" fillStyle="65535" height="169" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="330"/>
+      <GCRectangle draggable="1" fillColor="-6684775" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="230"/>
+      <GCRectangle draggable="1" fillColor="-6684673" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="130"/>
+      <GCRectangle draggable="1" fillColor="-103" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="30"/>
+      <ExitStep actionBlockVisible="0" actionText="" fileName="" height="85" id="85ca63dd-5c4c-4756-a3b3-b3c41871e8fc" name="" useIcon="0" width="60" x="590" y="325"/>
+      <EnterStep actionBlockVisible="1" actionText="S PV1 = PV;&#10;S MV1 = MV;&#10;S cI = TR;" fileName="" height="85" id="65b89fed-4d89-40f8-ad32-aae5af1ee9c7" name="" useIcon="0" width="170" x="590" y="50"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="TR" updated="0" value="0.0" width="75" x="190" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="PV" updated="0" value="0.0" width="75" x="10" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="SP" updated="0" value="0.0" width="75" x="100" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="K" updated="0" value="1.0" width="75" x="10" y="160"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Signals" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="69" x="10" y="30"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="MV" updated="0" value="0.0" width="75" x="280" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Ti" updated="0" value="20.0" width="75" x="100" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Td" updated="0" value="0.0" width="75" x="190" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Nd" updated="0" value="8.0" width="75" x="280" y="160"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Controller Parameters" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="208" x="10" y="130"/>
+      <GCTransition actionText="1" conditionVisible="1" height="25" id="e5c40042-ab20-4ed9-8041-c7b6a025606b" width="30" x="605" y="140"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Interaction" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="101" x="10" y="230"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Internal" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="71" x="10" y="330"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="PV1" updated="0" value="0.0" width="75" x="10" y="360"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="b" updated="0" value="1.0" width="75" x="370" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="cP" updated="0" value="0.0" width="75" x="10" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="cI" updated="0" value="0.0" width="75" x="100" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="cD" updated="0" value="0.0" width="75" x="190" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="h" updated="0" value="0.0" width="75" x="190" y="360"/>
+      <IntegerVariable constant="0" exp="" height="45" initialValue="" name="execFreq" updated="0" value="1" width="65" x="460" y="160"/>
+      <GCStep actionBlockVisible="1" actionText="// Execute one increment&#10;S h = execFreq * getTickTime() / 1000.0;&#10;S cP = K*(b*SP-PV);&#10;S cI = (Ti != 0) ? cI + K*h/Ti*(SP-PV) + (TR-MV1) : 0;&#10;S cD = (Td/(Td+Nd*h))*cD - (K*Td*Nd/(Td+Nd*h))*(PV-PV1);&#10;S MV = cP + cI + cD;&#10;&#10;// Update previous values&#10;S PV1 = PV;&#10;S MV1 = MV;&#10;" fileName="" height="70" id="2e01030e-0bc6-40b6-a4fb-b2dca9fc8905" name="exec" useIcon="0" width="200" x="590" y="175"/>
+      <GCTransition actionText="exec.t &gt;= execFreq" conditionVisible="1" height="25" id="23607c78-8d8a-4888-84e4-8535fc76919a" width="30" x="665" y="270"/>
+      <GCTransition actionText="stop" conditionVisible="1" height="25" id="c6524c24-c52a-4439-bf3c-4cae8ae19fc4" priority="1" width="30" x="575" y="270"/>
+      <BooleanVariable constant="0" exp="" height="45" initialValue="" name="stop" updated="0" value="0" width="65" x="10" y="260"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="MV1" updated="0" value="0.0" width="75" x="100" y="360"/>
+      <GCLink fromObject="65b89fed-4d89-40f8-ad32-aae5af1ee9c7" manAdj="0" toObject="e5c40042-ab20-4ed9-8041-c7b6a025606b">
+        <Stroke x="620" y="136"/>
+        <Stroke x="620" y="146"/>
+        <Stroke x="620" y="146"/>
+        <Stroke x="620" y="129"/>
+        <Stroke x="620" y="129"/>
+        <Stroke x="620" y="139"/>
+      </GCLink>
+      <GCLink fromObject="2e01030e-0bc6-40b6-a4fb-b2dca9fc8905" manAdj="0" toObject="c6524c24-c52a-4439-bf3c-4cae8ae19fc4">
+        <Stroke x="620" y="246"/>
+        <Stroke x="620" y="256"/>
+        <Stroke x="620" y="257"/>
+        <Stroke x="590" y="257"/>
+        <Stroke x="590" y="259"/>
+        <Stroke x="590" y="269"/>
+      </GCLink>
+      <GCLink fromObject="c6524c24-c52a-4439-bf3c-4cae8ae19fc4" manAdj="0" toObject="85ca63dd-5c4c-4756-a3b3-b3c41871e8fc">
+        <Stroke x="590" y="296"/>
+        <Stroke x="590" y="306"/>
+        <Stroke x="590" y="310"/>
+        <Stroke x="620" y="310"/>
+        <Stroke x="620" y="314"/>
+        <Stroke x="620" y="324"/>
+      </GCLink>
+      <GCLink fromObject="2e01030e-0bc6-40b6-a4fb-b2dca9fc8905" manAdj="0" toObject="23607c78-8d8a-4888-84e4-8535fc76919a">
+        <Stroke x="620" y="246"/>
+        <Stroke x="620" y="256"/>
+        <Stroke x="620" y="257"/>
+        <Stroke x="680" y="257"/>
+        <Stroke x="680" y="259"/>
+        <Stroke x="680" y="269"/>
+      </GCLink>
+      <GCLink fromObject="23607c78-8d8a-4888-84e4-8535fc76919a" manAdj="1" toObject="2e01030e-0bc6-40b6-a4fb-b2dca9fc8905">
+        <Stroke x="680" y="296"/>
+        <Stroke x="680" y="306"/>
+        <Stroke x="908" y="306"/>
+        <Stroke x="908" y="164"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="174"/>
+      </GCLink>
+      <GCLink fromObject="e5c40042-ab20-4ed9-8041-c7b6a025606b" manAdj="0" toObject="2e01030e-0bc6-40b6-a4fb-b2dca9fc8905">
+        <Stroke x="620" y="166"/>
+        <Stroke x="620" y="176"/>
+        <Stroke x="620" y="176"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="174"/>
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <GrafcetProcedure height="60" name="PID" simulationMode="1" threadSpeed="40" width="60" x="30" y="40">
+    <GCDocument color="-1" height="630" scale="1.0" socketSendMode="Inherit" viewPositionX="0" viewPositionY="0" width="957" x="132" y="85">
+      <GCRectangle draggable="1" fillColor="-52429" fillStyle="65535" height="232" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="330"/>
+      <GCRectangle draggable="1" fillColor="-6684775" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="230"/>
+      <GCRectangle draggable="1" fillColor="-6684673" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="130"/>
+      <GCRectangle draggable="1" fillColor="-103" fillStyle="65535" height="90" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1" width="550" x="0" y="30"/>
+      <ExitStep actionBlockVisible="0" actionText="" fileName="" height="85" id="b6fecbd7-df48-4e00-be42-37e8b73dda93" name="" useIcon="0" width="60" x="590" y="325"/>
+      <EnterStep actionBlockVisible="1" actionText="S PV1 = PV;&#10;S SP1 = SP;&#10;S FF1 = FF;&#10;S useFF1 = useFF;&#10;S MV1 = TR;&#10;" fileName="" height="85" id="9968c063-62c1-4711-ba72-ed6db6b5de09" name="" useIcon="0" width="170" x="590" y="50"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="TR" updated="0" value="0.0" width="75" x="190" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="PV" updated="0" value="0.0" width="75" x="10" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="SP" updated="0" value="0.0" width="75" x="100" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="K" updated="0" value="1.0" width="75" x="10" y="160"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Signals" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="69" x="10" y="30"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="MV" updated="0" value="0.0" width="75" x="280" y="60"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Ti" updated="0" value="20.0" width="75" x="100" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Td" updated="0" value="0.0" width="75" x="190" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Nd" updated="0" value="8.0" width="75" x="280" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="Man" updated="0" value="0.0" width="75" x="460" y="60"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Controller Parameters" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="208" x="10" y="130"/>
+      <GCTransition actionText="1" conditionVisible="1" height="25" id="c45d882b-78cb-4453-80a1-25ff8eb30f10" width="30" x="605" y="140"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Interaction" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="101" x="10" y="230"/>
+      <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="26" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Internal" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="71" x="10" y="330"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="PV1" updated="0" value="0.0" width="75" x="10" y="360"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="b" updated="0" value="1.0" width="75" x="370" y="160"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="FF" updated="0" value="0.0" width="75" x="370" y="60"/>
+      <BooleanVariable constant="0" exp="" height="45" initialValue="" name="manualMode" updated="0" value="0" width="65" x="98" y="260"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="dP" updated="0" value="0.0" width="75" x="10" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="dI" updated="0" value="0.0" width="75" x="100" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="dD" updated="0" value="0.0" width="75" x="190" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="h" updated="0" value="0.0" width="75" x="10" y="500"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="dFF" updated="0" value="0.0" width="75" x="280" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="dMV" updated="0" value="0.0" width="75" x="370" y="430"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="SP1" updated="0" value="0.0" width="75" x="100" y="360"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="FF1" updated="0" value="0.0" width="75" x="280" y="360"/>
+      <BooleanVariable constant="0" exp="" height="45" initialValue="" name="useFF" updated="0" value="0" width="65" x="10" y="260"/>
+      <IntegerVariable constant="0" exp="" height="45" initialValue="" name="execFreq" updated="0" value="1" width="65" x="460" y="160"/>
+      <GCStep actionBlockVisible="1" actionText="// Execute one increment&#10;S h = execFreq * getTickTime() / 1000.0;&#10;S dP = (Ti != 0) ? K*(b*SP-PV) - K*(b*SP1-PV1) : K*(SP-PV) - TR + (useFF ? FF : 0);&#10;S dI = (Ti != 0) ? K*h/Ti*(SP-PV) : 0;&#10;S D = (Td/(Td+Nd*h))*D - (K*Td*Nd/(Td+Nd*h))*(PV-PV1);&#10;S dD = D - D1;&#10;S dFF = (useFF &amp; useFF1) ? FF - FF1 : 0;&#10;S dMV = dP + dI + dD + dFF;&#10;S MV = manualMode ? Man : TR + dMV;&#10;&#10;// Update previous values&#10;S PV1 = PV;&#10;S SP1 = SP;&#10;S FF1 = FF;&#10;S useFF1 = useFF;&#10;S D1 = D;&#10;" fileName="" height="70" id="7c304931-6492-4c28-89c8-9ac2fde42903" name="exec" useIcon="0" width="200" x="590" y="175"/>
+      <GCTransition actionText="exec.t &gt;= execFreq" conditionVisible="1" height="25" id="d52eebe3-5747-420c-881d-a5088ef2b375" width="30" x="665" y="270"/>
+      <GCTransition actionText="stop" conditionVisible="1" height="25" id="d6152470-048d-4584-9124-024c10ce3546" priority="1" width="30" x="575" y="270"/>
+      <BooleanVariable constant="0" exp="" height="45" initialValue="" name="stop" updated="0" value="0" width="65" x="190" y="260"/>
+      <BooleanVariable constant="0" exp="" height="45" initialValue="" name="useFF1" updated="0" value="0" width="65" x="370" y="360"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="MV1" updated="0" value="0.0" width="75" x="190" y="360"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="D" updated="0" value="0.0" width="75" x="100" y="500"/>
+      <RealVariable constant="0" exp="" height="45" initialValue="" name="D1" updated="0" value="0.0" width="75" x="190" y="500"/>
+      <GCLink fromObject="9968c063-62c1-4711-ba72-ed6db6b5de09" manAdj="0" toObject="c45d882b-78cb-4453-80a1-25ff8eb30f10">
+        <Stroke x="620" y="136"/>
+        <Stroke x="620" y="146"/>
+        <Stroke x="620" y="146"/>
+        <Stroke x="620" y="129"/>
+        <Stroke x="620" y="129"/>
+        <Stroke x="620" y="139"/>
+      </GCLink>
+      <GCLink fromObject="7c304931-6492-4c28-89c8-9ac2fde42903" manAdj="0" toObject="d6152470-048d-4584-9124-024c10ce3546">
+        <Stroke x="620" y="246"/>
+        <Stroke x="620" y="256"/>
+        <Stroke x="620" y="257"/>
+        <Stroke x="590" y="257"/>
+        <Stroke x="590" y="259"/>
+        <Stroke x="590" y="269"/>
+      </GCLink>
+      <GCLink fromObject="d6152470-048d-4584-9124-024c10ce3546" manAdj="0" toObject="b6fecbd7-df48-4e00-be42-37e8b73dda93">
+        <Stroke x="590" y="296"/>
+        <Stroke x="590" y="306"/>
+        <Stroke x="590" y="310"/>
+        <Stroke x="620" y="310"/>
+        <Stroke x="620" y="314"/>
+        <Stroke x="620" y="324"/>
+      </GCLink>
+      <GCLink fromObject="7c304931-6492-4c28-89c8-9ac2fde42903" manAdj="0" toObject="d52eebe3-5747-420c-881d-a5088ef2b375">
+        <Stroke x="620" y="246"/>
+        <Stroke x="620" y="256"/>
+        <Stroke x="620" y="257"/>
+        <Stroke x="680" y="257"/>
+        <Stroke x="680" y="259"/>
+        <Stroke x="680" y="269"/>
+      </GCLink>
+      <GCLink fromObject="d52eebe3-5747-420c-881d-a5088ef2b375" manAdj="1" toObject="7c304931-6492-4c28-89c8-9ac2fde42903">
+        <Stroke x="680" y="296"/>
+        <Stroke x="680" y="306"/>
+        <Stroke x="908" y="306"/>
+        <Stroke x="908" y="164"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="174"/>
+      </GCLink>
+      <GCLink fromObject="c45d882b-78cb-4453-80a1-25ff8eb30f10" manAdj="0" toObject="7c304931-6492-4c28-89c8-9ac2fde42903">
+        <Stroke x="620" y="166"/>
+        <Stroke x="620" y="176"/>
+        <Stroke x="620" y="176"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="164"/>
+        <Stroke x="620" y="174"/>
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="16" height="21" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Library documentation is available in the manual (Libraries/ControlLib)" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="533" x="30" y="0"/>
+</GCDocument>

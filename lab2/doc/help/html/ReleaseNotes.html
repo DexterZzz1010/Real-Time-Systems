@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>What's new?</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>What's new?</h1>
+
+<hr>
+
+<h2>Version 2.6.1 (2014-08-01)</h2>
+<ul>
+	<li>Fixed deadlock introduced in 2.5.0.</li>
+	
+	<li>Fixed a few bugs.</li>
+</ul>
+
+<h2>Version 2.6.0 (2014-07-29)</h2>
+<ul>
+	<li>Improved LabComm support: Many limitations removed and both LabComm 2006 and 2013 supported.</li>
+	<li>Removed build-only tools from releases.</li>
+	<li>Added function lcReceived().</li>
+	
+	<li>Fixed a few bugs.</li>
+</ul>
+
+<h2>Version 2.5.0 (2014-07-18)</h2>
+<ul>
+	<li>Added modulo operator (%).</li>
+	<li>Added function getTickTime().</li>
+	<li>Added control library and samples.</li>
+	<li>Added: Applications can be paused and stepped one scan cycle at a time.</li>
+	
+	<li>Fixed a couple of bugs.</li>
+</ul>
+
+<h2>Version 2.4.1 (2014-03-26)</h2>
+<ul>
+	<li>Fixed major copy/paste issue introduced in 2.4.0.</li>
+	<li>Fixed a few bugs.</li>
+</ul>
+
+<h2>Version 2.4.0 (2014-02-26)</h2>
+<ul>
+	<li>Added LabComm support.</li>
+	
+	<li>Enhanced Socket IO:
+		<ul>
+			<li>Added: Applications can act as socket servers.</li>
+			<li>Added Socket Send Mode for Socket Outputs.</li>
+			<li>Added <tt>.msg</tt> attribute to Socket Inputs for message detection.</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Version 2.3.0 (2013-06-03)</h2>
+<ul>
+	<li>Added C++-style comments to the conditions language.</li>
+	
+	<li>Enhanced DPWS feature.</li>
+	
+	<li>Improved startup scripts.</li>
+	
+	<li>Fixed a few bugs.</li>
+</ul>
+
+<h2>Version 2.2.0 (2013-01-23)</h2>
+<p><b>Warning! With Java 6 this version starts but does not work.</b></p>
+<ul>
+	<li>Added transition priorities.</li>
+	<li>Added resume setting for Macro Steps.</li>
+	<li>Added list methods append() and contains().</li>
+	
+	<li>Enhanced DPWS feature.</li>
+	
+	<li>Improved: Consistent scope for procedures.</li>
+	
+	<li>Fixed a couple of bugs.</li>
+</ul>
+
+<h2>Version 2.1.2 (2012-01-20)</h2>
+<ul>
+	<li>Enhanced DPWS feature.</li>
+	
+	<li>Fixed issues with N and X action execution in various contexts.</li>
+	
+	<li>Added dpwsUnsubscribe() function.</li>
+	<li>Added Enter and Exit step to palette.</li>
+	
+	<li>Improved zoom handling.</li>
+	<li>Improved execution robustness.</li>
+	
+	<li>Fixed a couple of bugs.</li>
+</ul>
+
+<h2>Version 2.1.1 (2011-11-11)</h2>
+<ul>
+	<li>Fixed a load/save issue introduced in 2.1.0. Some resized FC objects were loaded to the wrong position. For application that have been loaded and saved with 2.1.0 the objects have to be re-positioned manually.</li>
+	<li>Fixed a load/save issue introduced in 2.1.0. Save files from 1.5.2 are loaded with Cyclic Updated disabled for Digital and Analog Inputs. For applications loaded and saved with 2.1.0 Cyclic Updated has to be re-enabled manually.</li>
+	<li>Fixed copy-paste issue for constant variables.</li>
+	
+	<li>Added maxMemory() function.</li>
+	
+	<li>Improved procedure calls dialogs.</li>
+</ul>
+
+<h2>Version 2.1.0 (2011-09-06)</h2>
+<ul>
+	<li>Added generic IO for Devices Profile for Web Services (DPWS).</li>
+	<li>Added C++-style comments to the actions language.</li>
+	<li>Added <a href="Editor_Overview.html#menu">multiple menu hotkeys</a>.</li>
+	
+	<li>Changed behavior for ByteStreamOut. Now writes values for all assignments, in accordance with the (unchanged) documentation. Previously a written value was skipped if it matched the last sent value.</li>
+	
+	<li>Improved load/save. Removed most of the font metrics dependencies.</li>
+	<li>
+		Improved robustness, interactivity, and usability for dialogs.<br>
+		Note: Added undo/redo for textfields using the usual hotkeys, i.e. <tt>Ctrl+Z</tt> for undo and <tt>Ctrl+Shift+Z</tt> and <tt>Ctrl+Y</tt> for redo.
+	</li>
+	<li>Improved keyboard usability, particularly for dialogs and context menus.</li>
+	<li>Improved Socket communication robustness.</li>
+	<li>Improved code readability. Now using fixed width font for all code.</li>
+	<li>Improved compilation and execution performance.</li>
+	<li>Improved startup scripts.</li>
+	
+	<li>Fixed lots of load/save issues.</li>
+	<li>Fixed lots of graphical editing bugs and annoyances.</li>
+	<li>Fixed lots of other bugs.</li>
+</ul>
+
+<h2>Version 2.0.1 (2011-05-17)</h2>
+<ul>
+	<li>Fixed issues with procedure execution.</li>
+	<li>Repaired the XML communication.</li>
+	<li>Start script cleanup.</li>
+	<li>The undo feature is now disabled by default.</li>
+	<li>Fixed a couple of bugs.</li>
+	<li>Under the hood
+		<ul>
+			<li>Now using standard transformation as outputter for save files.</li>
+			<li>Upgraded xmlBlaster to 2.0.0.</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Version 2.0.0 (2011-02-24)</h2>
+<ul>
+	<li>Extended and more robust compilation.</li>
+	<li>Improved compiler feedback. Compilation messages are now shown in the message list.</li>
+	<li>Added support for an arbitrary number of ^s in expressions.</li>
+	<li>Changed to standard association order for <tt>and</tt> and <tt>or</tt>. Note that this <b>breaks backward compatibility</b> with old applications. Example: <tt>b &amp; c | d</tt> was earlier equivalent to <tt>b &amp; (c | d)</tt> and is now equivalent to <tt>(b &amp; c) | d</tt>.</li>
+	<li>General support for the <tt>?</tt> operator.</li>
+	<li>Deterministic save files. It is now possible to compare save files to track changes.</li>
+	<li>Added mnemonics, i.e underscored letters, to the menu as well as more hotkeys.</li>
+	<li>Improved startup scripts. It is now possible to start from a file manager on *nix. Command line parameters may also be passed to the scripts now.</li>
+	<li>Made the manual viewable from ordinary browsers.</li>
+	<li>Added index, search, and favorites to JavaHelp.</li>
+	<li>Fixed a lot of bugs.</li>
+	<li>Under the hood
+		<ul>
+			<li>Completely rewritten compilers for the textual languages with reference attribute grammars and aspect oriented programming using JastAdd.</li>
+			<li>Builds, tests, etc. are now specified using Apache Ant build files.</li>
+			<li>Possible to build with Java 5 and later.</li>
+			<li>Possible to build on both Windows and *nix.</li>
+			<li>Possible to build and debug with Eclipse.</li>
+			<li>Started using version control for the development.</li>
+			<li>Upgraded JavaHelp to 2.0.05.</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Version 1.5.2 (2005-06-22)</h2>
+
+<p>The first released version.</p>
+
+</body>
+</html>
+

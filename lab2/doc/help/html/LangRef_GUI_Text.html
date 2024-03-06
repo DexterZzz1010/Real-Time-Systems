@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - GUI - Text</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - GUI - Text</h1>
+
+<hr>
+
+<p><img src="Figures/freetexts.gif" alt="Icon" style="float: right;"></p>
+
+<p>
+A Text object is a one-line editable text string.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsGUIText">GUI Text Methods</a>
+</p>
+
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Edit</b></p>
+		<p>
+			Opens an editor for the text properties.
+		</p>
+		
+		<p><img src="Figures/FreeTextEdit.png" alt="Edit Dialog"></p>
+
+		<p>
+			<b>x:</b><br>
+			The x position of the text object.
+		</p>
+		<p>
+			<b>y:</b><br>
+			The y position of the text object.
+		</p>
+		<p>
+			<b>Font Size:</b><br>
+			The font size of the text string.
+		</p>
+		<p>
+			<b>Text:</b><br>
+			The text string.
+		</p>
+		<p>
+			<b>Face:</b><br>
+			The font face of the text string. The available choices depend on
+			which fonts that are available on the particular machine. In order to ensure
+			portability between different platforms it is recommended to only use
+			the following face names: <b>Serif</b>, <b>SansSerif</b>, <b>Monospaced</b>,
+			<b>Dialog</b>, and <b>DialogInput</b>. These are guaranteed to be available in every
+			Java system. However, they may map to different real fonts depending on
+			the platform.
+		</p>
+		<p>
+			<b>Visible:</b><br>
+			If checked the text object is visible. (Default: Checked)<br>
+			<i>Hint: Invisible text objects can still be seen in a <b>Tree View</b>.</i>
+		</p>
+		<p>
+			<b>Selectable:</b><br>
+			If checked it is possible to select the text.
+			<i>Hint: Not selectable object can still be selected in a <b>Tree View</b>.</i>
+			(Default: Checked)
+		</p>
+		<p>
+			<b>Resizable:</b><br>
+			If checked it is possible to resize the text object. (Default: Checked)
+		</p>
+		<p>
+			<b>Draggable:</b><br>
+			If checked it is possible to move the text object. (Default: Checked)
+		</p>
+		<p>
+			<b>2D Scale:</b><br>
+			If checked the width and the height can be resized separately and the font size
+			will depend on both the width and the height, rather than just the height.
+			(Default: Unchecked)
+		</p>
+		<p>
+			<b>AutoResize:</b><br>
+			If checked the text object width is adjusted when the text string is changed.
+			Otherwise the font size is adjusted. (Default: Checked)
+		</p>
+		<p>
+			<b>Clipping:</b><br>
+			If checked, only the text within the text object is drawn. Only meaningful
+			if not resizable. (Default: Unchecked)
+		</p>
+		<p>
+			<b>Editable:</b><br>
+			If checked the text string can be edited. (Default: Checked)
+		</p>
+		<p>
+			<b>Single Click Edit:</b><br>
+			If checked only a single click is required to start editing. Only meaningful
+			if editable. (Default: Checked)
+		</p>
+		<p>
+			<b>Bold:</b><br>
+			If checked the text is bold. (Default: Checked)
+		</p>
+		<p>
+			<b>Italic:</b><br>
+			If checked the text is italic. (Default: Unchecked)
+		</p>
+		<p>
+			<b>Underline:</b><br>
+			If checked the text is underlined. (Default: Unchecked)
+		</p>
+		<p>
+			<b>Strike:</b><br>
+			If checked the text is strike-throughed. (Default: Unchecked)
+		</p>
+		<p>
+			<b>Alignment:</b><br>
+			Select the text alignment: Left justify, Center, or Right justify.
+			Only meaningful when not resizable. (Default: Left)
+		</p>
+		<p>
+			<b>Text Color:</b><br>
+			Choose the text color. (Default: Black)
+		</p>
+		<p>
+			<b>Background:</b><br>
+			Choose the background color. Only meaningful when not transparent. (Default: White)
+		</p>
+		<p>
+			<b>Transparent:</b><br>
+			If checked the text background is transparent. (Default: Checked)
+		</p>
+		<p>
+			<b>Select Background:</b><br>
+			If checked the text background is shown when selected.
+			Only meaningful when transparent and not resizable. (Default: Unchecked)
+		</p>
+	</li>
+	<li>
+		<p><b>Name</b></p>
+		<p>Opens an edit dialog for the name.</p>
+		<p><img src="Figures/NameEdit.png" alt="Name Dialog"></p>
+	</li>
+</ul>
+
+</body>
+</html>
+

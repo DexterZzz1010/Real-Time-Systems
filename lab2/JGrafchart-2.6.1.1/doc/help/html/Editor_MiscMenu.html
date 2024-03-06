@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Editor - Misc Menu</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Editor - Misc Menu</h1>
+
+<hr>
+
+<ul>
+	<li>
+		<p><a name="ConnectCCOM"></a><b>Connect CCOM</b></p>
+		<p>Connects to the xmlBlaster server.</p>
+	</li>
+	<li>
+		<p><a name="DisconnectCCOM"></a><b>Disconnect CCOM</b></p>
+		<p>Disconnects from the xmlBlaster server.</p>
+	</li>
+	<li>
+		<p><a name="CCOMServer"></a><b>CCOM Server</b></p>
+		<p>Open the CCOM server properties dialog.</p>
+		
+		<p><img src="Figures/CCOMServer.gif" alt="CCOM Server Properties Dialog"></p>
+
+		<p><b>CCOM Server IP address</b> The IP address of the xmlBlaster server. (Default: 127.0.0.1)</p>
+		<p><b>CCOM Server Port</b> The port of the xmlBlaster server. (Default: 3412)</p>
+		<p><b>CCOM Login Name</b> The login name to xmlBlaster. (Default: JGrafchart)</p>
+	</li>
+	<li>
+		<p><a name="EnableSlideMode"></a><b>Enable Slide Mode</b></p>
+		<p>Change the editor into slide show mode.</p>
+	</li>
+	<li>
+		<p><a name="DisableSlideMode"></a><b>Disable Slide Mode</b></p>
+		<p>Change the editor into its normal mode.</p>
+	</li>
+	<li>
+		<p><a name="DPWSServices"></a><b>DPWS Services</b></p>
+		<p>
+		Open the DPWS Services dialog showing all currently available services.
+		</p>
+		
+		<p>
+		JGrafchart uses WS-Discovery to find devices automatically.
+		Use command line argument <tt>--dpwsDiscovery</tt> to select which network interface or IPv4 address that is used for WS-Discovery.
+		</p>
+		
+		<p>
+		A list of all currently available services is updated automatically when devices send Hello and Bye WS-Discovery messages,
+		and a discovery (Probe) is performed when JGrafchart is started.
+		Under ordinary circumstances, using the Discover button is not required, but it might be useful
+		e.g. if messages have been lost, if a DPWS device has crashed, or to get verbose discovery printouts.
+		</p>
+		
+		<p><img src="Figures/DPWSServices.png" alt="DPWS Services Dialog"></p>
+		
+		<p>All available services are listed in a tree. When a tree node is selected the corresponding documentation is shown.</p>
+		<p><b>Device Address</b> The unique and persistent address for the device hosting the service.</p>
+		<p><b>Device Metadata</b> Various device metadata.</p>
+		<p><b>Service Endpoint Address</b> Current address for accessing the service.</p>
+
+		<b>Documentation</b> The content of the <tt>wsdl:documentation</tt> elements specified in the WSDL file below:
+		<ul>
+			<li><tt>wsdl:definitions</tt> (Service Documentation)</li>
+			<li><tt>wsdl:portType</tt> (PortType Documentation)</li>
+			<li><tt>wsdl:operation</tt> (Operation Documentation)</li>
+			<li><tt>wsdl:part</tt> (Parameter Documentation)</li>
+		</ul>
+		
+		<p><b>Discover</b> Discard the current list of available DPWS services and perform a DPWS discovery to find all running services.
+		To get verbose discovery printouts, hold the Shift key when clicking the button.
+		</p>
+		<p><b>Save WSDL</b> Save the WSDL file related to the currently selected tree node.</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

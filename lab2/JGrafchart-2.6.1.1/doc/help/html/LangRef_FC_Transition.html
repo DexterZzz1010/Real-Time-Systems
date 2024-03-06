@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - FC - Transition</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - FC - Transition</h1>
+
+<hr>
+
+<p><img src="Figures/transition.png" alt="Icon" style="float: right;"></p>
+
+<p>
+A transition represents a condition for changing from one state to another.
+The transition is enabled when the preceding step, i.e. the step connected to the <b>input port</b>, is active.
+If there is no preceding step, the transition is always enabled.
+The transition fires if it is enabled and its associated <b>condition</b> is true.
+When the transition fires it deactivates the preceding step and activates
+the succeeding step, i.e. the step connected to the <b>output port</b>.
+</p>
+
+<p>
+Transitions can also have a <b>priority</b>.
+A lower number means a higher priority, with priority 1 being the highest possible priority.
+No specified priority means the lowest possible priority.
+Fireable higher priority transitions inhibit transitions for alternative paths from firing.
+</p>
+
+<p>
+The condition text can be shown (default) or hidden.
+When the condition is hidden it is shown as a tool-tip text.
+</p>
+
+<p>
+During execution the truth-value of the condition of the
+transition is indicated using colors. A true condition is indicated
+by a green transition. A false condition is indicated by a red transition.
+If the condition of a transition is changed to <tt>0</tt> or <tt>1</tt> during execution,
+it is applied directly.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+Transitions currently have no name and thus there is no way to
+reference them. Hence transitions have no text methods.
+This is subject to change in future releases.
+</p>
+
+<h4><a name="ContextMenu"></a>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Show Condition</b></p>
+		<p>Shows the condition of the transition.</p>
+	</li>
+	<li>
+		<p><b>Hide Condition</b></p>
+		<p>Hides the condition of the transition.</p>
+	</li>
+	<li>
+		<p><b>Edit</b></p>
+		<p>
+			Open an editor for the condition and the priority.
+			The editor can also be opened by clicking on the condition.
+		</p>
+	</li>
+	<li>
+		<p><b>Force</b></p>
+		<p>
+			Forces the condition to be considered true until the next time the
+			transition fires.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

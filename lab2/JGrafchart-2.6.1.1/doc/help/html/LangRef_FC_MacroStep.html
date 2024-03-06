@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - FC - Macro Step</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - FC - Macro Step</h1>
+
+<hr>
+
+<p>
+A macro step is a hierarchical step containing a <b>subworkspace</b>.
+A macro step may have one or several <b>input ports</b>
+and one or several <b>output ports</b>. Each <b>enter step</b> in the
+subworkspace is associated with an input port and each <b>exit step</b> with an output
+port. It is the x-position that decides which enter/exit step
+that is associated with which input/output, i.e. the leftmost
+enter step is associated with the leftmost input port. When the number of enter or
+exit steps is changed, you need to trigger an update of the ports manually with
+Update Stubs in the context menu.
+</p>
+
+<p>
+<i>Note: Enter steps and exit steps are not available in the palette but can be created with copy-paste.</i>
+</p>
+
+<p><img src="Figures/macror.gif" alt="Macro Step"></p>
+
+<p>
+When a macro step is activated through an input port the corresponding enter step is activated.
+When an exit step is activated the transition connected to the corresponding output port is enabled.
+</p>
+
+<p>
+The macro step also has an <b>Exception Port</b> on its left-hand
+side to which an <b>Exception Transition</b> can be connected. Unlike
+the ordinary transition, the exception transition is enabled all the time while
+the macro step is active. Exception transitions have priority over ordinary
+transitions in the case that both are fireable. If an exception transition fires,
+the execution state of the macro step is saved.
+On the right-hand side of the macro step, there is a <b>history port</b>.
+If the macro step is activated through this port, execution is resumed from the
+saved state.
+</p>
+
+<p>
+A macro step may have a name and actions in the same way as ordinary
+steps. The stored actions of the macro step are executed <i>before</i>
+the stored actions of the enter step. The exit actions
+of the macro step are executed <i>after</i> the execution of the exit
+actions of the exit step. The periodic actions of the macro step are
+executed while the macro step is active, independently of which internal
+step that is active. The abort actions of the macro step are executed
+when the macro step has been aborted due to the firing of an exception
+transition. The abort actions of the macro step are executed <i>after</i> the
+abort actions of the internal steps of the macro steps.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsWorkspace">Workspace Methods</a>
+</p>
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Show/Hide Body</b></p>
+		<p>
+			Toggle the visibility of the subworkspace.
+		</p>
+	</li>
+	<li>
+		<p><b>Table</b></p>
+		<p>
+			Opens an <a href="Editor_Workspaces.html#Inspector">Inspector</a> 
+			for the subworkspace.
+		</p>
+	</li>
+	<li>
+		<p><b>Edit</b></p>
+		<p>Opens the step's actions and settings editor.</p>
+		<p><img src="Figures/MacroStepEdit.png" alt="Edit Dialog"/></p>
+		
+		<p>
+		<b>Macro Step Actions:</b><br/>
+		Edit the step's actions.
+		</p>
+		
+		<p>
+		<b>Resume Mode:</b><br/>
+		Determines when to perform a resume.
+		</p>
+		<ul>
+			<li><b>Default:</b> Recursive resume when activated through the history port only.</li>
+			<li><b>Always:</b> Recursive resume when activated either through the history port or by a Step Fusion Set.</li>
+			<li><b>Never:</b> Never resume, always activate the enter step. Useful to break resume recursion locally.</li>
+		</ul>
+	</li>
+	<li>
+		<p><b>Set Name</b></p>
+		<p>
+			Open a dialog to set the macro step's name.
+		</p>
+	</li>
+	<li>
+		<p><b>Update Stubs</b></p>
+		<p>
+			Updates the number of input and output ports according to the
+			number of enter and exit steps in the subworkspace.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

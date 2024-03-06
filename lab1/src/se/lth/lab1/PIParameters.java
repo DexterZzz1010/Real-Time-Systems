@@ -1,4 +1,4 @@
-package se.lth.lab1;
+
 
 public class PIParameters implements Cloneable {
 	public double K, Ti, Tr, Beta, H;

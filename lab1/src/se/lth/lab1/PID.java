@@ -1,4 +1,4 @@
-package se.lth.lab1;
+
 
 public class PID {
     // Current PID parameters
@@ -11,6 +11,7 @@ public class PID {
     private double v = 0; // Output from controller
     private double yOld = 0;
     private double y = 0;
+    private double ad =0;
 
     /** Add more private variables here if needed */
 
@@ -19,15 +20,15 @@ public class PID {
         p = new PIDParameters();
         // Initial PID Variables
         p.Beta = 1.0;
-        p.H = 0.03;
+        p.H = 0.1;
         p.N = 5.0;
-        p.integratorOn = true;
+        //p.integratorOn = true;
         p.integratorOn = false;
-        p.K = -0.1;
+        p.K = -0.12;
 //        p.K = 1.0;
-        p.Ti = 0.0;
+        p.Ti = 10.0;
         p.Tr = 10.0;
-        p.Td = 1.0;
+        p.Td = 1.2;
     }
 
     // Calculates the control signal v.
@@ -38,7 +39,11 @@ public class PID {
 
         this.e = yref - y;
 
+	//this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
+	this.D = ad * D + (p.K * ad * p.N) * (e - this.eOld);
+
         this.v = p.K * (p.Beta * yref - y) + I + D;
+    
         return this.v;
     }
 
@@ -54,9 +59,10 @@ public class PID {
         } else {
             I = 0.0;
         }
-        double ad = p.Td / (p.Td + p.N * p.H);
-        this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
-//        this.D = ad * D - (p.K * ad * p.N) * (e - this.eOld);
+	
+      
+       
+
         this.yOld = y;
         this.eOld = e;
     }
@@ -77,6 +83,7 @@ public class PID {
         if (!p.integratorOn) {
             I = 0.0;
         }
+	ad = p.Td / (p.Td + p.N * p.H);
     }
 
     // Sets the I-part of the controller to 0.

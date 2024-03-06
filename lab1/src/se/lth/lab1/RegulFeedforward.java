@@ -117,18 +117,20 @@ public class RegulFeedforward extends Thread {
         double yRef = 0.0;
         double y = 0.0;
         double u = 0.0;
+        double angleRef=0.0;
         startTime = t;
 
         while (shouldRun) {
             /** Written by you */
             yRef = refGen.getRef();
-            synchronized (outer) {
+
                 switch (modeMon.getMode()) {
                     case OFF: {
                         /** Written by you */
                         u = 0;
                         y = 0;
                         yRef = 0;
+
                         writeOutput(u);
                         break;
                     }
@@ -136,10 +138,13 @@ public class RegulFeedforward extends Thread {
                         /** Written by you */
 
                         try {
-                            y = analogInPosition.get();
-                            u = limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff());
-                            writeOutput(u);
-                            outer.updateState(u - refGen.getPhiff());
+                            synchronized (outer){
+                                y = analogInPosition.get();
+                                u = limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff());
+                                writeOutput(u);
+                                outer.updateState(u - refGen.getPhiff());
+                            }
+
                         } catch (IOChannelException e) {
                             throw new RuntimeException(e);
                         }
@@ -151,9 +156,15 @@ public class RegulFeedforward extends Thread {
                         /** Written by you */
 
                         try {
-                            y = analogInPosition.get();
-                            u = limit(inner.calculateOutput(analogInAngle.get(), limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff())) + refGen.getPhiff());
-                            writeOutput(u);
+                            synchronized (outer){
+                                y = analogInPosition.get();
+                                angleRef = limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getUff()) + refGen.getPhiff();
+                                synchronized (inner){
+                                    u = limit(inner.calculateOutput(analogInAngle.get(),angleRef ));
+                                    writeOutput(u);
+
+                                }
+                            }
                             if (u == 10 || u == -10) {
                                 inner.updateState(u - refGen.getUff());
                                 outer.updateState(analogInAngle.get() - refGen.getPhiff());
@@ -175,7 +186,7 @@ public class RegulFeedforward extends Thread {
                 }
 
 
-            }
+
 
 
             sendDataToOpCom(yRef, y, u);

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Editor - Workspaces</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Editor - Workspaces</h1>
+
+<hr>
+
+<p>
+Workspaces are windows within the workspace area of the editor.
+The window title of a workspace is its <a href="LanguageOverview_ScopingRules.html#globalReference">global reference</a> name.
+Top-level workspaces have the name prefixed by "<b>Top:</b>".
+</p>
+
+<p>
+Workspaces have an associated level number.
+Workspaces with a high level number are always shown on top of workspaces with a lower level number.
+When a workspace receives focus it is shown on top of all workspaces with the same or lower level number.
+The level of a top-level workspace is 1. The level a subworkspaces is the level of its parent workspace + 1.
+</p>
+
+<p>
+By default each workspace has a grid and objets that are created or moved will
+automatically snap to the grid. Connectable objects are snapped so that their
+connection stub is horizontally aligned with the grid.
+</p>
+
+<p>
+It is possible to lock all workspaces of an application. A locked workspace cannot
+be resized and it is not possible to move, delete, or create objects, make connections etc.
+However, it is still possible to access object-specific menus and it is still
+possible to execute the application. A locked workspace is indicated by a
+lock icon <img src="Figures/icon-lock2.gif" alt="Locked Workspace">.
+Locked workspace can for example be used to
+</p>
+
+<ul>
+	<li>
+		restrict the operations that an end-user can perform on the application.
+	</li>
+	<li>
+		create libraries from which you can drag-and-drop objects in the same way as from the palette.
+	</li>
+</ul>
+
+<p>
+A workspace that is executing is indicated by an arrow icon
+<img src="Figures/runner5.jpeg" alt="Running Workspace">.
+The arrow icon overrides the lock icon.
+</p>
+
+<p>
+Hold the shift key while scrolling with the mouse to scroll horizontally. The scrollbars of a workspace may be removed.
+</p>
+
+<h2><a name="Inspector"></a>Inspector</h2>
+
+
+<p>
+	The inspector is a window that can be opened for hierarchical objects, i.e. objects containing a workspace.
+	The window contains a table with all analog and digital inputs
+	and outputs, hierarchical objects, and ordinary variables found on the workspace.
+	The values in the table are automatically updated.
+	Double-click on the value of a variable to edit it.
+	This is, however, not possible if the application is locked.
+	Double-click on a hierarchical object to make the inspector show this object instead.
+</p>
+<p><img src="Figures/Inspector.png" alt="Inspector"></p>
+
+</body>
+</html>
+

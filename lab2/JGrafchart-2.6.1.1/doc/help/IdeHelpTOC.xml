@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0">
+	<tocitem text="JGrafchart Manual" target="top"/>
+	<tocitem text="Introduction" target="Introduction"/>
+	<tocitem text="What's new?" target="ReleaseNotes"/>
+	<tocitem text="Glossary" target="Glossary"/>
+	<tocitem text="Language Overview">
+		<tocitem text="Steps and Transitions" target="LanguageOverview_StepsAndTransitions"/>
+		<tocitem text="Parallel and Alternative Paths" target="LanguageOverview_ParallelAndAlternativePaths"/>
+		<tocitem text="Macro Steps" target="LanguageOverview_MacroSteps"/>
+		<tocitem text="Procedures" target="LanguageOverview_Procedures"/>
+		<tocitem text="Workspace Objects" target="LanguageOverview_WorkspaceObjects"/>
+		<tocitem text="Types and Variables" target="LanguageOverview_TypesAndVariables"/>
+		<tocitem text="Action Language" target="LanguageOverview_ActionLanguage"/>
+		<tocitem text="Scoping Rules" target="LanguageOverview_ScopingRules"/>
+		<tocitem text="Execution" target="LanguageOverview_Execution"/>
+	</tocitem>
+	<tocitem text="Editor">
+		<tocitem text="Overview" target="Editor_Overview"/>
+		<tocitem text="Workspaces" target="Editor_Workspaces"/>
+		<tocitem text="Mouse Interaction" target="Editor_MouseInteraction"/>
+		<tocitem text="File Menu" target="Editor_FileMenu"/>
+		<tocitem text="Edit Menu" target="Editor_EditMenu"/>
+		<tocitem text="View Menu" target="Editor_ViewMenu"/>
+		<tocitem text="Execute Menu" target="Editor_ExecuteMenu"/>
+		<tocitem text="Misc. Menu" target="Editor_MiscMenu"/>
+		<tocitem text="Samples Menu" target="Editor_SamplesMenu"/>
+		<tocitem text="Help Menu" target="Editor_HelpMenu"/>
+	</tocitem>
+	<tocitem text="Language Reference">
+		<tocitem text="FC: Function Chart Elements">
+			<tocitem text="Initial Step" target="LangRef_FC_InitialStep"/>
+			<tocitem text="Step" target="LangRef_FC_Step"/>
+			<tocitem text="Transition" target="LangRef_FC_Transition"/>
+			<tocitem text="Paralllel Split" target="LangRef_FC_ParallelSplit"/>
+			<tocitem text="Parallel Join" target="LangRef_FC_ParallelJoin"/>
+			<tocitem text="Workspace Object" target="LangRef_FC_WorkspaceObject"/>
+			<tocitem text="Macro Step" target="LangRef_FC_MacroStep"/>
+			<tocitem text="Enter Step" target="LangRef_FC_EnterStep"/>
+			<tocitem text="Exit Step" target="LangRef_FC_ExitStep"/>
+			<tocitem text="Exception Transition" target="LangRef_FC_ExceptionTransition"/>
+			<tocitem text="Procedure" target="LangRef_FC_Procedure"/>
+			<tocitem text="Procedure Step" target="LangRef_FC_ProcedureStep"/>
+			<tocitem text="Process Step" target="LangRef_FC_ProcessStep"/>
+			<tocitem text="Connection Posts" target="LangRef_FC_ConnectionPosts"/>
+			<tocitem text="Step Fusion Set" target="LangRef_FC_StepFusionSet"/>
+			<tocitem text="Group" target="LangRef_FC_Group"/>
+		</tocitem>
+		<tocitem text="Var: Variables" target="LangRef_Var">
+			<tocitem text="Boolean Variable" target="LangRef_Var_BooleanVariable"/>
+			<tocitem text="Integer Variable" target="LangRef_Var_IntegerVariable"/>
+			<tocitem text="Real Variable" target="LangRef_Var_RealVariable"/>
+			<tocitem text="String Variable" target="LangRef_Var_StringVariable"/>
+			<tocitem text="Boolean List" target="LangRef_Var_BooleanList"/>
+			<tocitem text="Integer List" target="LangRef_Var_IntegerList"/>
+			<tocitem text="Real List" target="LangRef_Var_RealList"/>
+			<tocitem text="String List" target="LangRef_Var_StringList"/>
+		</tocitem>
+		<tocitem text="IO: Inputs and Output">
+			<tocitem text="Digital Input" target="LangRef_IO_DigitalInput"/>
+			<tocitem text="Digital Input (Inverse Logic)" target="LangRef_IO_DigitalInputInverse"/>
+			<tocitem text="Digital Output" target="LangRef_IO_DigitalOutput"/>
+			<tocitem text="Digital Output (Inverse Logic)" target="LangRef_IO_DigitalOutputInverse"/>
+			<tocitem text="Analog Input" target="LangRef_IO_AnalogInput"/>
+			<tocitem text="Analog Output" target="LangRef_IO_AnalogOutput"/>
+			<tocitem text="Socket IO" target="LangRef_IO_Socket">
+				<tocitem text="Socket Bool In" target="LangRef_IO_Socket_BoolIn"/>
+				<tocitem text="Socket Int In" target="LangRef_IO_Socket_IntIn"/>
+				<tocitem text="Socket Real In" target="LangRef_IO_Socket_RealIn"/>
+				<tocitem text="Socket String In" target="LangRef_IO_Socket_StringIn"/>
+				<tocitem text="Socket Bool Out" target="LangRef_IO_Socket_BoolOut"/>
+				<tocitem text="Socket Int Out" target="LangRef_IO_Socket_IntOut"/>
+				<tocitem text="Socket Real Out" target="LangRef_IO_Socket_RealOut"/>
+				<tocitem text="Socket String Out" target="LangRef_IO_Socket_StringOut"/>
+			</tocitem>
+			<tocitem text="ByteStream IO">
+				<tocitem text="ByteStream In" target="LangRef_IO_ByteStream_In"/>
+				<tocitem text="ByteStream Out" target="LangRef_IO_ByteStream_Out"/>
+			</tocitem>
+			<tocitem text="DPWS Object" target="LangRef_IO_DPWSObject"/>
+			<tocitem text="LabComm Object" target="LangRef_IO_LabCommObject"/>
+		</tocitem>
+		<tocitem text="XML: CHEM and CCOM" target="LangRef_XML">
+			<tocitem text="Representing Structures" target="LangRef_XML_RepresentingStructures"/>
+			<tocitem text="Connecting to CCOM" target="LangRef_XML_ConnectingToCCOM"/>
+			<tocitem text="Publishing Data Messages" target="LangRef_XML_PublishingDataMessages"/>
+			<tocitem text="Sending Data Messages" target="LangRef_XML_SendingDataMessages"/>
+			<tocitem text="Subscribe and Unsubscribe" target="LangRef_XML_Subscriptions"/>
+			<tocitem text="Receiving Data Messages" target="LangRef_XML_ReceivingDataMessages"/>
+			<tocitem text="Detecting Message Arrival" target="LangRef_XML_DetectingMessageArrival"/>
+			<tocitem text="Sending Reply Messages" target="LangRef_XML_SendingReplyMessages"/>
+			<tocitem text="Receiving Reply Messages" target="LangRef_XML_ReceivingReplyMessages"/>
+			<tocitem text="Remote Procedure Calls" target="LangRef_XML_RemoveProcedureCalls"/>
+			<tocitem text="External Calls to Procedures" target="LangRef_XML_ExternalCallsToJGProcs"/>
+			<tocitem text="Calling External RPCs" target="LangRef_XML_CallingExternalRPCs"/>
+			<tocitem text="RPC Libraries" target="LangRef_XML_RPCLibraries"/>
+			<tocitem text="XML Object Reference">
+				<tocitem text="XML Message In" target="LangRef_XML_Object_XMLMessageIn"/>
+				<tocitem text="XML Message Out" target="LangRef_XML_Object_XMLMessageOut"/>
+				<tocitem text="Integer Attribute" target="LangRef_XML_Object_IntegerAttribute"/>
+				<tocitem text="Real Attribute" target="LangRef_XML_Object_RealAttribute"/>
+				<tocitem text="String Attribute" target="LangRef_XML_Object_StringAttribute"/>
+				<tocitem text="Index Variable" target="LangRef_XML_Object_IndexVariable"/>
+			</tocitem>
+		</tocitem>
+		<tocitem text="GUI: Graphical Elements">
+			<tocitem text="Text" target="LangRef_GUI_Text"/>
+			<tocitem text="Rectangle" target="LangRef_GUI_Rectangle"/>
+			<tocitem text="Ellipse" target="LangRef_GUI_Ellipse"/>
+			<tocitem text="Polygon" target="LangRef_GUI_Polygon"/>
+			<tocitem text="3D Rectangle" target="LangRef_GUI_3DRectangle"/>
+			<tocitem text="Line" target="LangRef_GUI_Line"/>
+			<tocitem text="Spline" target="LangRef_GUI_Spline"/>
+			<tocitem text="Icon" target="LangRef_GUI_Icon"/>
+			<tocitem text="Action Button" target="LangRef_GUI_ActionButton"/>
+			<tocitem text="Graphical Action Button" target="LangRef_GUI_GraphicalActionButton"/>
+			<tocitem text="Plotter" target="LangRef_GUI_Plotter"/>
+			<tocitem text="Browser" target="LangRef_GUI_Browser"/>
+			<tocitem text="Show Workspace Button" target="LangRef_GUI_ShowWorkspaceButton"/>
+			<tocitem text="CHEM Icon" target="LangRef_GUI_CHEMIcon"/>
+			<tocitem text="LUCAS Icon" target="LangRef_GUI_LUCASIcon"/>
+		</tocitem>
+		<tocitem text="Textual Language" target="LangRef_TextLang">
+			<tocitem text="Actions" target="LangRef_TextLang_Actions"/>
+			<tocitem text="Conditions" target="LangRef_TextLang_Conditions"/>
+			<tocitem text="Call Parameters" target="LangRef_TextLang_CallParameters"/>
+			<tocitem text="Functions" target="LangRef_TextLang_Functions"/>
+			<tocitem text="Methods" target="LangRef_TextLang_Methods"/>
+			<tocitem text="Evaluation Rules" target="LangRef_TextLang_EvaluationRules"/>
+		</tocitem>
+		<tocitem text="Execution Model" target="LangRef_ExecutionModel"/>
+	</tocitem>
+	<tocitem text="Libraries">
+		<tocitem text="ControlLib" target="Lib_ControlLib"/>
+	</tocitem>
+	<tocitem text="Custom IO" target="CustomIO"/>
+	<tocitem text="Command Line" target="CommandLine"/>
+</toc>
+

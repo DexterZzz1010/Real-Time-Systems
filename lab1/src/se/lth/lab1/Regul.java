@@ -1,4 +1,4 @@
-package se.lth.lab1;
+
 
 import se.lth.control.realtime.AnalogIn;
 import se.lth.control.realtime.AnalogOut;
@@ -129,16 +129,13 @@ public class Regul extends Thread {
                 }
                 case BEAM: {
                     /** Written by you */
-                    synchronized (outer){
-                        try {
-                            y = analogInPosition.get();
-                            u = limit(outer.calculateOutput(y, refGen.getRef()));
-                            writeOutput(u);
-                            outer.updateState(u);
-                        } catch (IOChannelException e) {
-                            throw new RuntimeException(e);
-                        }
-
+                    synchronized (inner){
+                        
+			y = readInput(analogInAngle);
+			u = limit(inner.calculateOutput(y, refGen.getRef())+refGen.getUff());
+			writeOutput(u);
+			inner.updateState(u-refGen.getUff());
+     
                     }
 
                     break;
@@ -146,19 +143,17 @@ public class Regul extends Thread {
                 case BALL: {
                     /** Written by you */
                     synchronized (outer){
-                        try {
-                            y = analogInPosition.get();
-                            angleRef = limit(outer.calculateOutput(y, refGen.getRef()));
+                        
+                            y = readInput(analogInPosition);
+                            angleRef = limit(outer.calculateOutput(y, refGen.getRef()) + refGen.getPhiff());
                             synchronized (inner){
-                                u = limit(inner.calculateOutput(analogInAngle.get(), angleRef));
+                                u = limit(inner.calculateOutput(readInput(analogInAngle), angleRef )+ refGen.getUff());
+				inner.updateState(u - refGen.getUff());
                                 writeOutput(u);
-                                inner.updateState(u);
                             }
-                            outer.updateState(u);
-                        } catch (IOChannelException e) {
-                            throw new RuntimeException(e);
-                        }
-
+                           
+                            outer.updateState(angleRef - refGen.getPhiff());
+ 
                     }
 
                     break;
@@ -168,9 +163,6 @@ public class Regul extends Thread {
                     break;
                 }
             }
-
-
-
 
 
             sendDataToOpCom(yRef, y, u);

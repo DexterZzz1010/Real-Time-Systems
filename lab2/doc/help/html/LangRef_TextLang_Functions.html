@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Textual Language - Functions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Textual Language - Functions</h1>
+
+<hr>
+
+<p>
+The textual language contains a number of predefined functions:
+</p>
+
+<h4>Mathematical Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="abs"></a><tt>real abs(real a)</tt></p>
+		<p>Returns the absolute value of <tt>a</tt>.</p>
+	<li>
+		<p><a name="cos"></a><tt>real cos(real a)</tt></p>
+		<p>Returns the cosine value of <tt>a</tt>.</p>
+	</li>
+	<li>
+		<p><a name="max"></a><tt>real max(real a1, real a2, ... , real an)</tt></p>
+		<p>Returns the largest argument. The function can take any number of arguments &ge; 1.</p>
+	</li>
+	<li>
+		<p><a name="min"></a><tt>real min(real a1, real a2, ..., real an)</tt></p>
+		<p>Returns the smallest argument. The function can take any number of arguments &ge; 1.</p>
+	</li>
+	<li>
+		<p><a name="random"></a><tt>real random()</tt></p>
+		<p>Returns a uniformly distributed value, <tt>a</tt>, where <tt>0.0 &le; a &lt; 1.0</tt>.</p>
+	</li>
+	<li>
+		<p><a name="sin"></a><tt>real sin(real a)</tt></p>
+		<p>Returns the sine value of <tt>a</tt>.</p>
+	</li>
+	<li>
+		<p><a name="sqrt"></a><tt>real sqrt(real a)</tt></p>
+		<p>Returns the square root value of <tt>a</tt>.</p>
+	</li>
+</ul>
+
+<h4>Text Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="clearMessages"></a><tt>void clearMessages()</tt></p>
+		<p>Removes all messages from the message list.</p>
+	</li>
+	<li>
+		<p><a name="format"></a><tt>string format(real a)</tt></p>
+		<p>
+			Returns the formatted value of <tt>a</tt>.
+			The formatting is performed using the Java DecimalFormat with
+			MaximumFractionDigits = 3 and MinimumFractionDigits = 1 and a
+			dot as decimal separator.
+		</p>
+	</li>
+	<li>
+		<p><a name="println"></a><tt>void println(string msg)</tt></p>
+		<p>Writes <tt>msg</tt> to the terminal.</p>
+	</li>
+	<li>
+		<p><a name="writeMessage"></a><tt>void writeMessage(string msg)</tt></p>
+		<p>Adds <tt>msg</tt> first in the message list.</p>
+	</li>
+</ul>
+
+<h4>Time Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="getTickTime"></a><tt>int getTickTime()</tt></p>
+		<p>
+			Returns the scan cycle time for the current workspace in milliseconds.
+		</p>
+	</li>
+	<li>
+		<p><a name="currentTime"></a><tt>string currentTime()</tt></p>
+		<p>
+			Returns a string containing the current date and time, formatted with
+			the system's default locale.
+		</p>
+	</li>
+	<li>
+		<p><a name="getTimestamp"></a><tt>string getTimestamp()</tt></p>
+		<p>
+			Returns a string containing the CHEM timestamp format version
+			of the current time. No millisecond or timezone information is used.
+			An example of what the string might look like is <tt>2003-06-06T11:29:31</tt>.
+		</p>
+	</li>
+</ul>
+
+<h4>Color Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="intToBlue"></a><tt>real intToBlue(int a)</tt></p>
+		<p>
+			Extracts the blue color component as a value in the range 0.0
+			- 1.0 from the integer RGB value <tt>a</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="intToGreen"></a><tt>real intToGreen(int a)</tt></p>
+		<p>
+			Extracts the green color component as a value in the range 0.0
+			- 1.0 from the integer RGB value <tt>a</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="intToRed"></a><tt>real intToRed(int a)</tt></p>
+		<p>
+			Extracts the red color component as a value in the range 0.0
+			- 1.0 from the integer RGB value <tt>a</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="RGBToInt"></a><tt>int RGBToInt(real red, real green, real blue)</tt></p>
+		<p>
+			Converts a color represented by three real RGB components <tt>red</tt>,
+			<tt>green</tt>, and <tt>blue</tt> in the range 0.0 - 1.0 to an integer RGB value.
+		</p>
+	</li>
+</ul>
+
+<h4>Debug Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="freeMemory"></a><tt>void freeMemory()</tt></p>
+		<p>
+			Print the amount of free memory of JGrafchart in the command
+			window from which JGrafchart was started.
+		</p>
+	</li>
+	<li>
+		<p><a name="maxMemory"></a><tt>void maxMemory()</tt></p>
+		<p>
+			Print the maximum amount of memory that can be used by JGrafchart in
+			the command window from which JGrafchart was started.
+		</p>
+	</li>
+	<li>
+		<p><a name="totalMemory"></a><tt>void totalMemory()</tt></p>
+		<p>
+			Print the amount of total memory used by JGrafchart in
+			the command window from which JGrafchart was started.
+		</p>
+	</li>
+</ul>
+
+<h4>Dynamic Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="compile"></a><tt>bool compile(string name)</tt></p>
+		<p>
+			Compiles the application named <tt>name</tt>. Returns <tt>true</tt> if
+			the compilation was successful.
+		</p>
+	</li>
+	<li>
+		<p><a name="delete"></a><tt>void delete(string name)</tt></p>
+		<p>Closes the application named <tt>name</tt>.</p>
+	</li>
+	<li>
+		<p><a name="load"></a><tt>string load(string path)</tt></p>
+		<p>
+			Loads the file <tt>path</tt> into JGrafchart.
+			Returns the name of the opened application.
+		</p>
+	</li>
+	<li>
+		<p><a name="loadCompile"></a><tt>void loadCompile(string path)</tt></p>
+		<p>
+			Loads the file <tt>path</tt> into JGrafchart and compiles it.
+		</p>
+	</li>
+	<li>
+		<p><a name="loadCompileStart"></a><tt>void loadCompileStart(string path)</tt></p>
+		<p>
+			Loads the file <tt>path</tt> into JGrafchart, compiles it, and starts it.
+		</p>
+	</li>
+	<li>
+		<p><a name="new"></a><tt>void new(string class, string name, string workspace, int x, int y)</tt></p>
+		<p>
+			Creates a new object of the given <tt>class</tt>. The name of the object
+			is set to <tt>name</tt>. The object is added to the workspace named <tt>workspace</tt>
+			at the position <tt>x</tt>, <tt>y</tt>.
+			Currently only the classes "Rectangle" and "Ellipse" are supported.
+		</p>
+	</li>
+	<li>
+		<p><a name="start"></a><tt>void start(string name)</tt></p>
+		<p>
+			Starts the application named <tt>name</tt>. Requires that the
+			workspace has been successfully compiled.
+		</p>
+	</li>
+	<li>
+		<p><a name="stop"></a><tt>void stop(string name)</tt></p>
+		<p>Stops the application named <tt>name</tt>.</p>
+	</li>
+</ul>
+
+<h4>Misc. Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="addPalette"></a><tt>void addPalette()</tt></p>
+		<p>Adds the palette if it was previously hidden.</p>
+	</li>
+	<li>
+		<p><a name="applyStaticMethod"></a><tt>
+			returnType applyStaticMethod(string class, string method, string returnType, string arg1Type, arg1Type arg1, ..., string argNType, argNType argN)
+		</tt></p>
+		<p>
+			Generic function that makes it possible to call an arbitrary
+			static method of any Java class. The function is implemented using Java
+			Reflection. The first argument is the name of Java class. The second
+			argument is a string containing the name of the method to be invoked.
+			The third argument is a string that decides the return argument type
+			of the method. This type will also be the type of the returned value
+			of <tt>applyStaticMethod</tt>. Legal values are "string",
+			"real", "int", and "boolean". The remaining arguments consist of argument
+			pairs where the first argument in the pair decides how the second argument
+			should be evaluated. The legal values are the same as for the return
+			type. For example, the following call to applyStaticMethod calls the random()
+			method of the Math class. <tt>applyStaticMethod("java.lang.Math","random","real").</tt>
+		</p>
+	</li>
+	<li>
+		<p><a name="exec"></a><tt>void exec(string command)</tt></p>
+		<p>Executes <tt>command</tt> in a separate operating system process.</p>
+	</li>
+	<li>
+		<p><a name="removePalette"></a><tt>void removePalette()</tt></p>
+		<p>Hides the palette if it was previously visible.</p>
+	</li>
+	<li>
+		<p><a name="stringApply"></a><tt>
+			returnType stringApply(string object, string method, string returnType, string arg1Type,  arg1Type arg1, ..., string argNType, argNType argN)
+		</tt></p>
+		<p>
+			Generic function that makes it possible to apply an arbitrary
+			Java method to a string. The function is implemented using Java Reflection.
+			The first argument is the string that the method should be applied
+			to. The second argument is a string containing the name of the method
+			to be invoked. The third argument is a string that decides the return
+			argument type of the method. This type will also be the type of the returned
+			value of stringApply. Legal values are "string", "real", "int",
+			and "boolean". The remaining arguments consist of argument pairs where
+			the first argument in the pair decides how the second argument should
+			be evaluated. The legal values are the same as for the return type.
+			For example, the following call to stringApply extracts the substring
+			"Graf" from the argument "JGrafchart".
+			<tt>stringApply("JGrafchart","substring","string","int",1,"int",5).</tt>
+		</p>
+	</li>
+</ul>
+
+<h4><a name="CCOM"></a>CCOM Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="connectCCOM"></a><tt>void connectCCOM()</tt></p>
+		<p>Programmatic connect to CCOM.</p>
+	</li>
+	<li>
+		<p><a name="disconnectCCOM"></a><tt>void disconnectCCOM()</tt></p>
+		<p>Programmatic disconnect from CCOM.</p>
+	</li>
+	<li>
+		<p><a name="getCCOMLoginName"></a><tt>string getCCOMLoginName()</tt></p>
+		<p>Returns the CCOM login name.</p>
+	</li>
+	<li>
+		<p><a name="getCCOMPort"></a><tt>string getCCOMPort()</tt></p>
+		<p>Returns the CCOM port.</p>
+	</li>
+	<li>
+		<p><a name="getCCOMServer"></a><tt>string getCCOMServer()</tt></p>
+		<p>Returns the IP address to the CCOM server.</p>
+	</li>
+	<li>
+		<p><a name="isConnectedToCCOM"></a><tt>bool isConnectedToCCOM()</tt></p>
+		<p>Returns <tt>true</tt> if connected to CCOM.</p>
+	</li>
+	<li>
+		<p><a name="setCCOMLoginName"></a><tt>void setCCOMLoginName(string name)</tt></p>
+		<p>Sets the CCOM login name. (Default = JGrafchart)</p>
+	</li>
+	<li>
+		<p><a name="setCCOMPort"></a><tt>void setCCOMPort(string port)</tt></p>
+		<p>Sets the CCOM port. (Default = 3412).</p>
+	</li>
+	<li>
+		<p><a name="setCCOMServer"></a><tt>void setCCOMServer(string IPaddress)</tt></p>
+		<p>Sets the IP address of the CCOM server.</p>
+	</li>
+	<li>
+		<p><a name="subscribe"></a><tt>void subscribe(string topic)</tt></p>
+		<p>Subscribes to a CCOM topic.</p>
+	</li>
+	<li>
+		<p><a name="unsubscribe"></a><tt>void unsubscribe(string topic)</tt></p>
+		<p>Unsubscribes from a CCOM topic.</p>
+	</li>
+</ul>
+
+<h4><a name="DPWS"></a>DPWS Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="dpwsGetEvent"></a><tt>string dpwsGetEvent(DPWSObject obj, string opName)</tt></p>
+		<p>
+			Get the next <tt>opName</tt> event on <tt>obj</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="dpwsGetFault"></a><tt>string dpwsGetFault(DPWSObject obj)</tt></p>
+		<p>
+			Get the next stored fault on <tt>obj</tt>. If the list is empty and <tt>obj</tt> is known to be unavailable a generic fault message is returned.
+		</p>
+	</li>
+	<li>
+		<p><a name="dpwsHasEvent"></a><tt>bool dpwsHasEvent(DPWSObject obj, string opName)</tt></p>
+		<p>
+			Returns <tt>true</tt> if and only if there is an <tt>opName</tt> event on <tt>obj</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="dpwsHasFault"></a><tt>bool dpwsHasFault(DPWSObject obj)</tt></p>
+		<p>
+			Returns <tt>true</tt> if and only if there are any stored faults on <tt>obj</tt> or if <tt>obj</tt> is known to be unavailable.
+		</p>
+	</li>
+	<li>
+		<p><a name="dpwsSubscribe"></a><tt>void dpwsSubscribe(DPWSObject obj, string duration)</tt></p>
+		<p>
+			Subscribe to events in <tt>obj</tt> for a certain <tt>duration</tt>.
+			The duration uses the xsd type xsd:duration which is specified on the ISO 8601 format, i.e.
+			<tt>P&lt;date&gt;T&lt;time&gt;</tt>. Example: <tt>PT2H10M</tt> means 2 hours and 10 minutes.
+		</p>
+		<p>
+			<i>Note:</i> The used implementation states that the year and month fields are not used.
+		</p>
+	</li>
+	<li>
+		<p><a name="dpwsUnsubscribe"></a><tt>void dpwsUnsubscribe(DPWSObject obj)</tt></p>
+		<p>
+			Cancel the current subscription to <tt>obj</tt>.
+		</p>
+	</li>
+	<li>
+		<p><a name="xmlAdd"></a><tt>string xmlAdd(string elemName, string value, string xml="")</tt></p>
+		<p>
+			Adds an element with name <tt>elemName</tt> and text <tt>value</tt> to an xml string <tt>xml</tt>
+			and returns the new complete xml.
+		</p>
+		<p>
+			Example: <tt>xmlAdd("elem", "val")</tt> returns "&lt;elem&gt;val&lt;/elem&gt;"<br>
+			Example: <tt>xmlAdd("elem", "val", "&lt;elem&gt;val&lt;/elem&gt;")</tt> returns "&lt;elem&gt;val&lt;/elem&gt;&lt;elem&gt;val&lt;/elem&gt;"
+		</p>
+	</li>
+	<li>
+		<p><a name="xmlFetch"></a><tt>string xmlFetch(string xml, string xpath, string multiHandler="first")</tt></p>
+		<p>
+			Fetch the element text for the element given by the XPath <tt>xpath</tt>, which is called on the root element.<br>
+			<tt>multiHandler</tt> specifies how to handle multiple matching elements.
+		</p>
+		<ul>
+			<li><tt>first</tt> Select the first matching element.</li>
+			<li><tt>sum</tt> Interpret each matching element text as a real value, and return their sum.</li>
+		</ul>
+		<p>
+			If the <tt>multiHandler</tt> value is illegal, the default MultiHandler is used.
+		</p>
+	</li>
+</ul>
+
+<h4><a name="LabComm"></a>LabComm Functions</h4>
+
+<ul>
+	<li>
+		<p><a name="lcReceived"></a><tt>bool lcReceived(LabCommObject obj)</tt></p>
+		<p>
+			Returns <tt>true</tt> if and only if a sample has been received on the LabComm Object <tt>obj</tt> since the previous scan cycle.
+		</p>
+	</li>
+	<li>
+		<p><a name="lcSend"></a><tt>void lcSend(LabCommObject obj, string sampleName=*)</tt></p>
+		<p>
+			Send the sample named <tt>sampleName</tt> in the LabComm Object <tt>obj</tt>.
+			If the second parameter is omitted, all samples in the LabComm Object are sent.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>

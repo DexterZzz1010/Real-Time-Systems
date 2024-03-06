@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - IO - LabComm Object</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - IO - LabComm Object</h1>
+
+<hr>
+
+<p><img src="Figures/LabCommObject.png" alt="Icon" style="float: right;"></p>
+
+<p>
+	A LabComm Object is used for <a id="labcomm" href="ExternalLink.html" target="_top">LabComm protocol</a> communication over TCP sockets.
+	The data in the LabComm Object is accessed with dot-notation.
+	Primitive LabComm types are mapped to the corresponding JGrafchart variable types.
+	One-dimensional LabComm arrays of primitive types are mapped to JGrafchart lists.
+	Other arrays are not supported.
+	When a LabComm sample is received the data in the LabComm Object is updated accordingly.
+	LabComm samples are sent with <a href="LangRef_TextLang_Functions.html#lcSend">lcSend()</a>.
+	<a href="LangRef_TextLang_Functions.html#lcReceived">lcReceived()</a> is used to check if LabComm samples have been received since the previous scan cycle.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+</p>
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Edit</b></p>
+		<p>Opens an edit dialog for the LabComm Object.</p>
+		<p><img src="Figures/LabCommObjectEdit.png" alt="Edit Dialog"></p>
+		<p><b>Socket server</b> LabComm TCP socket server to connect to as a client.</p>
+		<p><b>Be socket server</b> Be a LabComm TCP socket server which LabComm clients may connect to.</p>
+		<p><b>Socket port</b> The port number of the LabComm TCP socket server.</p>
+		<p><b>Version</b> LabComm version.</p>
+		<p>
+			<b>LabComm sample specification</b> The declaration of supported samples and types.<br/>
+			<i>Note: Currently, only flat struct samples are supported.</i>
+		</p>
+		<p><b>Input</b> The specified samples can be received.</p>
+		<p><b>Output</b> The specified samples can be sent.</p>
+		<p><b>Orca</b> Special purpose only: Set up the connection over an Orca channel. Only available when connecting as a client with version 2006.</p>
+	</li>
+	<li>
+		<p><b>Table</b></p>
+		<p>
+			Opens an <a href="Editor_Workspaces.html#Inspector">Inspector</a> for the LabComm samples.
+		</p>
+		<p>
+			<i>Note: Only works after compilation.</i>
+		</p>
+	</li>
+</ul>
+
+<script language="javascript" type="text/javascript">
+	<!--
+		document.getElementById("labcomm").href = "http://wiki.cs.lth.se/moin/LabComm";
+	//-->
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="J1" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="662.0" boundsWidth="540.0" scale="1.0" color="-35" x="0.0" y="0.0" socketHost="" socketPort="-1">
+  <GCStep id="S1" x="119.0" y="397.0" height="70.0" width="223.0" name="S3" actionText=";" actionBlockVisible="1" />
+  <FreeText name="" x="52.0" y="382.0" height="27" width="49" fontSize="20" text="Name" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="222.0" y="332.0" height="27" width="84" fontSize="20" text="Input port" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="232.0" y="482.0" height="27" width="100" fontSize="20" text="Output port" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="111" y="398" />
+    <Stroke x="127" y="420" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="215" y="360" />
+    <Stroke x="180" y="389" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="223" y="493" />
+    <Stroke x="191" y="476" />
+  </GCStroke>
+  <FreeText name="" x="332.0" y="342.0" height="27" width="105" fontSize="20" text="Action block" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="326" y="372" />
+    <Stroke x="294" y="397" />
+  </GCStroke>
+  <FreeText name="" x="52.0" y="462.0" height="27" width="54" fontSize="20" text="Token" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="116" y="473" />
+    <Stroke x="158" y="447" />
+  </GCStroke>
+</GCDocument>
+

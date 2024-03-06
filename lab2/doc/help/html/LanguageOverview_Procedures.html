@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Overview - Procedures</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Overview - Procedures</h1>
+
+<hr>
+
+<p>
+<b>Procedures</b> make it possible to create reusable building blocks.
+A procedure has its body stored in a subworkspace and begin and end with
+enter and exit steps in the same way as for macro steps.
+</p>
+
+<p>
+Procedures are reentrant and may even be recursive. Procedures may also have parameters.
+All internal variables within the procedure can be used as parameters.
+</p>
+
+<p>
+A procedure can be called in the following ways:
+</p>
+
+<ul>
+	<li>Through a <a href="LangRef_FC_ProcedureStep.html">Procedure Step</a>.</li>
+	<li>Through a <a href="LangRef_FC_ProcessStep.html">Process Step</a>.</li>
+	<li>With a call to the <tt>spawn()</tt> method.</li>
+	<li>Manually from the Procedure object.</li>
+</ul>
+
+<p>
+When a procedure is called from a procedure step, the transitions after
+the procedure step do not become enabled until the execution has reached
+the exit step of the procedure. This corresponds to an ordinary
+procedure call.
+</p>
+
+<p>
+When a procedure is called from a process step the transitions
+after the procedure step are enabled immediately.
+Conceptually, the procedure call is spawned and executed in a separate execution thread.
+</p>
+
+<p>
+When a procedure is started manually or with the <tt>spawn()</tt> method it is started in
+the same way as for a Process Step.
+</p>
+
+<p><img src="Figures/procedure.gif" alt="Procedure"></p>
+
+</body>
+</html>
+

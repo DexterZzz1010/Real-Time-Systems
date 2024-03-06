@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCDocument boundsHeight="632.0" boundsWidth="625.0" color="-35" dimTicks="25" horizontalScrollBar="1" modifiable="1" name="J1" saveVersion="2" scale="1.0" simulationMode="1" socketHost="" socketPort="-1" threadSpeed="40" tokenLuminance="0" verticalScrollBar="1" viewPositionX="0.0" viewPositionY="0.0" x="0.0" y="0.0">
+  <SocketIntIn height="83.0" identifier="" name="I67" value="" width="80.0" x="70.0" y="400.0"/>
+  <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Integer variable" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="128" x="180.0" y="50.0"/>
+  <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Real variable" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="104" x="180.0" y="130.0"/>
+  <DigitalIn channel="2" cyclic="1" height="60.0" name="On" value="1" width="80.0" x="70.0" y="200.0"/>
+  <AnalogOut channel="3" height="60.0" name="U" value="0.0" width="80.0" x="70.0" y="300.0"/>
+  <IntegerVariable constant="0" exp="" height="45.0" initialValue="" name="Count" updated="0" value="0" width="70.0" x="70.0" y="40.0"/>
+  <RealVariable constant="0" exp="" height="45.0" initialValue="" name="Termperature" updated="0" value="98.56" width="91.0" x="60.0" y="120.0"/>
+  <GCGroup hidden="0" name="" objectified="0" showBorder="0">
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Reak output" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="99" x="180.0" y="310.0"/>
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="connected to AD channel 3" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="222" x="180.0" y="330.0"/>
+  </GCGroup>
+  <GCGroup hidden="0" name="" objectified="0" showBorder="0">
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Boolean input" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="113" x="180.0" y="210.0"/>
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="connected to digital I/O channel 2" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="281" x="180.0" y="230.0"/>
+  </GCGroup>
+  <GCGroup hidden="0" name="" objectified="0" showBorder="0">
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Integer input" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="107" x="180.0" y="410.0"/>
+    <FreeText alignment="0" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SanSerif" fontSize="16" height="20" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="connected to a socket" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="178" x="180.0" y="430.0"/>
+  </GCGroup>
+</GCDocument>

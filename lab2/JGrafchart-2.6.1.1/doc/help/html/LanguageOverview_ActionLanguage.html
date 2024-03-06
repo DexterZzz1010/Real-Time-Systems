@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Overview - Action Language</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Overview - Action Language</h1>
+
+<hr>
+
+<p>
+JGrafchart contains both graphical and textual language elements. The
+textual language is primarily used for expressing step actions and transition
+conditions. A step action consists of two parts: an action qualifier and the actual
+action. The action qualifier decides when to execute the action. Five qualifiers are available.
+</p>
+
+<ul>
+	<li>
+		<p><b>Enter action</b></p>
+		<p>(Stored action). The action is executed once when the step becomes active.</p>
+		<pre>  S "action";</pre>
+	</li>
+	<li>
+		<p><b>Exit action</b></p>
+		<p>The action is executed once immediately before the step is deactivated.</p>
+		<pre>  X "action";</pre>
+	</li>
+	<li>
+		<p><b>Periodic action.</b></p>
+		<p>
+			The action is executed periodically, once every scan-cycle, while the step is active.
+		</p>
+		<pre>  P "action";</pre>
+	</li>
+	<li>
+		<p><b>Abort action</b></p>
+		<p>The action is executed once when a step is aborted due to the firing of an exception transition.</p>
+		<pre>  A "action";</pre>
+	</li>
+	<li>
+		<p><b>Normal action</b></p>
+		<p>
+			(Level action).
+			A normal action is used to associate the truth-value of a boolean variable with the activation status of the step.
+			When the step is activated or deactivated the variable is marked accordingly.
+			At the end of the scan cycle, all marked variables are updated.
+			A variable that is marked with both activate and deactivate is set to true.
+		</p>
+		<pre>  N "boolean variable";</pre>
+	</li>
+</ul>
+
+<p>
+<tt>"action"</tt> can be either an assigment or a call.
+</p>
+
+<ul>
+	<li>
+		<p><b>Assignment</b></p>
+		<pre>  "variable" = "expression"</pre>
+		<p>
+			<tt>"variable"</tt> is the variable to assign to. How <tt>"expression"</tt> is evaluated is determined by the type of the variable.
+			For example, if the variable is real the expression will be evaluated as a real-valued expression.
+		</p>
+	</li>
+</ul>
+
+
+<ul>
+	<li>
+	 	<p><b>Call</b></p>
+	 	<pre>  ["object expression".]"name"(arg1, ..., argn)</pre>
+		<p>
+			Methods for objects and built-in functions can be called. <tt>"object expression".</tt> is
+			the object that a method is called on for method calls and is left out for function calls.
+			<tt>"name"</tt> is the name of the called function/method.
+		</p>
+	 </li>
+</ul>
+
+
+<p>
+The action language is also used to express transition conditions. A transition
+condition is represented by an expression, which is evaluated as a boolean expression.
+</p>
+
+</body>
+</html>
+

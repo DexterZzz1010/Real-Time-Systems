@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="J5" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="600.0" boundsWidth="731.0" scale="1.0" color="-1" x="0.0" y="0.0" socketHost="" socketPort="-1">
+  <ParallelJoin id="PJ1" x="200.0" y="145.0" height="14.0" width="280.0" />
+  <FreeText name="" x="100.0" y="100.0" height="27" width="99" fontSize="20" text="Input port 1" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="490.0" y="100.0" height="27" width="99" fontSize="20" text="Input port 2" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="370.0" y="180.0" height="27" width="100" fontSize="20" text="Output port" fontName="Serif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="363" y="185" />
+    <Stroke x="348" y="168" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="206" y="115" />
+    <Stroke x="222" y="138" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="475" y="116" />
+    <Stroke x="455" y="135" />
+  </GCStroke>
+</GCDocument>
+

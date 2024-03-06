@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - FC - Procedure Step</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - FC - Procedure Step</h1>
+
+<hr>
+
+<p><img src="Figures/procedurestep.gif" alt="Icon" style="float: right;"></p>
+
+<p>
+A procedure step represents a call to a procedure.
+The <b>exception output port</b> behaves in the same way as the exception output port of a macro step.
+However, it is not possible to resume the execution of a procedure.
+The transition connected to the output port is enabled when the exit step of the procedure is active.
+When this transition fires the exit step is deactivated, the procedure call is terminated, and the procedure step is deactivated.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a>
+</p>
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><a name="Edit"></a><b>Edit</b></p>
+		<p>
+			Opens an editor for the procedure name, call parameters, and the procedure step actions.
+		</p>
+		<p><img src="Figures/ProcedureStepEdit.png" alt="Edit Dialog"></p>
+		
+		<p>
+			<b>Procedure:</b> The procedure name can be written in several ways:
+		</p>
+
+		<ul>
+			<li><tt>Proc1</tt> - <tt>Proc1</tt> is a Procedure. Calls the procedure named <tt>Proc1</tt>.</li>
+			<li><tt>StringVar</tt> - <tt>StringVar</tt> is a string variable. Calls the procedure named by <tt>StringVar</tt>.</li>
+			<li><tt>"Proc1"</tt> - Calls the procedure named Proc1.</li>
+			<li><tt>"Proc" + "1"</tt> - Calls the procedure named Proc1.</li>
+			<li>
+				<tt>ObjectVar + "." + MethodVar</tt> - <tt>ObjectVar</tt> and <tt>MethodVar</tt> are string variables.
+				Calls the procedure named by the values of <tt>ObjectVar</tt> and <tt>MethodVar</tt> with a
+				dot in between.
+			</li>
+			<li>
+				<tt>ObjectVar^.MethodVar^</tt> - <tt>ObjectVar</tt> and <tt>MethodVar</tt> are string variables.
+				Calls the procedure referenced by ordinary referencing.
+			</li> 
+		</ul>
+		
+		<p>
+			<b>Procedure Parameters:</b> See <a href="LangRef_TextLang_CallParameters.html">Call Parameters Syntax</a> for details about
+			call parameters. The expression will be evaluated in the context of the Procedure Step.
+		</p>
+		
+		<p>
+			<b>Step Actions:</b> Procedure Step actions are entered in the Step Actions field.
+		</p>
+	</li>
+	<li>
+		<p><b>Show/Hide Call</b></p>
+		<p>Toggle visibility of the procedure call subworkspace.</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - Sending Data Messages</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - Sending Data Messages</h1>
+
+<hr>
+
+<p>
+The message to be sent is represented by an XML Message Out object.
+Attributes of the XML Message Out object are used to decide the destination
+of the message, the CCOM type of the data message (Data or Event), the
+origin of the publication (i.e., JGrafchart), etc.
+</p>
+
+<p>
+To send a data message the following steps are performed:
+</p>
+
+<ol>
+	<li>
+		The content of the message is built up using ordinary actions.
+		For example, the values of the different elements and attributes within
+		the XML Message out object are set using assignment actions.
+	</li>
+	<li>
+		The necessary XML Message out attributes are set either interactively
+		or programmatically.
+	</li>
+	<li>
+		The message is sent by calling the method <tt>sendMessage()</tt>
+		of the XML Message Out object. When this is done an XML Message structure
+		is created from the XML Message Out object. The XML Message is embedded
+		in an CCOM envelope and then send to the CCOM server.
+	</li>
+</ol>
+
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Overview - Execution</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Overview - Execution</h1>
+
+<hr>
+
+<p>
+A function chart cannot be executed until it has been successfully compiled.
+Compilation errors and warnings are shown in the message list.
+During execution, parts of the editing is disabled and several things do not
+take effect until the application has been re-compiled and restarted.
+</p>
+
+<p>
+It is recommended to run JGrafchart with a visible terminal since most 
+runtime errors as well as most other problems are printed there.
+</p>
+
+<p>
+JGrafchart uses the traditional PLC execution model.
+A separate periodic thread executes each application.
+Every period (scan-cycle) the thread performs the operations:
+</p>
+
+<ol>
+	<li>Read digital and analog inputs</li>
+	<li>Execute one scan of the application.</li>
+	<li>Update variables subject to normal actions.</li>
+</ol>
+
+<p>
+Each time an output is assigned in the application it immediately affects the real IO.
+</p>
+
+</body>
+</html>
+

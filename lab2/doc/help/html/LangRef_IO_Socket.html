@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - IO - Socket IO</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - IO - Socket IO</h1>
+
+<hr>
+
+<p>
+	Each application can act as the server or client in a TCP socket connection with some user-defined TCP server/client.
+	The host and port of the TCP server are configured in the <a href="Editor_EditMenu.html#Properties">Application Properties</a>.
+	If the application is a server, the server is started when the application is started unless already running.
+	If the application is a client, a connection is made when the application is started and there is not already a connection.
+	An established connection remains open and a started server remains running but can be explicitly shut down with <a href="Editor_ExecuteMenu.html#ShutDownClient">Shut Down Socket</a>.
+</p>
+
+<p>
+	There is a Socket Input and a Socket Output for each primitive data type.
+	Socket Inputs are assigned when a TCP message with a matching identifier is received.
+	The <tt>.msg</tt> attribute of a Socket Input is true if it has been assigned since the previous scan cycle and can be used for message detection.
+	If no identifier has been specified, the local name of the Socket Input/Output is used instead.
+	If several inputs have the same identifier they will all be updated.
+</p>
+
+<h2>Protocol</h2>
+<p>
+	The protocol used for the TCP messages is: <tt>&lt;identifier&gt; '|' &lt;value&gt; '\n'</tt>
+</p>
+
+<h2>Socket Send Mode</h2>
+<p>
+	For Socket Outputs a TCP message is sent on assignments according to its Socket Send Mode. This can be set per workspace and per Socket Output.
+
+	<ul>
+		<li><b>&lt;Inherit&gt;</b> Inherit the setting from the enclosing workspace.</li>
+		<li><b>Assigned</b> A message is sent each time the Socket Output is assigned.</li>
+		<li><b>Changed</b> A message is sent only if the Socket Output's value changed.</li>
+	</ul>
+</p>
+
+</body>
+</html>

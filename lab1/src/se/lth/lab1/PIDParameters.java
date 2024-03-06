@@ -1,4 +1,4 @@
-package se.lth.lab1;
+
 
 public class PIDParameters implements Cloneable {
 	public double K, Ti, Td, Tr, N, Beta, H;

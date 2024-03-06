@@ -1,0 +1,732 @@
+
+<!DOCTYPE HTML PUBLIC
+   "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	<link rel='stylesheet' type='text/css' href='html/style.css'>
+	<base target="main">
+	<title>JGrafchart Help - Menu</title>
+	<script language='javascript' type='text/javascript'>
+		<!--
+			function toggleExpand(id) {
+				var style = document.getElementById(id).style;
+				var a = document.getElementById(id + "_a");
+				if (style.display == "none") {
+					style.display = "";
+					a.innerHTML = "<tt><b>-<\/b><\/tt>";
+				} else {
+					style.display = "none";
+					a.innerHTML = "<tt><b>+<\/b><\/tt>";
+				}
+			}
+		//-->
+	</script>
+</head>
+<body>
+<dl class='menu_top_level'>
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/JGrafchart.html'>JGrafchart Manual</a>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/Introduction.html'>Introduction</a>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/ReleaseNotes.html'>What's new?</a>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/Glossary.html'>Glossary</a>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a onClick='toggleExpand("sub1"); return false;' style='cursor: pointer;' id='sub1_a'><tt><b>+</b></tt></a>
+		Language Overview
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd id='sub1' class='menu_dd' style='display: none;'>
+		<dl class='menu_other_level'>
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_StepsAndTransitions.html'>Steps and Transitions</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_ParallelAndAlternativePaths.html'>Parallel and Alternative Paths</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_MacroSteps.html'>Macro Steps</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_Procedures.html'>Procedures</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_WorkspaceObjects.html'>Workspace Objects</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_TypesAndVariables.html'>Types and Variables</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_ActionLanguage.html'>Action Language</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_ScopingRules.html'>Scoping Rules</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LanguageOverview_Execution.html'>Execution</a>
+			</dd>
+
+		</dl>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a onClick='toggleExpand("sub2"); return false;' style='cursor: pointer;' id='sub2_a'><tt><b>+</b></tt></a>
+		Editor
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd id='sub2' class='menu_dd' style='display: none;'>
+		<dl class='menu_other_level'>
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_Overview.html'>Overview</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_Workspaces.html'>Workspaces</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_MouseInteraction.html'>Mouse Interaction</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_FileMenu.html'>File Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_EditMenu.html'>Edit Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_ViewMenu.html'>View Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_ExecuteMenu.html'>Execute Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_MiscMenu.html'>Misc. Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_SamplesMenu.html'>Samples Menu</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Editor_HelpMenu.html'>Help Menu</a>
+			</dd>
+
+		</dl>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a onClick='toggleExpand("sub3"); return false;' style='cursor: pointer;' id='sub3_a'><tt><b>+</b></tt></a>
+		Language Reference
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd id='sub3' class='menu_dd' style='display: none;'>
+		<dl class='menu_other_level'>
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub4"); return false;' style='cursor: pointer;' id='sub4_a'><tt><b>+</b></tt></a>
+				FC: Function Chart Elements
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub4' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_InitialStep.html'>Initial Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_Step.html'>Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_Transition.html'>Transition</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ParallelSplit.html'>Paralllel Split</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ParallelJoin.html'>Parallel Join</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_WorkspaceObject.html'>Workspace Object</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_MacroStep.html'>Macro Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_EnterStep.html'>Enter Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ExitStep.html'>Exit Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ExceptionTransition.html'>Exception Transition</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_Procedure.html'>Procedure</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ProcedureStep.html'>Procedure Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ProcessStep.html'>Process Step</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_ConnectionPosts.html'>Connection Posts</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_StepFusionSet.html'>Step Fusion Set</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_FC_Group.html'>Group</a>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub5"); return false;' style='cursor: pointer;' id='sub5_a'><tt><b>+</b></tt></a>
+				<a class='menu_item' href='html/LangRef_Var.html'>Var: Variables</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub5' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_BooleanVariable.html'>Boolean Variable</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_IntegerVariable.html'>Integer Variable</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_RealVariable.html'>Real Variable</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_StringVariable.html'>String Variable</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_BooleanList.html'>Boolean List</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_IntegerList.html'>Integer List</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_RealList.html'>Real List</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_Var_StringList.html'>String List</a>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub6"); return false;' style='cursor: pointer;' id='sub6_a'><tt><b>+</b></tt></a>
+				IO: Inputs and Output
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub6' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_DigitalInput.html'>Digital Input</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_DigitalInputInverseLogic.html'>Digital Input (Inverse Logic)</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_DigitalOutput.html'>Digital Output</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_DigitalOutputInverseLogic.html'>Digital Output (Inverse Logic)</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_AnalogInput.html'>Analog Input</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_AnalogOutput.html'>Analog Output</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a onClick='toggleExpand("sub7"); return false;' style='cursor: pointer;' id='sub7_a'><tt><b>+</b></tt></a>
+						<a class='menu_item' href='html/LangRef_IO_Socket.html'>Socket IO</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd id='sub7' class='menu_dd' style='display: none;'>
+						<dl class='menu_other_level'>
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_BoolIn.html'>Socket Bool In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_IntIn.html'>Socket Int In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_RealIn.html'>Socket Real In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_StringIn.html'>Socket String In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_BoolOut.html'>Socket Bool Out</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_IntOut.html'>Socket Int Out</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_RealOut.html'>Socket Real Out</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_Socket_StringOut.html'>Socket String Out</a>
+							</dd>
+
+						</dl>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a onClick='toggleExpand("sub8"); return false;' style='cursor: pointer;' id='sub8_a'><tt><b>+</b></tt></a>
+						ByteStream IO
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd id='sub8' class='menu_dd' style='display: none;'>
+						<dl class='menu_other_level'>
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_ByteStream_In.html'>ByteStream In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_IO_ByteStream_Out.html'>ByteStream Out</a>
+							</dd>
+
+						</dl>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_DPWSObject.html'>DPWS Object</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_IO_LabCommObject.html'>LabComm Object</a>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub9"); return false;' style='cursor: pointer;' id='sub9_a'><tt><b>+</b></tt></a>
+				<a class='menu_item' href='html/LangRef_XML.html'>XML: CHEM and CCOM</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub9' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_RepresentingStructures.html'>Representing Structures</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_ConnectingToCCOM.html'>Connecting to CCOM</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_PublishingDataMessages.html'>Publishing Data Messages</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_SendingDataMessages.html'>Sending Data Messages</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_Subscriptions.html'>Subscribe and Unsubscribe</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_ReceivingDataMessages.html'>Receiving Data Messages</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_DetectingMessageArrival.html'>Detecting Message Arrival</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_SendingReplyMessages.html'>Sending Reply Messages</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_ReceivingReplyMessages.html'>Receiving Reply Messages</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_RemoteProcedureCalls.html'>Remote Procedure Calls</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_ExternalCallsToJGProcs.html'>External Calls to Procedures</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_CallingExternalRPCs.html'>Calling External RPCs</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_XML_RPCLibraries.html'>RPC Libraries</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a onClick='toggleExpand("sub10"); return false;' style='cursor: pointer;' id='sub10_a'><tt><b>+</b></tt></a>
+						XML Object Reference
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd id='sub10' class='menu_dd' style='display: none;'>
+						<dl class='menu_other_level'>
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_MessageIn.html'>XML Message In</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_MessageOut.html'>XML Message Out</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_IntegerAttribute.html'>Integer Attribute</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_RealAttribute.html'>Real Attribute</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_StringAttribute.html'>String Attribute</a>
+							</dd>
+
+							<dt class='menu_dt'>&nbsp;</dt>
+							<dd class='menu_dd'>
+								<a class='menu_item' href='html/LangRef_XML_Object_IndexVariable.html'>Index Variable</a>
+							</dd>
+
+						</dl>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub11"); return false;' style='cursor: pointer;' id='sub11_a'><tt><b>+</b></tt></a>
+				GUI: Graphical Elements
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub11' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Text.html'>Text</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Rectangle.html'>Rectangle</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Ellipse.html'>Ellipse</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Polygon.html'>Polygon</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_3DRectangle.html'>3D Rectangle</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Line.html'>Line</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Spline.html'>Spline</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Icon.html'>Icon</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_ActionButton.html'>Action Button</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_GraphicalActionButton.html'>Graphical Action Button</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Plotter.html'>Plotter</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_Browser.html'>Browser</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_ShowWorkspaceButton.html'>Show Workspace Button</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_CHEMIcon.html'>CHEM Icon</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_GUI_LUCASIcon.html'>LUCAS Icon</a>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a onClick='toggleExpand("sub12"); return false;' style='cursor: pointer;' id='sub12_a'><tt><b>+</b></tt></a>
+				<a class='menu_item' href='html/LangRef_TextLang.html'>Textual Language</a>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd id='sub12' class='menu_dd' style='display: none;'>
+				<dl class='menu_other_level'>
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_Actions.html'>Actions</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_Conditions.html'>Conditions</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_CallParameters.html'>Call Parameters</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_Functions.html'>Functions</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_Methods.html'>Methods</a>
+					</dd>
+
+					<dt class='menu_dt'>&nbsp;</dt>
+					<dd class='menu_dd'>
+						<a class='menu_item' href='html/LangRef_TextLang_EvaluationRules.html'>Evaluation Rules</a>
+					</dd>
+
+				</dl>
+			</dd>
+
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/LangRef_ExecutionModel.html'>Execution Model</a>
+			</dd>
+
+		</dl>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a onClick='toggleExpand("sub13"); return false;' style='cursor: pointer;' id='sub13_a'><tt><b>+</b></tt></a>
+		Libraries
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd id='sub13' class='menu_dd' style='display: none;'>
+		<dl class='menu_other_level'>
+			<dt class='menu_dt'>&nbsp;</dt>
+			<dd class='menu_dd'>
+				<a class='menu_item' href='html/Lib_ControlLib.html'>ControlLib</a>
+			</dd>
+
+		</dl>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/CustomIO.html'>Custom IO</a>
+	</dd>
+
+	<dt class='menu_dt'>&nbsp;</dt>
+	<dd class='menu_dd'>
+		<a class='menu_item' href='html/CommandLine.html'>Command Line</a>
+	</dd>
+
+</dl>
+</body>
+</html>

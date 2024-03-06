@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Overview - Steps and Transitions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Overview - Steps and Transitions</h1>
+
+<hr>
+
+<p>
+The graphical language of Grafchart is based on Grafcet/Sequential Function
+Charts (SFC). The language is state-transition oriented. A Grafchart
+program consists of a function chart that represents an activity flow.
+By convention the flow goes from the top of page to the bottom of page.
+</p>
+
+<p>
+More formally a Grafcet function chart is a bipartite directed graph consisting
+of <b>steps</b> and <b>transitions</b>.
+</p>
+
+<p><img src="Figures/steptransition.gif" alt="Steps and Transitions"></p>
+
+<p>
+A step can either be <i>active</i> or <i>inactive</i>.
+An <i>active</i> step is indicated by a filled token.
+</p>
+
+<p>
+Associated with the steps are actions. The actions
+are expressed in a textual action language. Actions can be performed when
+the step is activated, deactivated, aborted and/or periodically while the
+step is active.
+</p>
+
+<p>
+The transitions have an associated boolean <i>condition</i> that acts as a guard.
+A transition is <i>enabled</i> if all immediately preceding steps are <i>active</i>.
+An <i>enabled</i> transition <i>fires</i> if its <i>condition</i> is true.
+</p>
+
+</body>
+</html>
+

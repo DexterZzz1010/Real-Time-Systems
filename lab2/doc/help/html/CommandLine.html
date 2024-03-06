@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Command Line</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Command Line</h1>
+
+<hr>
+
+<p>
+	Command line arguments passed to the startup scripts will be forwarded
+	to JGrafchart. If you want to send parameters to the JVM you need to
+	modify the startup scripts.
+</p>
+
+<p>
+	The working directory for JGrafchart must always be <tt>bin/</tt>,
+	the startup scripts make sure that this is the case. Relative paths
+	are always interpreted as relative to the working directory.
+</p>
+
+<p>
+	It is recommended to send the command line argument <tt>-Xincgc</tt>
+	to the JVM to enable incremental Java GC and avoid occasional freezing.
+	The startup scripts do this by default.
+</p>
+
+<hr>
+
+<p>
+	Command line arguments:
+</p>
+
+<ul>
+	<li>
+		<p><tt>-connect &lt;makeConnect&gt;</tt></p>
+		<p>Triggers an automatic connection to the CCOM server if <tt>makeConnect = 1</tt>. (default: 0)</p>
+	</li>
+	<li>
+		<p><tt>-debug</tt></p>
+		<p>Intended for JGrafchart developers only. Customizations that make debugging more convenient, e.g. no Overrun notifications.</p>
+	</li>
+	<li>
+		<p><tt>--dpwsDiscovery &lt;networkInterface/IPv4&gt;</tt></p>
+		<p>Select network interface or IPv4 address to use for WS-Discovery. (default: &lt;default&gt;)</p>
+	</li>
+	<li>
+		<p><tt>-geometry &lt;width&gt;x&lt;height&gt;</tt></p>
+		<p>Sets the initial size of the JGrafchart window (default: 1024x768)</p>
+	</li>
+	<li>
+		<p><tt>-graphicalSteps &lt;mode&gt;</tt></p>
+		<p>With <tt>mode = 1</tt> it is possible to set step images. (default: 0)</p>
+	</li>
+	<li>
+		<p><tt>-load &lt;path&gt;</tt></p>
+		<p>Opens the application <tt>path</tt> during startup.</p>
+	</li>
+	<li>
+		<p><tt>-loadcompile &lt;path&gt;</tt></p>
+		<p>Opens and compiles the application <tt>path</tt> during startup.</p>
+	</li>
+	<li>
+		<p><tt>-loadcompilestart &lt;path&gt;</tt></p>
+		<p>Opens, compiles, and starts the application <tt>path</tt> during startup.</p>
+	</li>
+	<li>
+		<p><tt><a name="localIO"></a>-localIO &lt;class&gt;</tt></p>
+		<p>The implementation class for the custom IO. (default: grafchart.sfc.io.lund.LundLocalIO)</p>
+	</li>
+	<li>
+		<p><tt>-name &lt;name&gt;</tt></p>
+		<p>
+			Sets the name of the JGrafchart instance. This will also be the
+			identifier used in CCOM communication. (default: JGrafchart)
+		</p>
+	</li>
+	<li>
+		<p><tt>-plain &lt;mode&gt;</tt></p>
+		<p>With <tt>mode = 1</tt> JGrafchart is started in slimmed mode. (default: 0)</p>
+	<li>
+		<p><tt>-port &lt;portNumber&gt;</tt></p>
+		<p>Sets the port number that the CCOM server listens to. (default: 3412)</p>
+	</li>
+	<li>
+		<p><tt>-serverIP &lt;IP&gt;</tt></p>
+		<p>Sets the CCOM server IP address. <i>Note: Localhost is not a valid value.</i> (default: &lt;none&gt;)</p>
+	</li>
+	<li>
+		<p><tt>-undo</tt></p>
+		<p>Enables the experimental Undo/Redo feature.</p>
+	</li>
+	<li>
+		<p><tt>-windows &lt;style&gt;</tt></p>
+		<p>Sets the UI look-and-feel. 0 = Standard Java look-and-feel, 1 = Windows look-and-feel. (Default: 0)</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

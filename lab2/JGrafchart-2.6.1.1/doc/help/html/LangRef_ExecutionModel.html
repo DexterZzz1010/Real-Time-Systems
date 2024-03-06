@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Execution Model</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Execution Model</h1>
+
+<hr>
+
+<p>
+In every scan the following operations are performed:
+</p>
+
+<ol>
+	<li>Read digital and analog inputs.</li>
+	<li>
+		<p>
+			Each transition that is enabled and has a condition that is true, is marked for firing.
+		</p>
+	</li>
+	<li>
+		<p>
+			If a transition marked for firing has lower priority than an alternative transition which is also marked for firing, its firing mark is removed.
+		</p>
+	</li>
+	<li>
+		<p>
+			The transitions marked for firing perform the following operations:
+		</p>
+		<ol>
+			<li>
+				Each step preceding the transition is deactivated, i.e. the exit actions of these steps are executed.
+			</li>
+			<li>
+				Each step succeeding the transition is activated, i.e. the enter actions of these steps are executed.
+			</li>
+		</ol>
+	</li>
+	<li>
+		<p>
+			The following operations are performed for each step:
+		</p>
+		<ul>
+			<li>
+				The step timer (accessed through &lt;stepname&gt;.t or &lt;stepname&gt;.s) is updated.
+			</li>
+			<li>
+				If the step is active and was also active the previous scan, the periodic actions of the step are executed.
+			</li>
+			<li>
+				The variables related to the normal actions of the step are marked if the step's activation status has changed since the previous scan.
+			</li>
+		</ul>
+	</li>
+	<li>
+		<p>
+			Update variables that are marked due to normal actions.
+		</p>
+	</li>
+	<li>
+		<p>
+			Sleep until the start of the next scan cycle.
+		</p>
+	</li>
+</ol>
+
+<p>
+This evaluation strategy makes the evaluation order of the transitions irrelevant and eliminates the risk of firing chains of transitions within the same scan-cycle.
+It also affects how alternative transitions with non-mutually exclusive conditions are handled.
+In JGrafchart all the alternative transitions will be fired. This conforms to the Grafcet standard and also gives a fully deterministic behavior.
+You need to make sure that alternative transitions always are mutually exclusive, e.g. by using priorities.
+</p>
+
+<p><img src="Figures/alternativefiring002.gif" alt="Alternative Firing"></p>
+
+</body>
+</html>
+

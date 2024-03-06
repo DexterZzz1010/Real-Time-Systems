@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - External Calls to JGrafchart Procedures</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - External Calls to JGrafchart Procedures</h1>
+
+<hr>
+
+<p>
+Calls from external components or toolboxes to JGrafchart procedures
+are handled as in the figure below.
+</p>
+
+<p><img src="Figures/externalcalls.gif" alt="External Call"></p>
+
+<p>
+An XML Message In message is used to receive the RPC invocation
+message. The identifier/name of the XML Message In object should be
+Rpc. The arrival detection is implemented by a separate procedure associated
+with the XML Message In object (here named RPCDispatcher). The RPCDispatcher
+may be common to all RPCs. The RPCDispatcher calls a wrapper procedure
+associated with the JGrafchart procedure, e.g., by adding the "Wrapper"
+prefix to the procedure name.. The wrapper procedure extracts the procedure
+parameters from the message, calls the actual procedure, collects the
+out parameters, and generates an RPCResponse message that is sent back
+to the external caller.
+</p>
+
+<p>
+Complete examples of external calls to JGrafchart procedures can
+be found in the on-line tutorial.
+</p>
+
+</body>
+</html>
+

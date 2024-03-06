@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="J1" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="600.0" boundsWidth="472.0" scale="1.0" color="-35" x="0.0" y="0.0" socketHost="" socketPort="-1">
+  <GCStep id="S1" x="137.0" y="135.0" height="70.0" width="223.0" name="S1" actionText=";" actionBlockVisible="0" />
+  <GCTransition id="T1" x="175.0" y="220.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <GCStep id="S2" x="137.0" y="255.0" height="70.0" width="223.0" name="S2" actionText=";" actionBlockVisible="0" />
+  <GCTransition id="T2" x="175.0" y="340.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <GCTransition id="T3" x="175.0" y="100.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <FreeText name="" x="60.0" y="220.0" height="25" width="42" fontSize="19" text="Step" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="270.0" y="220.0" height="25" width="95" fontSize="19" text="Transition" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="111" y="226" />
+    <Stroke x="143" y="196" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="113" y="242" />
+    <Stroke x="141" y="267" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="266" y="251" />
+    <Stroke x="233" y="340" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="267" y="240" />
+    <Stroke x="240" y="240" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="264" y="214" />
+    <Stroke x="238" y="129" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="2" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+    <Stroke x="190" y="364" />
+    <Stroke x="190" y="390" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="2" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+    <Stroke x="190" y="102" />
+    <Stroke x="190" y="82" />
+  </GCStroke>
+  <GCLink fromObject="S1" toObject="T1">
+    <Stroke x="190" y="205" />
+    <Stroke x="190" y="215" />
+    <Stroke x="190" y="215" />
+    <Stroke x="190" y="210" />
+    <Stroke x="190" y="210" />
+    <Stroke x="190" y="220" />
+  </GCLink>
+  <GCLink fromObject="T1" toObject="S2">
+    <Stroke x="190" y="245" />
+    <Stroke x="190" y="255" />
+    <Stroke x="190" y="255" />
+    <Stroke x="190" y="245" />
+    <Stroke x="190" y="245" />
+    <Stroke x="190" y="255" />
+  </GCLink>
+  <GCLink fromObject="S2" toObject="T2">
+    <Stroke x="190" y="325" />
+    <Stroke x="190" y="335" />
+    <Stroke x="190" y="335" />
+    <Stroke x="190" y="330" />
+    <Stroke x="190" y="330" />
+    <Stroke x="190" y="340" />
+  </GCLink>
+  <GCLink fromObject="T3" toObject="S1">
+    <Stroke x="190" y="125" />
+    <Stroke x="190" y="135" />
+    <Stroke x="190" y="135" />
+    <Stroke x="190" y="125" />
+    <Stroke x="190" y="125" />
+    <Stroke x="190" y="135" />
+  </GCLink>
+</GCDocument>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="J1" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="930.0" boundsWidth="1265.0" scale="1.0" color="-35" x="0.0" y="0.0" socketHost="" socketPort="-1">
+  <Icon name="" x="110.0" y="70.0" height="767.0" width="942.0" file="../doc/help/html/Figures/editor.gif" />
+  <FreeText name="" x="400.0" y="10.0" height="37" width="127" fontSize="28" text="Menu bar" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="670.0" y="200.0" height="37" width="204" fontSize="28" text="Message menu" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="270.0" y="320.0" height="37" width="92" fontSize="28" text="Palette" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="600.0" y="30.0" height="37" width="112" fontSize="28" text="Tool bar" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="500.0" y="470.0" height="37" width="218" fontSize="28" text="Workspace area" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="4" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="254" y="344" />
+    <Stroke x="198" y="373" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="4" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="436" y="53" />
+    <Stroke x="310" y="109" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="4" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="617" y="69" />
+    <Stroke x="507" y="140" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="4" fillColor="-16777216" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="770" y="196" />
+    <Stroke x="812" y="140" />
+  </GCStroke>
+</GCDocument>
+

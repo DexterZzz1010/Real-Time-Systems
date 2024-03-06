@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - Detecting Message Arrival</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - Detecting Message Arrival</h1>
+
+<hr>
+
+<p>
+The reception of an XML Message by an XML Message In object can
+be detected in two different ways:
+</p>
+
+<ol>
+	<li>
+		<p>Using an event transition expression</p>
+		<p>
+			The event expression <tt>/In1</tt> is true whenever a new message
+			is received by the XML Message In object named <tt>In1</tt>. The main
+			advantage with is approach is that it is fast and simple. The disadvantage
+			is that it only works if the transition is enabled. If this is not the
+			case there is a risk that the message is lost due to overwriting by a
+			new message. Also, the approach currently does not work for XML Message
+			In objects that are contained within procedures.
+		</p>
+	</li>
+	<li>
+		<p>Using a procedure.</p>
+		<p>
+			It is possible to associate a procedure with an XML Message In
+			object. Whenever a message is received a new call to the procedure
+			is spawned (similar to a process step). The entire contents of the message
+			can be passed in as a call-by-value parameter to the procedure. The advantage
+			of this approach is that no messages may be lost. The disadvantage is that
+			the spawning of a procedure is quite time consuming.
+		</p>
+	</li>
+</ol>
+
+<h3>Example: Detecting Message Arrival Using Transitions</h3>
+
+<p>
+An example of how the arrival of a message is detected using an
+event expression is shown below.
+</p>
+
+<p><img src="Figures/eventexpression.gif" alt="Detect Message in Transition"></p>
+
+<h3>Example: Detecting Message Arrival Using a Procedure</h3>
+
+<p>
+An example of how the arrival of a message is detected using a
+procedure is shown below:
+</p>
+
+<p><img src="Figures/proceduredetection.gif" alt="Detect Message with Procedure"></p>
+
+<p>
+In the Procedure Menu action dialog the user indicates which procedure
+that should be associated with the XML Message In object. The entire
+object is passed in to the procedure invocation (V Message = In1;) Here
+it is important that the object at the left hand side in the assignment
+is a workspace object and not an XML Message In object.
+</p>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/index_2_0.dtd">
+<index version="2.0">
+	<indexitem text="Command Line" target="CommandLine"/>
+	<indexitem text="Custom IO" target="CustomIO"/>
+	<indexitem text="Glossary" target="Glossary"/>
+	<indexitem text="Functions">
+		<indexitem text="abs" target="LangRef_TextLang_Functions_abs"/>
+		<indexitem text="addPalette" target="LangRef_TextLang_Functions_addPalette"/>
+		<indexitem text="applyStaticMethod" target="LangRef_TextLang_Functions_applyStaticMethod"/>
+		<indexitem text="clearMessages" target="LangRef_TextLang_Functions_clearMessages"/>
+		<indexitem text="compile" target="LangRef_TextLang_Functions_compile"/>
+		<indexitem text="connectCCOM" target="LangRef_TextLang_Functions_connectCCOM"/>
+		<indexitem text="cos" target="LangRef_TextLang_Functions_cos"/>
+		<indexitem text="currentTime" target="LangRef_TextLang_Functions_currentTime"/>
+		<indexitem text="delete" target="LangRef_TextLang_Functions_delete"/>
+		<indexitem text="disconnectCCOM" target="LangRef_TextLang_Functions_disconnectCCOM"/>
+		<indexitem text="dpwsGetEvent" target="LangRef_TextLang_Functions_dpwsGetEvent"/>
+		<indexitem text="dpwsGetFault" target="LangRef_TextLang_Functions_dpwsGetFault"/>
+		<indexitem text="dpwsHasEvent" target="LangRef_TextLang_Functions_dpwsHasEvent"/>
+		<indexitem text="dpwsHasFault" target="LangRef_TextLang_Functions_dpwsHasFault"/>
+		<indexitem text="dpwsSubscribe" target="LangRef_TextLang_Functions_dpwsSubscribe"/>
+		<indexitem text="dpwsUnsubscribe" target="LangRef_TextLang_Functions_dpwsUnsubscribe"/>
+		<indexitem text="exec" target="LangRef_TextLang_Functions_exec"/>
+		<indexitem text="format" target="LangRef_TextLang_Functions_format"/>
+		<indexitem text="freeMemory" target="LangRef_TextLang_Functions_freeMemory"/>
+		<indexitem text="getCCOMLoginName" target="LangRef_TextLang_Functions_getCCOMLoginName"/>
+		<indexitem text="getCCOMPort" target="LangRef_TextLang_Functions_getCCOMPort"/>
+		<indexitem text="getCCOMServer" target="LangRef_TextLang_Functions_getCCOMServer"/>
+		<indexitem text="getTickTime" target="LangRef_TextLang_Functions_getTickTime"/>
+		<indexitem text="getTimestamp" target="LangRef_TextLang_Functions_getTimestamp"/>
+		<indexitem text="intToBlue" target="LangRef_TextLang_Functions_intToBlue"/>
+		<indexitem text="intToGreen" target="LangRef_TextLang_Functions_intToGreen"/>
+		<indexitem text="intToRed" target="LangRef_TextLang_Functions_intToRed"/>
+		<indexitem text="isConnectedToCCOM" target="LangRef_TextLang_Functions_isConnectedToCCOM"/>
+		<indexitem text="lcReceived" target="LangRef_TextLang_Functions_lcReceived"/>
+		<indexitem text="lcSend" target="LangRef_TextLang_Functions_lcSend"/>
+		<indexitem text="load" target="LangRef_TextLang_Functions_load"/>
+		<indexitem text="loadCompile" target="LangRef_TextLang_Functions_loadCompile"/>
+		<indexitem text="loadCompileStart" target="LangRef_TextLang_Functions_loadCompileStart"/>
+		<indexitem text="max" target="LangRef_TextLang_Functions_max"/>
+		<indexitem text="maxMemory" target="LangRef_TextLang_Functions_maxMemory"/>
+		<indexitem text="min" target="LangRef_TextLang_Functions_min"/>
+		<indexitem text="new" target="LangRef_TextLang_Functions_new"/>
+		<indexitem text="println" target="LangRef_TextLang_Functions_println"/>
+		<indexitem text="random" target="LangRef_TextLang_Functions_random"/>
+		<indexitem text="removePalette" target="LangRef_TextLang_Functions_removePalette"/>
+		<indexitem text="RGBToInt" target="LangRef_TextLang_Functions_RGBToInt"/>
+		<indexitem text="setCCOMLoginName" target="LangRef_TextLang_Functions_setCCOMLoginName"/>
+		<indexitem text="setCCOMPort" target="LangRef_TextLang_Functions_setCCOMPort"/>
+		<indexitem text="setCCOMServer" target="LangRef_TextLang_Functions_setCCOMServer"/>
+		<indexitem text="sin" target="LangRef_TextLang_Functions_sin"/>
+		<indexitem text="sqrt" target="LangRef_TextLang_Functions_sqrt"/>
+		<indexitem text="start" target="LangRef_TextLang_Functions_start"/>
+		<indexitem text="stop" target="LangRef_TextLang_Functions_stop"/>
+		<indexitem text="stringApply" target="LangRef_TextLang_Functions_stringApply"/>
+		<indexitem text="subscribe" target="LangRef_TextLang_Functions_subscribe"/>
+		<indexitem text="totalMemory" target="LangRef_TextLang_Functions_totalMemory"/>
+		<indexitem text="unsubscribe" target="LangRef_TextLang_Functions_unsubscribe"/>
+		<indexitem text="writeMessage" target="LangRef_TextLang_Functions_writeMessage"/>
+		<indexitem text="xmlAdd" target="LangRef_TextLang_Functions_xmlAdd"/>
+		<indexitem text="xmlFetch" target="LangRef_TextLang_Functions_xmlFetch"/>
+	</indexitem>
+	<indexitem text="Methods">
+		<indexitem text="add" target="LangRef_TextLang_Methods_BasicList_add"/>
+		<indexitem text="add" target="LangRef_TextLang_Methods_BasicList_add_2"/>
+		<indexitem text="addFirst" target="LangRef_TextLang_Methods_BasicList_addFirst"/>
+		<indexitem text="addItem" target="LangRef_TextLang_Methods_Browser_addItem"/>
+		<indexitem text="addItem" target="LangRef_TextLang_Methods_Browser_addItem_2"/>
+		<indexitem text="append" target="LangRef_TextLang_Methods_BasicList_append"/>
+		<indexitem text="clear" target="LangRef_TextLang_Methods_BasicList_clear"/>
+		<indexitem text="clear" target="LangRef_TextLang_Methods_Browser_clear"/>
+		<indexitem text="contains" target="LangRef_TextLang_Methods_BasicList_contains"/>
+		<indexitem text="echo" target="LangRef_TextLang_Methods_JGoText_echo"/>
+		<indexitem text="get" target="LangRef_TextLang_Methods_BasicList_get"/>
+		<indexitem text="getBkColor" target="LangRef_TextLang_Methods_JGoText_getBkColor"/>
+		<indexitem text="getDestination" target="LangRef_TextLang_Methods_XMLMessageOut_getDestination"/>
+		<indexitem text="getFillColor" target="LangRef_TextLang_Methods_Browser_getFillColor"/>
+		<indexitem text="getFillColor" target="LangRef_TextLang_Methods_JGoDrawable_getFillColor"/>
+		<indexitem text="getFont" target="LangRef_TextLang_Methods_Browser_getFont"/>
+		<indexitem text="getFontSize" target="LangRef_TextLang_Methods_JGoText_getFontSize"/>
+		<indexitem text="getHandle" target="LangRef_TextLang_Methods_XMLMessageX_getHandle"/>
+		<indexitem text="getHeight" target="LangRef_TextLang_Methods_Referencable_getHeight"/>
+		<indexitem text="getItem" target="LangRef_TextLang_Methods_Browser_getItem"/>
+		<indexitem text="getMustReply" target="LangRef_TextLang_Methods_XMLMessageX_getMustReply"/>
+		<indexitem text="getNumItems" target="LangRef_TextLang_Methods_Browser_getNumItems"/>
+		<indexitem text="getOrigin" target="LangRef_TextLang_Methods_XMLMessageX_getOrigin"/>
+		<indexitem text="getPenColor" target="LangRef_TextLang_Methods_JGoDrawable_getPenColor"/>
+		<indexitem text="getPenStyle" target="LangRef_TextLang_Methods_JGoDrawable_getPenStyle"/>
+		<indexitem text="getPenWidth" target="LangRef_TextLang_Methods_JGoDrawable_getPenWidth"/>
+		<indexitem text="getPointX" target="LangRef_TextLang_Methods_JGoStroke_getPointX"/>
+		<indexitem text="getPointY" target="LangRef_TextLang_Methods_JGoStroke_getPointY"/>
+		<indexitem text="getPublish" target="LangRef_TextLang_Methods_XMLMessageOut_getPublish"/>
+		<indexitem text="getSelectedIndex" target="LangRef_TextLang_Methods_Browser_getSelectedIndex"/>
+		<indexitem text="getSelectedItem" target="LangRef_TextLang_Methods_Browser_getSelectedItem"/>
+		<indexitem text="getSendHandle" target="LangRef_TextLang_Methods_XMLMessageOut_getSendHandle"/>
+		<indexitem text="getText" target="LangRef_TextLang_Methods_JGoText_getText"/>
+		<indexitem text="getTextColor" target="LangRef_TextLang_Methods_Browser_getTextColor"/>
+		<indexitem text="getTextColor" target="LangRef_TextLang_Methods_JGoText_getTextColor"/>
+		<indexitem text="getTextSize" target="LangRef_TextLang_Methods_Browser_getTextSize"/>
+		<indexitem text="getTickTime" target="LangRef_TextLang_Methods_Workspace_getTickTime"/>
+		<indexitem text="getTopic" target="LangRef_TextLang_Methods_XMLMessageOut_getTopic"/>
+		<indexitem text="getType" target="LangRef_TextLang_Methods_XMLMessageX_getType"/>
+		<indexitem text="getWidth" target="LangRef_TextLang_Methods_Referencable_getWidth"/>
+		<indexitem text="getWorkspaceColor" target="LangRef_TextLang_Methods_Hierarchical_getWorkspaceColor"/>
+		<indexitem text="getXLocation" target="LangRef_TextLang_Methods_Referencable_getXLocation"/>
+		<indexitem text="getXML" target="LangRef_TextLang_Methods_XMLMessageX_getXML"/>
+		<indexitem text="getYLocation" target="LangRef_TextLang_Methods_Referencable_getYLocation"/>
+		<indexitem text="hideWorkspace" target="LangRef_TextLang_Methods_Hierarchical_hideWorkspace"/>
+		<indexitem text="indexOf" target="LangRef_TextLang_Methods_BasicList_indexOf"/>
+		<indexitem text="isBold" target="LangRef_TextLang_Methods_Browser_isBold"/>
+		<indexitem text="isEmpty" target="LangRef_TextLang_Methods_BasicList_isEmpty"/>
+		<indexitem text="isUpdated" target="LangRef_TextLang_Methods_InternalVariable_isUpdated"/>
+		<indexitem text="loadFile" target="LangRef_TextLang_Methods_Icon_loadFile"/>
+		<indexitem text="loadURL" target="LangRef_TextLang_Methods_Icon_loadURL"/>
+		<indexitem text="outputMessage" target="LangRef_TextLang_Methods_XMLMessageOut_outputMessage"/>
+		<indexitem text="publishMessage" target="LangRef_TextLang_Methods_XMLMessageOut_publishMessage"/>
+		<indexitem text="remove" target="LangRef_TextLang_Methods_BasicList_remove"/>
+		<indexitem text="remove" target="LangRef_TextLang_Methods_GUIX_remove"/>
+		<indexitem text="removeItem" target="LangRef_TextLang_Methods_Browser_removeItem"/>
+		<indexitem text="sample" target="LangRef_TextLang_Methods_InputVariable_sample"/>
+		<indexitem text="sampleAll" target="LangRef_TextLang_Methods_Workspace_sampleAll"/>
+		<indexitem text="sendMessage" target="LangRef_TextLang_Methods_XMLMessageOut_sendMessage"/>
+		<indexitem text="set" target="LangRef_TextLang_Methods_BasicList_set"/>
+		<indexitem text="setBkColor" target="LangRef_TextLang_Methods_JGoText_setBkColor"/>
+		<indexitem text="setBold" target="LangRef_TextLang_Methods_Browser_setBold"/>
+		<indexitem text="setDestination" target="LangRef_TextLang_Methods_XMLMessageOut_setDestination"/>
+		<indexitem text="setEnabled" target="LangRef_TextLang_Methods_WorkspaceObject_setEnabled"/>
+		<indexitem text="setFillColor" target="LangRef_TextLang_Methods_Browser_setFillColor"/>
+		<indexitem text="setFillColor" target="LangRef_TextLang_Methods_JGoDrawable_setFillColor"/>
+		<indexitem text="setFont" target="LangRef_TextLang_Methods_Browser_setFont"/>
+		<indexitem text="setFontSize" target="LangRef_TextLang_Methods_JGoText_setFontSize"/>
+		<indexitem text="setHandle" target="LangRef_TextLang_Methods_XMLMessageOut_setHandle"/>
+		<indexitem text="setHeight" target="LangRef_TextLang_Methods_Referencable_setHeight"/>
+		<indexitem text="setItem" target="LangRef_TextLang_Methods_Browser_setItem"/>
+		<indexitem text="setLocation" target="LangRef_TextLang_Methods_Referencable_setLocation"/>
+		<indexitem text="setMustReply" target="LangRef_TextLang_Methods_XMLMessageOut_setMustReply"/>
+		<indexitem text="setOrigin" target="LangRef_TextLang_Methods_XMLMessageOut_setOrigin"/>
+		<indexitem text="setPenColor" target="LangRef_TextLang_Methods_JGoDrawable_setPenColor"/>
+		<indexitem text="setPenStyle" target="LangRef_TextLang_Methods_JGoDrawable_setPenStyle"/>
+		<indexitem text="setPenWidth" target="LangRef_TextLang_Methods_JGoDrawable_setPenWidth"/>
+		<indexitem text="setPoint" target="LangRef_TextLang_Methods_JGoStroke_setPoint"/>
+		<indexitem text="setPublish" target="LangRef_TextLang_Methods_XMLMessageOut_setPublish"/>
+		<indexitem text="setText" target="LangRef_TextLang_Methods_JGoText_setText"/>
+		<indexitem text="setTextColor" target="LangRef_TextLang_Methods_Browser_setTextColor"/>
+		<indexitem text="setTextColor" target="LangRef_TextLang_Methods_JGoText_setTextColor"/>
+		<indexitem text="setTextSize" target="LangRef_TextLang_Methods_Browser_setTextSize"/>
+		<indexitem text="setTopic" target="LangRef_TextLang_Methods_XMLMessageOut_setTopic"/>
+		<indexitem text="setType" target="LangRef_TextLang_Methods_XMLMessageOut_setType"/>
+		<indexitem text="setUpdated" target="LangRef_TextLang_Methods_InternalVariable_setUpdated"/>
+		<indexitem text="setVisible" target="LangRef_TextLang_Methods_Referencable_setVisible"/>
+		<indexitem text="setWidth" target="LangRef_TextLang_Methods_Referencable_setWidth"/>
+		<indexitem text="setWorkspaceColor" target="LangRef_TextLang_Methods_Hierarchical_setWorkspaceColor"/>
+		<indexitem text="showWorkspace" target="LangRef_TextLang_Methods_Hierarchical_showWorkspace"/>
+		<indexitem text="showWorkspaceAt" target="LangRef_TextLang_Methods_Hierarchical_showWorkspaceAt"/>
+		<indexitem text="size" target="LangRef_TextLang_Methods_BasicList_size"/>
+		<indexitem text="spawn" target="LangRef_TextLang_Methods_Procedure_spawn"/>
+		<indexitem text="writeFile" target="LangRef_TextLang_Methods_Browser_writeFile"/>
+	</indexitem>
+	<indexitem text="Objects">
+		<indexitem text="3D Rectangle" target="LangRef_GUI_3DRectangle"/>
+		<indexitem text="Action Button" target="LangRef_GUI_ActionButton"/>
+		<indexitem text="Analog Input" target="LangRef_IO_AnalogInput"/>
+		<indexitem text="Analog Output" target="LangRef_IO_AnalogOutput"/>
+		<indexitem text="Boolean List" target="LangRef_Var_BooleanList"/>
+		<indexitem text="Boolean Variable" target="LangRef_Var_BooleanVariable"/>
+		<indexitem text="Browser" target="LangRef_GUI_Browser"/>
+		<indexitem text="ByteStream In" target="LangRef_IO_ByteStream_In"/>
+		<indexitem text="ByteStream Out" target="LangRef_IO_ByteStream_Out"/>
+		<indexitem text="CHEM Icon" target="LangRef_GUI_CHEMIcon"/>
+		<indexitem text="Connection Posts" target="LangRef_FC_ConnectionPosts"/>
+		<indexitem text="Digital Input (Inverse Logic)" target="LangRef_IO_DigitalInputInverse"/>
+		<indexitem text="Digital Input" target="LangRef_IO_DigitalInput"/>
+		<indexitem text="Digital Output (Inverse Logic)" target="LangRef_IO_DigitalOutputInverse"/>
+		<indexitem text="Digital Output" target="LangRef_IO_DigitalOutput"/>
+		<indexitem text="DPWS Object" target="LangRef_IO_DPWSObject"/>
+		<indexitem text="Ellipse" target="LangRef_GUI_Ellipse"/>
+		<indexitem text="Enter Step" target="LangRef_FC_EnterStep"/>
+		<indexitem text="Exception Transition" target="LangRef_FC_ExceptionTransition"/>
+		<indexitem text="Exit Step" target="LangRef_FC_ExitStep"/>
+		<indexitem text="Graphical Action Button" target="LangRef_GUI_GraphicalActionButton"/>
+		<indexitem text="Group" target="LangRef_FC_Group"/>
+		<indexitem text="Icon" target="LangRef_GUI_Icon"/>
+		<indexitem text="Index Variable" target="LangRef_XML_Object_IndexVariable"/>
+		<indexitem text="Initial Step" target="LangRef_FC_InitialStep"/>
+		<indexitem text="Integer Attribute" target="LangRef_XML_Object_IntegerAttribute"/>
+		<indexitem text="Integer List" target="LangRef_Var_IntegerList"/>
+		<indexitem text="Integer Variable" target="LangRef_Var_IntegerVariable"/>
+		<indexitem text="LabComm Object" target="LangRef_IO_LabCommObject"/>
+		<indexitem text="Line" target="LangRef_GUI_Line"/>
+		<indexitem text="LUCAS Icon" target="LangRef_GUI_LUCASIcon"/>
+		<indexitem text="Macro Step" target="LangRef_FC_MacroStep"/>
+		<indexitem text="Parallel Join" target="LangRef_FC_ParallelJoin"/>
+		<indexitem text="Paralllel Split" target="LangRef_FC_ParallelSplit"/>
+		<indexitem text="Plotter" target="LangRef_GUI_Plotter"/>
+		<indexitem text="Polygon" target="LangRef_GUI_Polygon"/>
+		<indexitem text="Procedure Step" target="LangRef_FC_ProcedureStep"/>
+		<indexitem text="Procedure" target="LangRef_FC_Procedure"/>
+		<indexitem text="Process Step" target="LangRef_FC_ProcessStep"/>
+		<indexitem text="Real Attribute" target="LangRef_XML_Object_RealAttribute"/>
+		<indexitem text="Real List" target="LangRef_Var_RealList"/>
+		<indexitem text="Real Variable" target="LangRef_Var_RealVariable"/>
+		<indexitem text="Rectangle" target="LangRef_GUI_Rectangle"/>
+		<indexitem text="Show Workspace Button" target="LangRef_GUI_ShowWorkspaceButton"/>
+		<indexitem text="Socket Bool In" target="LangRef_IO_Socket_BoolIn"/>
+		<indexitem text="Socket Bool Out" target="LangRef_IO_Socket_BoolOut"/>
+		<indexitem text="Socket Int In" target="LangRef_IO_Socket_IntIn"/>
+		<indexitem text="Socket Int Out" target="LangRef_IO_Socket_IntOut"/>
+		<indexitem text="Socket Real In" target="LangRef_IO_Socket_RealIn"/>
+		<indexitem text="Socket Real Out" target="LangRef_IO_Socket_RealOut"/>
+		<indexitem text="Socket String In" target="LangRef_IO_Socket_StringIn"/>
+		<indexitem text="Socket String Out" target="LangRef_IO_Socket_StringOut"/>
+		<indexitem text="Spline" target="LangRef_GUI_Spline"/>
+		<indexitem text="Step Fusion Set" target="LangRef_FC_StepFusionSet"/>
+		<indexitem text="Step" target="LangRef_FC_Step"/>
+		<indexitem text="String Attribute" target="LangRef_XML_Object_StringAttribute"/>
+		<indexitem text="String List" target="LangRef_Var_StringList"/>
+		<indexitem text="String Variable" target="LangRef_Var_StringVariable"/>
+		<indexitem text="Text" target="LangRef_GUI_Text"/>
+		<indexitem text="Transition" target="LangRef_FC_Transition"/>
+		<indexitem text="Workspace Object" target="LangRef_FC_WorkspaceObject"/>
+		<indexitem text="XML Message In" target="LangRef_XML_Object_XMLMessageIn"/>
+		<indexitem text="XML Message Out" target="LangRef_XML_Object_XMLMessageOut"/>
+	</indexitem>
+</index>
+

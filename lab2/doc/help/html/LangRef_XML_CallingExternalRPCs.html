@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - Calling External RPCs</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - Calling External RPCs</h1>
+
+<hr>
+
+<p>
+When JGrafchart should call an RPC in another component/toolbox
+it is convenient to use a Grafchart procedure as a proxy for the remote
+procedure according to the example below.
+</p>
+
+<p><img src="Figures/callingexternal.gif" alt="External Call"></p>
+
+<p>
+The proxy procedure, which may have the same name as the external
+procedure, generates an RPCInvocation message using a local XML Message
+Out object, awaits the RPCResponse message using a local XML Message In
+object, extracts the reply parameters, and returns the reply to the context
+of the procedure step.
+</p>
+
+<p>
+Complete examples of calling external procedures from JGrafchart
+can be found in the on-line tutorial.
+</p>
+
+</body>
+</html>
+

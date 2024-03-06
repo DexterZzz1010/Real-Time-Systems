@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - XML Message Out</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - XML Message Out</h1>
+
+<hr>
+
+<p><img src="Figures/XMLMessageOut.gif" alt="Icon" style="float: right;"></p>
+
+<p>
+An XML Message Out object is an hierarchical object that is used
+to represent sent XML Messages. It contains a subworkspace on which
+it is only allowed to place internal variables and workspace objects.
+The internal variables represent simple XML elements or XML attributes.
+The workspace objects represent structured XML elements.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsWorkspace">Workspace Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsXMLCommon">XML Common Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsXMLOut">XML Out Methods</a><br>
+</p>
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Show/Hide Body</b></p>
+		<p>
+			Toggle the visibility of the subworkspace.
+		</p>
+	</li>
+	<li>
+		<p><b>Table</b></p>
+
+		<p>		
+			Opens an <a href="Editor_Workspaces.html#Inspector">Inspector</a> 
+			for the subworkspace.
+		</p>
+	</li>
+	<li>
+		<p><b>Edit</b></p>
+		<p>Opens the settings dialog</p>
+		<p><img src="Figures/XMLOutEdit.gif" alt="Edit Dialog"></p>
+		
+		<p>
+		<b>Identifier:</b><br>
+		Determines the tag of the main element. If it has no value then
+		the local name is used instead. (Default: &lt;empty&gt;)
+		</p>
+
+		<p>
+		<b>Publish (otherwise send):</b><br>
+		The message is published if checked and sent if unchecked
+		when the method <tt>outputMessage()</tt> is called. (Default: Checked)
+		</p>
+
+		<p>
+		<b>Topic/Destination:</b><br>
+		The value of this field is used as the topic when the message is
+		published and as the destination when the message is sent. A message
+		can only be sent to a single destination at a time. (Default: &lt;empty&gt;)
+		</p>
+
+		<p>
+		<b>Type:</b><br>
+		The CCOM type of the message. (Default: &lt;empty&gt;)
+		</p>
+
+		<p>
+		<b>Origin:</b><br>
+		The origin of the message. Should normally be the same as
+		the CCOM login name, i.e. JGrafchart. (Default: JGrafchart)
+		</p>
+
+		<p>
+		<b>MustReply:</b><br>
+		If this has the value "yes" then the receiver of the message
+		is required to send a response. Otherwise it should have the value "no".
+		(Default: &lt;empty&gt;)
+		</p>
+
+		<p>
+		<b>Handle:</b><br>
+		If the message is a reply message then this attribute should
+		contain the handle of the original message. A value of 0 means that the
+		message is not a reply message (Default: 0).
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

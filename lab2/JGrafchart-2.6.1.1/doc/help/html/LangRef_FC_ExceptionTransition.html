@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - FC - Exception Transition</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - FC - Exception Transition</h1>
+
+<hr>
+
+<p><img src="Figures/exceptiontransition.png" alt="Icon" style="float: right;"></p>
+
+<p>
+An exception transitions is a special transition that may only be connected to an exception output port.
+When the exception transition is fired the preceding step is aborted and the applicable abort actions are executed.
+Exception transitions always have priority over ordinary transitions.
+When connected to a macro step it is possible to refer to the internal state of the macro step from the condition, e.g.
+it is possible to express that an exception only may be fired if the macro step is in a certain internal state.
+The connection rules for the output port are the same as for ordinary transitions.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+None
+</p>
+
+<h4>Context Menu</h4>
+
+<p>
+Same as <a href="LangRef_FC_Transition.html#ContextMenu">Transition</a>.
+</p>
+
+</body>
+</html>
+

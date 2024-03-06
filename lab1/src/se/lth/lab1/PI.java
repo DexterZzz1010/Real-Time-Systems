@@ -1,4 +1,4 @@
-package se.lth.lab1;
+
 
 public class PI {
     // Current PI parameters
@@ -16,7 +16,7 @@ public class PI {
         p.Beta = 1.0;
         p.H = 0.1;
         p.integratorOn = false;
-        p.K = 1.0;
+        p.K = 0.5;
         p.Ti = 0.0;
         p.Tr = 10.0;
         setParameters(p);

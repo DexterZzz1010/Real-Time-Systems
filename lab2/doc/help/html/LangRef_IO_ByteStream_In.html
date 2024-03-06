@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - IO - ByteStream In</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - IO - ByteStream In</h1>
+
+<hr>
+
+<p><img src="Figures/ByteStreamIn.png" alt="Icon" style="float: right;"></p>
+
+<p>
+The ByteStream IO are of string type and each IO acts as a client
+in a TCP socket connection with some user-defined TCP server.
+</p>
+
+<p>
+Each scan cycle the ByteStream In reads all available characters from the socket input
+stream. The value of the ByteStream In is the characters read in the current scan cycle.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+</p>
+
+<h4><a name="ContextMenu"></a>Context Menu</h4>
+
+<ul>
+	<li>
+		<b>Edit:</b> Configure server host and port for the ByteStream IO's connection.
+	</li>
+	<li>
+		<b>Open:</b> Connect to the server.
+	</li>
+	<li>
+		<b>Close:</b> Disconnect from the server.
+	</li>
+</ul>
+
+
+</body>
+</html>
+

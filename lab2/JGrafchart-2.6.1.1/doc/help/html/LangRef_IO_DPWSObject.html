@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - IO - DPWS Object</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - IO - DPWS Object</h1>
+
+<hr>
+
+<p><img src="Figures/DPWSObject.png" alt="Icon" style="float: right;"></p>
+
+<p>
+A DPWS Object is used to communicate with a DPWS server.
+Each DPWS Object needs a binding to a service porttype.
+</p>
+
+<h2>DPWS Eventing</h2>
+
+<p>
+To enable eventing for an application you need to configure the network interface and port to use for event callback. This is done in the <a href="Editor_EditMenu.html#Properties">Application Properties</a>.
+To start a subscription use <a href="LangRef_TextLang_Functions.html#dpwsSubscribe">dpwsSubscribe</a>.
+Incoming events are stored in a separate list for each <i>Notification</i> operation.
+To check if there are any events for any operation, use the event expression <tt>/obj</tt>.
+To check if there are any events for a specific operation, use <a href="LangRef_TextLang_Functions.html#dpwsHasEvent">dpwsHasEvent</a>.
+To get the next event in the list for a specific operation, use <a href="LangRef_TextLang_Functions.html#dpwsGetEvent">dpwsGetEvent</a>.
+The return value from <a href="LangRef_TextLang_Functions.html#dpwsGetEvent">dpwsGetEvent</a> works the same as the return value for <i>Request Response</i> operations.
+</p>
+
+<h2>DPWS Faults</h2>
+
+<p>
+Faults that occur when making DPWS calls are stored in a list.
+To check if there are any stored faults, use <a href="LangRef_TextLang_Functions.html#dpwsHasFault">dpwsHasFault</a>.
+To get the next fault in the list, use <a href="LangRef_TextLang_Functions.html#dpwsGetFault">dpwsGetFault</a>.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+The text methods available on a DPWS Object are the operations
+in its bound porttype of type <i>One Way</i> and <i>Request Response</i>.
+</p>
+
+<p>
+The root element is created automatically and for convenience it specifies the targetNamespace of the <tt>wsdl:definitions</tt> with prefix <tt>tns</tt> (if specified).
+</p>
+
+<p>
+The allowed arguments depend on the operation:
+</p>
+
+<ul>
+	<li>For operations without arguments, no arguments are allowed.</li>
+	<li>For operations with arguments, the call must contain exactly one argument with the root element's contents.</li>
+</ul>
+
+<p>
+<i>Request Response</i> operations return the root element's contents as a string.<br>
+<i>Hint:</i> <a href="LangRef_TextLang_Functions.html#xmlFetch">xmlFetch</a> can be used to extract information from the returned string.
+</p>
+
+<h4>Context Menu</h4>
+
+<p>
+	<i>Note: <b>Edit</b> is chosen automatically instead of showing a context menu with only one choice.</i>
+</p>
+
+<ul>
+	<li>
+		<p><b>Edit:</b> Opens an edit dialog for configuring the porttype binding for the DPWS Object.</p>
+		<p><img src="Figures/DPWSObjectEdit.png" alt="Edit Dialog"></p>
+		<p><b>PortTypes</b> All currently available porttypes. The first item is the binding configured when the dialog was opened. Selecting an item automatically sets all data for the binding.</p>
+		<p><b>Documentation</b> Focus the selected porttype in the <a href="Editor_MiscMenu.html#DPWSServices">DPWS Services</a> dialog.</p>
+		<p><b>Device Address</b> Device address for the binding (globally unique). (Default: &lt;empty&gt;)</p>
+		<p><b>Service Id (optional)</b> Hosted Service Id for the binding (unique within a device). If not specified any hosted service in the device may be used. (Default: &lt;empty&gt;)</p>
+		<p><b>PortType</b> PortType expanded name for the binding (unique within a WSDL file) on the form: <tt>&lt;namespaceName&gt; '/' &lt;localName&gt;</tt>. (Default: &lt;empty&gt;)</p>
+	</li>
+</ul>
+
+</body>
+</html>

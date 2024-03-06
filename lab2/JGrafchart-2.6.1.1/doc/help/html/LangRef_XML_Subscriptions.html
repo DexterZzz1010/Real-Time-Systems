@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - Subscriptions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - Subscriptions</h1>
+
+<hr>
+
+<p>
+In order to receive messages that published under a certain topic
+the toolbox must first have subscribed to the topic. Subscription and
+unsubscription can be made in two different ways:
+</p>
+
+<ol>
+	<li>
+		<p>Implicit subscription</p>
+		<p>
+			When the application is started an automatic subscription is made
+			to the topics of all the XML Message In objects of the application. Similarly,
+			when the application is stopped an automatic unsubscription is made to
+			the topics of all the XML Message Out objects in the application. Implicit
+			subscription is always activated.
+		</p>
+	</li>
+	<li>
+		<p>Explicit subscription.</p>
+		<p>
+			A topic is subscribed to using the function <tt>subscribe(aTopic)</tt>.
+			Similarly a topic is unsubscribed to using the function <tt>unsubscribe(aTopic)</tt>.
+		</p>
+	</li>
+</ol>
+
+</body>
+</html>
+

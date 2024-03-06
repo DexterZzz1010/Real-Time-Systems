@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Introduction</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<base target="_top">
+</head>
+
+<body>
+<h1>Introduction</h1>
+
+<hr>
+
+<p>
+Grafchart is a graphical programming language for sequential, procedural,
+and state-transition oriented applications. It is based on ideas from
+</p>
+
+<ul>
+	<li>Grafcet/Sequential Function Charts (SFC)</li>
+	<li>Statecharts</li>
+	<li>Ordinary textual programming languages</li>
+	<li>Petri nets</li>
+</ul>
+
+<p>
+Grafchart can be used for all types of discrete-event based applications,
+e.g. logical control, operating procedure management, recipe-based batch
+control, and workflow modeling.
+</p>
+
+<p>
+JGrafchart is the name of the graphical object editor for Grafchart.
+With the editor the user both programs, configures, and executes the programs. Programs can also be saved to XML.
+JGrafchart is based on interpretation or simulation.
+The interpretation is performed in real-time in connection with the external environment.
+The implementation is very dynamic and it should be possible to create custom connections to practically any external environment,
+either with custom Digital/Analog IO, custom TCP servers, or custom DPWS servers.
+</p>
+
+<p>
+JGrafchart is developed by the
+<a id="control" href="ExternalLink.html">Department of Automatic Control</a>
+at Lund University.
+</p>
+
+<h2>Under the Hood</h2>
+
+<p>
+JGrafchart is implemented in Java 2 and Swing. It runs on every
+computing platform that supports this environment. JGrafchart also uses a
+number of external software components:
+</p>
+
+<ul>
+	<li>The <a id="beaver" href="ExternalLink.html">Beaver</a> parser generator.</li>
+	<li>
+		<a id="jgo" href="ExternalLink.html">JGo</a>, a class package that supports the
+		development of model-view-controller based graphical object editors.
+	</li>
+	<li>The <a id="javacc" href="ExternalLink.html">JavaCC</a> parser generator.</li>
+	<li>The <a id="javahelp" href="ExternalLink.html">JavaHelp</a> system for on-line help.</li>
+	<li>The <a id="dpws" href="ExternalLink.html">DPWS4J Core</a> for web service integration.</li>
+	<li>
+		<a id="blaster" href="ExternalLink.html">xmlBlaster</a>, a XML-based message-passing middleware.
+		XmlBlaster is layered on top of Corba and/or XML-RPC. Using xmlBlaster JGrafchart can send and receive XML-structures.
+	</li>
+</ul>
+
+<p>
+Tools used for development:
+</p>
+
+<ul>
+	<li><a id="jastadd" href="ExternalLink.html">JastAdd</a> for compiler specification.</li>
+	<li><a id="eclipse" href="ExternalLink.html">Eclipse</a> for development in Java.</li>
+	<li><a id="junit" href="ExternalLink.html">JUnit</a> for unit tests.</li>
+	<li><a id="ant" href="ExternalLink.html">Apache Ant</a> for build automation.</li>
+	<li><a id="svn" href="ExternalLink.html">Subversion</a> for version control.</li>
+	<li><a id="python" href="ExternalLink.html">Python</a> for custom build tools.</li>
+</ul>
+
+<script language="javascript" type="text/javascript">
+	<!--
+		document.getElementById("ant").href      = "http://ant.apache.org/";
+		document.getElementById("beaver").href   = "http://beaver.sourceforge.net/";
+		document.getElementById("blaster").href  = "http://www.xmlblaster.org/";
+		document.getElementById("control").href  = "http://www.control.lth.se/";
+		document.getElementById("dpws").href     = "https://forge.soa4d.org/projects/dpws4j/";
+		document.getElementById("eclipse").href  = "http://www.eclipse.org/";
+		document.getElementById("jastadd").href  = "http://www.jastadd.org/";
+		document.getElementById("javacc").href   = "http://java.net/projects/javacc/";
+		document.getElementById("javahelp").href = "https://javahelp.dev.java.net/";
+		document.getElementById("jgo").href      = "http://www.nwoods.com/";
+		document.getElementById("junit").href    = "http://www.junit.org/";
+		document.getElementById("python").href   = "http://www.python.org/";
+		document.getElementById("svn").href      = "http://subversion.tigris.org/";
+	//-->
+</script>
+
+</body>
+</html>

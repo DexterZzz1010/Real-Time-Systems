@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="J1" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="673.0" boundsWidth="881.0" scale="1.0" color="-35" x="0.0" y="0.0" socketHost="" socketPort="-1">
+  <GrafcetProcedure x="250.0" y="110.0" height="86.0" width="60.0" name="Proc1" threadSpeed="40" simulationMode="1">
+    <GCDocument x="400.0" y="600.0" boundsHeight="400.0" boundsWidth="400.0" scale="1.0" color="-1">
+      <ExitStep id="S1" x="70.0" y="255.0" height="85.0" width="170.0" name="S2" actionText=";" actionBlockVisible="0" />
+      <EnterStep id="S2" x="70.0" y="10.0" height="85.0" width="170.0" name="S1" actionText=";" actionBlockVisible="0" />
+      <GCTransition id="T1" x="85.0" y="220.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+      <GCTransition id="T2" x="85.0" y="100.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+      <GCStep id="S3" x="47.0" y="135.0" height="70.0" width="223.0" name="S3" actionText=";" actionBlockVisible="0" />
+      <FreeText name="" x="180.0" y="30.0" height="28" width="104" fontSize="21" text="Enter step" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+      <FreeText name="" x="180.0" y="270.0" height="28" width="88" fontSize="21" text="Exit step" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+      <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-10066177" penStyle="65535" penWidth="1" fillColor="-10066177" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+        <Stroke x="170" y="44" />
+        <Stroke x="140" y="44" />
+      </GCStroke>
+      <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-10066177" penStyle="65535" penWidth="1" fillColor="-10066177" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+        <Stroke x="170" y="274" />
+        <Stroke x="140" y="274" />
+      </GCStroke>
+      <GCLink fromObject="T1" toObject="S1">
+        <Stroke x="100" y="245" />
+        <Stroke x="100" y="255" />
+        <Stroke x="100" y="255" />
+        <Stroke x="100" y="245" />
+        <Stroke x="100" y="245" />
+        <Stroke x="100" y="255" />
+      </GCLink>
+      <GCLink fromObject="S2" toObject="T2">
+        <Stroke x="100" y="95" />
+        <Stroke x="100" y="105" />
+        <Stroke x="100" y="105" />
+        <Stroke x="100" y="90" />
+        <Stroke x="100" y="90" />
+        <Stroke x="100" y="100" />
+      </GCLink>
+      <GCLink fromObject="T2" toObject="S3">
+        <Stroke x="100" y="125" />
+        <Stroke x="100" y="135" />
+        <Stroke x="100" y="135" />
+        <Stroke x="100" y="125" />
+        <Stroke x="100" y="125" />
+        <Stroke x="100" y="135" />
+      </GCLink>
+      <GCLink fromObject="S3" toObject="T1">
+        <Stroke x="100" y="205" />
+        <Stroke x="100" y="215" />
+        <Stroke x="100" y="215" />
+        <Stroke x="100" y="210" />
+        <Stroke x="100" y="210" />
+        <Stroke x="100" y="220" />
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <FreeText name="" x="90.0" y="80.0" height="28" width="105" fontSize="21" text="Procedure" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="440.0" y="100.0" height="28" width="161" fontSize="21" text="Procedure body" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCTransition id="T3" x="85.0" y="260.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <ProcedureStep id="PS1" x="70.0" y="305.0" height="70.0" width="83.0" name="P1" grafcetProcedure="" parameters="" actionText=";" />
+  <GCTransition id="T4" x="85.0" y="390.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <ProcessStep id="PSS2" x="70.0" y="435.0" height="70.0" width="83.0" name="P2" grafcetProcedure="" parameters="" actionText=";" />
+  <GCTransition id="T5" x="85.0" y="520.0" height="25.0" width="48.0" actionText="0" conditionVisible="1" />
+  <FreeText name="" x="170.0" y="280.0" height="28" width="155" fontSize="21" text="Procedure step" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="180.0" y="410.0" height="28" width="133" fontSize="21" text="Process step" fontName="SanSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-10066177" penStyle="65535" penWidth="1" fillColor="-10066177" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="207" y="107" />
+    <Stroke x="235" y="138" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-10066177" penStyle="65535" penWidth="1" fillColor="-10066177" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="209" y="320" />
+    <Stroke x="160" y="334" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-10066177" penStyle="65535" penWidth="1" fillColor="-10066177" fillStyle="65535" arrowEnd="1" arrowStart="0" cubic="0">
+    <Stroke x="199" y="450" />
+    <Stroke x="160" y="466" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="1" penWidth="2" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+    <Stroke x="318" y="179" />
+    <Stroke x="352" y="477" />
+    <Stroke x="358" y="535" />
+  </GCStroke>
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="1" penWidth="2" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+    <Stroke x="321" y="119" />
+    <Stroke x="361" y="140" />
+  </GCStroke>
+  <GCLink fromObject="T3" toObject="PS1">
+    <Stroke x="100" y="285" />
+    <Stroke x="100" y="295" />
+    <Stroke x="100" y="295" />
+    <Stroke x="100" y="295" />
+    <Stroke x="100" y="295" />
+    <Stroke x="100" y="305" />
+  </GCLink>
+  <GCLink fromObject="PS1" toObject="T4">
+    <Stroke x="100" y="375" />
+    <Stroke x="100" y="385" />
+    <Stroke x="100" y="385" />
+    <Stroke x="100" y="380" />
+    <Stroke x="100" y="380" />
+    <Stroke x="100" y="390" />
+  </GCLink>
+  <GCLink fromObject="T4" toObject="PSS2">
+    <Stroke x="100" y="415" />
+    <Stroke x="100" y="425" />
+    <Stroke x="100" y="425" />
+    <Stroke x="100" y="425" />
+    <Stroke x="100" y="425" />
+    <Stroke x="100" y="435" />
+  </GCLink>
+  <GCLink fromObject="PSS2" toObject="T5">
+    <Stroke x="100" y="505" />
+    <Stroke x="100" y="515" />
+    <Stroke x="100" y="515" />
+    <Stroke x="100" y="510" />
+    <Stroke x="100" y="510" />
+    <Stroke x="100" y="520" />
+  </GCLink>
+</GCDocument>
+

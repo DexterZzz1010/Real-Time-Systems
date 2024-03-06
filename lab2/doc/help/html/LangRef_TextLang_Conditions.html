@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Textual Language - Conditions</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Textual Language - Conditions</h1>
+
+<hr>
+
+<p>
+The textual language used in transition conditions is equivalent
+to the expression (expr) in the actions grammar with the exception
+that the additional unary prefix operators <tt>/</tt> and <tt>\</tt> are available.
+</p>
+
+<ul>
+	<li>
+		<p>Rising Edge Detection</p>
+		<p>
+			The expression <b><tt>'/'expr</tt></b> is true if the expression
+			is true in the current scan cycle and was false in the
+			previous scan cycle. <tt>expr</tt> may only refer to a digital input or
+			a Boolean Variable with an update expression.
+		</p>
+	</li>
+	<li>
+		<p>Falling Edge Detection</p>
+		<p>
+			The expression <b><tt>'\'expr</tt></b> is true if the expression
+			is false in the current scan cycle and was false in the
+			previous scan cycle. <tt>expr</tt> may only refer to a digital input or
+			a Boolean Variable with an update expression.
+		</p>
+	</li>
+	<li>
+		<p>CCOM Message Arrival</p>
+		<p>
+			The expression <b><tt>'/'id</tt></b> is true if an incoming CCOM
+			message has arrived and has been decoded into the XML Message In
+			structure <tt>id</tt>.
+		</p>
+	</li>
+	<li>
+		<p>DPWS Eventing</p>
+		<p>
+			The expression <b><tt>'/'obj</tt></b> is true if the DPWS Object <tt>obj</tt> has any events.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

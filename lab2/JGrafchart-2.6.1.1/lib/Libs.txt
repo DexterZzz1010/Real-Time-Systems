@@ -1,0 +1,11 @@
+=======================  ====================  =========  ==========================================
+File                     Purpose               Version    Website
+=======================  ====================  =========  ==========================================
+beaver-rt.jar            LabComm                 0.9.6.1  http://beaver.sourceforge.net
+JGo.jar                  Graphics                    5.0  http://www.nwoods.com
+jhall.jar                JavaHelp                 2.0.05  https://javahelp.dev.java.net
+jutils.jar               Argument parsing              ?  https://jutils.dev.java.net
+regler.jar               IO, GUI                       ?  N/A, Internal
+xmlBlaster.jar           XML                       2.0.0  http://www.xmlblaster.org
+dpws/*                   DPWS                      1.3.0  https://forge.soa4d.org/projects/dpws4j/
+=======================  ====================  =========  ==========================================

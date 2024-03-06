@@ -17,6 +17,8 @@ public class PID {
     private double yOld = 0;
     private double y = 0;
 
+    private double ad = 0.0;
+
 
     // Constructor
     public PID(String name) {
@@ -45,6 +47,8 @@ public class PID {
 
         this.e = yref - y;
 
+        this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
+
         this.v = p.K * (p.Beta * yref - y) + I + D;
         return this.v;
     }
@@ -61,8 +65,9 @@ public class PID {
         } else {
             I = 0.0;
         }
-        double ad = p.Td / (p.Td + p.N * p.H);
-        this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
+//        ad = p.Td / (p.Td + p.N * p.H);
+//        double ad = p.Td / (p.Td + p.N * p.H);
+//        this.D = ad * D - (p.K * ad * p.N) * (y - this.yOld);
         this.yOld = y;
     }
 
@@ -80,5 +85,6 @@ public class PID {
         if (!p.integratorOn) {
             I = 0.0;
         }
+        ad = p.Td / (p.Td + p.N * p.H);
     }
 }

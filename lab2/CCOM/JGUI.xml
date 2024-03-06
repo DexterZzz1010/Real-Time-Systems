@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="JGUI" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="646.0" boundsWidth="839.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1" x="37.0" y="80.0" socketHost="" socketPort="-1" modifiable="1" horizontalScrollBar="1" verticalScrollBar="1">
+  <WorkspaceObject x="74.0" y="230.0" height="60.0" width="60.0" name="OperatorConfirmDialog" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+    <GCDocument x="249.0" y="301.0" boundsHeight="292.0" boundsWidth="731.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-2171427">
+      <FreeText name="Text" x="130.0" y="40.0" height="45" width="71" fontSize="35" text="Text" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+      <Icon name="" x="40.0" y="20.0" height="90.0" width="70.0" file="../CCOM/info1.gif" />
+      <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+        <Stroke x="60" y="140" />
+        <Stroke x="700" y="140" />
+      </GCStroke>
+      <GraphicalButton x="280.0" y="170.0" height="56.0" width="142.0" file="../CCOM/OK.gif" action="S Confirmed = 1; S OperatorConfirmDialog.hideWorkspace();" alwaysAct="1" />
+    </GCDocument>
+  </WorkspaceObject>
+  <BooleanVariable height="61.0" x="70.0" y="390.0" width="65.0" name="Confirmed" value="1" initialValue="" />
+  <FreeText name="" x="60.0" y="180.0" height="37" width="101" fontSize="28" text="Dialogs" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="60.0" y="340.0" height="37" width="126" fontSize="28" text="Variables" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="50.0" y="30.0" height="45" width="451" fontSize="35" text="Version 0: Not &quot;threadsafe&quot;" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <WorkspaceObject x="274.0" y="230.0" height="60.0" width="60.0" name="OperatorQueryDialog" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="0" verticalScrollBar="0">
+    <GCDocument x="319.0" y="403.0" boundsHeight="338.0" boundsWidth="811.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-2171427">
+      <FreeText name="Text" x="124.0" y="38.0" height="45" width="71" fontSize="35" text="Text" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+      <Icon name="" x="26.0" y="17.0" height="90.0" width="70.0" file="../CCOM/query.gif" />
+      <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+        <Stroke x="71" y="187" />
+        <Stroke x="770" y="188" />
+      </GCStroke>
+      <GraphicalButton x="272.0" y="222.0" height="56.0" width="142.0" file="../CCOM/OK2.gif" action="S Confirmed = 1;S Cancelled = 0;S ReplyText = Input.getText(); S OperatorQueryDialog.hideWorkspace();" alwaysAct="1" />
+      <GraphicalButton x="427.0" y="221.0" height="56.0" width="142.0" file="../CCOM/cancel.gif" action="S Cancelled = 1;S Confirmed = 0; S OperatorQueryDialog.hideWorkspace();" alwaysAct="1" />
+      <FreeText name="Input" x="120.0" y="100.0" height="45" width="599" fontSize="35" text="" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="0" draggable="1" twoDScale="0" autoResize="0" clipping="1" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+      <FreeText name="" x="89.0" y="107.0" height="45" width="20" fontSize="35" text="&gt;" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+    </GCDocument>
+  </WorkspaceObject>
+  <BooleanVariable height="61.0" x="160.0" y="390.0" width="65.0" name="Cancelled" value="0" initialValue="" />
+  <BooleanVariable height="61.0" x="250.0" y="390.0" width="65.0" name="ReplyText" value="0" initialValue="" />
+</GCDocument>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GCDocument color="-1" dimTicks="25" dpwsInterface="" dpwsPort="-1" height="600" horizontalScrollBar="1" modifiable="1" name="J2" saveVersion="6" scale="1.0" simulationMode="1" socketHost="" socketPort="-1" threadSpeed="40" tokenLuminance="0" verticalScrollBar="1" viewPositionX="48" viewPositionY="19" width="583" x="0" y="0">
+  <GCTransition actionText="Temp &gt; 25" conditionVisible="1" height="25" id="b08141cc-3879-43c7-b13a-b41cdfc25b17" priority="3" width="30" x="135" y="190"/>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="323" y="201"/>
+    <Stroke x="283" y="201"/>
+  </GCStroke>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Condition" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="109" x="331" y="189"/>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="203" y="170"/>
+    <Stroke x="155" y="192"/>
+  </GCStroke>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Input port" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="114" x="208" y="156"/>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Output port" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="134" x="208" y="225"/>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="201" y="235"/>
+    <Stroke x="154" y="213"/>
+  </GCStroke>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="137" y="154"/>
+    <Stroke x="126" y="192"/>
+  </GCStroke>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Priority" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="86" x="102" y="128"/>
+</GCDocument>

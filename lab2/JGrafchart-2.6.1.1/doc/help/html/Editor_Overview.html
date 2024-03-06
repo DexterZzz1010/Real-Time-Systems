@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Editor - Overview</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Editor - Overview</h1>
+
+<hr>
+
+<p>
+The JGrafchart editor consists of a graphical user-interface through which
+the user creates, compiles, executes, and stores function charts.
+</p>
+
+<p>
+	Function charts are created by adding and connecting elements.
+	Drag-click the connection stubs or ports of elements to create connections.
+	It is only possible to create valid connections, e.g. connecting a
+	step directly to another step is not possible.
+</p>
+
+<p><img src="Figures/EditorOverview.png" alt="Editor Overview"></p>
+
+<ul>
+	<li>
+		<p><b>Palette</b></p>
+		<p>
+			The palette contains the different language elements in JGrafchart.
+			Elements are added to a workspace by drag-and-drop from the palette.
+		</p>
+		<p>The FC tab contains the basic JGrafchart language elements, e.g, steps and transitions.</p>
+		<p>The Var tab contains variables.</p>
+		<p>The IO tab contains inputs and outputs.</p>
+		<p>
+			The XML tab contains objects for XML communication. The objects in this menu assume the availability
+			of the CCOM infrastructure. This is not available in all distributions.
+		</p>
+		<p>
+			The GUI tab contains graphical objects, e.g., texts and rectangles.
+			It also contains plotters, browsers, and buttons. In addition
+			to the drag-and-droppable objects the GUI palette also contains two mode
+			buttons: the line mode button and the spline mode button. Clicking one of
+			these buttons changes the mouse behavior to <a href="LangRef_GUI_Line.html#DrawingLines">line drawing</a> mode.
+		</p>
+	</li>
+	<li>
+		<p><a name="menu"></a><b>Menu</b></p>
+		<p>
+			The menu in JGrafchart works like an ordinary menu.
+			All menus and menu choices have mnemonic hotkey support, i.e. Alt+&lt;UnderScoredLetter&gt;.
+			Many menu choices also have ordinary hotkeys which are displayed in the menus.
+		<p>
+		<p>
+			These menu choices also have the following additional ordinary hotkeys:
+		</p>
+		<ul>
+			<li>File - Close: <tt>Ctrl+W</tt></li>
+			<li>Edit - Redo: <tt>Ctrl+Shift+Z</tt></li>
+			<li>View - Zoom In: <tt>Ctrl++</tt> (i.e. any <tt>+</tt>, not only <tt>Numpad+</tt>)</li>
+			<li>View - Zoom Out: <tt>Ctrl+-</tt> (i.e. any <tt>-</tt>, not only <tt>Numpad-</tt>)</li>
+		</ul>
+	</li>
+	<li>
+		<p><b>Toolbar</b></p>
+		<p>
+			The toolbar in JGrafchart works like an ordinary toolbar. A useful button in the toolbar is the
+			<a href="Editor_HelpMenu.html#ObjectHelp">Object Help</a>.
+		</p>
+	</li>
+	<li>
+		<p><b>Message List</b></p>
+		<p>
+			The message list contains various messages, most importantly the compilation messagess.
+			An application can manipulate the message list through the functions
+			<tt><a href="LangRef_TextLang_Functions.html#writeMessage">writeMessage()</a></tt> and
+			<tt><a href="LangRef_TextLang_Functions.html#clearMessages">clearMessages()</a></tt>.
+		</p>
+	</li>
+	<li>
+		<p><b>Workspace Area</b></p>
+		<p>
+			This is where the application workspaces are shown.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - FC - Step Fusion Set</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - FC - Step Fusion Set</h1>
+
+<hr>
+
+<p><img src="Figures/stepfusionset.gif" alt="Icon" style="float: right;"></p>
+
+<p>
+A step fusion set makes it possible to have steps with multiple
+views. Each step that belongs to a step fusion set constitutes one
+view of the same conceptual step. When one of the steps in the set become
+active, all the steps in the set are activated, and when one of the
+steps is deactivated, all are deactivated. The steps that should belong
+to the same set are specified by <b>Text</b> objects on the subworkspace
+of the step fusion set. <a href="LanguageOverview_ScopingRules.html#globalReference">Global references</a> must be used.
+Step fusion sets may contain steps, macro steps, and procedure steps.
+Neither the step fusion set itself nor any of its views may be contained
+within a procedure. In principle it should be possible for a step to
+be a member of multiple step fusion sets, although this has not been
+tested.
+</p>
+
+<p>A step fusion set may be non-abortive or abortive.</p>
+
+<h3>Non-abortive step fusion sets:</h3>
+<p>In a non-abortive fusion set, all the transitions connected
+to the output of any of the step fusion set views must be enabled
+in order for one of the transitions to be enabled. When an enabled transition
+is fired, all the steps in the set are deactivated and their exit actions
+are executed. The different steps of a non-abortive fusion set behave
+as if they all are connected in parallel.
+</p>
+
+<h3>Abortive step fusion sets:</h3>
+<p>
+In an abortive fusion set, a transition connected to the
+output of one of the steps in the set is enabled independently
+of the status of the other steps in the set. When an enabled transition
+is fired, the step connected to the transition is terminated in the
+normal way and its exit actions are executed. The other steps in the
+fusion set are aborted and their abortive actions are executed.
+</p>
+
+<h4>Text Methods</h4>
+
+<p>
+<a href="LangRef_TextLang_Methods.html#MethodsCommon">Common Methods</a><br>
+<!-- TODO: These are callable but do not make sense for step fusion set. Disable them. -->
+<!--
+<a href="LangRef_TextLang_Methods.html#MethodsWorkspace">Workspace Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#MethodsWorkspaceExecution">Workspace Execution Methods</a><br>
+<a href="LangRef_TextLang_Methods.html#WorkspaceObject_setEnabled"><tt>setEnabled()</tt></a>
+-->
+</p>
+
+<h4>Context Menu</h4>
+
+<ul>
+	<li>
+		<p><b>Show/Hide Body</b></p>
+		<p>
+			Toggle the visibility of the subworkspace.
+		</p>
+	</li>
+	<li>
+		<p><b>Edit</b></p>
+		<p>
+			Opens a dialog for editing the Step Fusion Set properties.
+		</p>
+		<p><img src="Figures/StepFusionSetEdit.png" alt="Edit Dialog"></p>
+		<p><b>Abortive?:</b> Selects if the Step Fusion Set is Non-abortive or Abortive. (default: unchecked)</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Laguage Reference - Textual Language - Methods</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - Textual Language - Methods</h1>
+
+<hr>
+
+<p>
+The textual language contains a number of predefined methods that are
+available for certain objects.
+</p>
+
+<!-- Referencable -->
+<h4><a name="MethodsCommon"></a>Common Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="Referencable_getHeight"></a><tt>int getHeight()</tt></p>
+		<p>Returns the object's height.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_getWidth"></a><tt>int getWidth()</tt></p>
+		<p>Returns the object's width.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_getXLocation"></a><tt>int getXLocation()</tt></p>
+		<p>Returns the x coordinate of the object's location.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_getYLocation"></a><tt>int getYLocation()</tt></p>
+		<p>Returns the y coordinate of the object's location.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_setHeight"></a><tt>void setHeight(int height)</tt></p>
+		<p>Sets the object's height.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_setLocation"></a><tt>void setLocation(int x, int y)</tt></p>
+		<p>Sets the object's location.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_setVisible"></a><tt>void setVisible(bool visible)</tt></p>
+		<p>Changes the visiblity of the object.</p>
+	</li>
+	<li>
+		<p><a name="Referencable_setWidth"></a><tt>void setWidth(int width)</tt></p>
+		<p>Sets the object's width.</p>
+	</li>
+</ul>
+
+<!-- JGoDrawable -->
+<h4><a name="MethodsGUICommon"></a>GUI Common Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="JGoDrawable_getFillColor"></a><tt>int getFillColor()</tt></p>
+		<p>Returns the current RGB value of the fill color.</p>
+		<p>Not meaningful for lines and splines.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_getPenColor"></a><tt>int getPenColor()</tt></p>
+		<p>Returns the current RGB value of the pen color.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_getPenStyle"></a><tt>int getPenStyle()</tt></p>
+		<p>Returns the current pen style. See <tt>setPenStyle</tt> for details.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_getPenWidth"></a><tt>int getPenWidth()</tt></p>
+		<p>Returns the current pen width.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_setFillColor"></a><tt>void setFillColor(int RGBColor)</tt></p>
+		<p>Sets the fill color.</p>
+		<p>Not meaningful for lines and splines.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_setPenColor"></a><tt>void setPenColor(int RGBColor)</tt></p>
+		<p>Sets the pen color.</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_setPenStyle"></a><tt>void setPenStyle(int RGBColor)</tt></p>
+		<p>
+			Sets the pen style. Legal values are
+			0 - No Pen,
+			65535 - Solid Pen,
+			1 - Dashed Pen,
+			2 - Dotted Pen,
+			3 - Dash Dot Pen, and
+			4 - Dash Dot Dot Pen.
+		</p>
+	</li>
+	<li>
+		<p><a name="JGoDrawable_setPenWidth"></a><tt>void setPenWidth(int width)</tt></p>
+		<p>Sets the pen width.</p>
+	</li>
+</ul>
+
+<!-- Browser -->
+<h4><a name="MethodsGUIBrowser"></a>GUI Browser Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="Browser_addItem"></a><tt>void addItem(string message)</tt></p>
+		<p>Adds a message at the end of the browser.</p>
+	</li>
+	<li>
+		<p><a name="Browser_addItem_2"></a><tt>void addItem(int index, string message)</tt></p>
+		<p>
+			Inserts a message at the given index.
+		</p>
+	</li>
+	<li>
+		<p><a name="Browser_clear"></a><tt>void clear()</tt></p>
+		<p>Deletes all messages.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getFillColor"></a><tt>int getFillColor()</tt></p>
+		<p>Returns the current fill color.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getFont"></a><tt>string getFont()</tt></p>
+		<p>Returns the current font face name.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getItem"></a><tt>string getItem(int index)</tt></p>
+		<p>Returns the message at the given index.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getNumItems"></a><tt>int getNumItems()</tt></p>
+		<p>Returns the number of messages.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getSelectedIndex"></a><tt>int getSelectedIndex()</tt></p>
+		<p>
+			Returns the index of the currently selected item. Returns -1 if no item is selected.
+		</p>
+	</li>
+	<li>
+		<p><a name="Browser_getSelectedItem"></a><tt>string getSelectedItem()</tt></p>
+		<p>
+			Returns the selected message. Returns the empty string if no item is selected.
+		</p>
+	</li>
+	<li>
+		<p><a name="Browser_getTextColor"></a><tt>int getTextColor()</tt></p>
+		<p>Returns the current text color.</p>
+	</li>
+	<li>
+		<p><a name="Browser_getTextSize"></a><tt>int getTextSize()</tt></p>
+		<p>Returns the current font size.</p>
+	</li>
+	<li>
+		<p><a name="Browser_isBold"></a><tt>bool isBold()</tt></p>
+		<p>Returns true if the bold property is set.</p>
+	</li>
+	<li>
+		<p><a name="Browser_removeItem"></a><tt>void removeItem(int index)</tt></p>
+		<p>Removes the item at the given index.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setBold"></a><tt>void setBold(bool value)</tt></p>
+		<p>Sets the bold property.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setFillColor"></a><tt>void setFillColor(int color)</tt></p>
+		<p>Sets the fill color.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setFont"></a><tt>void setFont(string name)</tt></p>
+		<p>Sets the font face name.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setItem"></a><tt>void setItem(int index, string newMessage)</tt></p>
+		<p>Replaces the message at the given index.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setTextColor"></a><tt>void setTextColor(int color)</tt></p>
+		<p>Sets the text color.</p>
+	</li>
+	<li>
+		<p><a name="Browser_setTextSize"></a><tt>void setTextSize(int color)</tt></p>
+		<p>Sets the font size.</p>
+	</li>
+	<li>
+		<p><a name="Browser_writeFile"></a><tt>void writeFile(string path)</tt></p>
+		<p>Writes all messages to the file <tt>path</tt> in reversed order.</p>
+	</li>
+</ul>
+
+<!-- Icon -->
+<h4><a name="MethodsGUIImage"></a>GUI Image Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="Icon_loadFile"></a><tt>void loadFile(string fileName)</tt></p>
+		<p>Display the image given by <tt>fileName</tt>.</p>
+	</li>
+	<li>
+		<p><a name="Icon_loadURL"></a><tt>void loadURL(string URL)</tt></p>
+		<p>Display the image given by <tt>URL</tt>.</p>
+	</li>
+</ul>
+
+
+<!-- JGoStroke -->
+<h4><a name="MethodsGUILine"></a>GUI Line Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="JGoStroke_getPointX"></a><tt>int getPointX(int index)</tt></p>
+		<p>Returns the x coordinate of the <tt>index</tt><font style="vertical-align: super;">th</font> point.</p>
+	</li>
+	<li>
+		<p><a name="JGoStroke_getPointY"></a><tt>int getPointY(int index)</tt></p>
+		<p>Returns the y coordinate of the <tt>index</tt><font style="vertical-align: super;">th</font> point.</p>
+	</li>
+	<li>
+		<p><a name="JGoStroke_setPoint"></a><tt>void setPoint(int index, int x-coord, int y-coord)</tt></p>
+		<p>Moves the <tt>index</tt><font style="vertical-align: super;">th</font> point to a new position.</p>
+	</li>
+</ul>
+
+<!-- JGoText -->
+<h4><a name="MethodsGUIText"></a>GUI Text Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="JGoText_echo"></a><tt>void echo()</tt></p>
+		<p>Writes the text string to the terminal.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_getBkColor"></a><tt>int getBkColor()</tt></p>
+		<p>Returns the current RGB value of the background color.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_getFontSize"></a><tt>int getFontSize()</tt></p>
+		<p>Returns the current font size.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_getText"></a><tt>string getText()</tt></p>
+		<p>Returns the text string.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_getTextColor"></a><tt>int getTextColor()</tt></p>
+		<p>Returns the current RGB value of the text color.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_setBkColor"></a><tt>void setBkColor(int RGBColor)</tt></p>
+		<p>Changes the background color.</p>		
+	</li>
+	<li>
+		<p><a name="JGoText_setFontSize"></a><tt>void setFontSize(int size)</tt></p>
+		<p>Changes the font size.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_setText"></a><tt>void setText(string newText)</tt></p>
+		<p>Changes the text string.</p>
+	</li>
+	<li>
+		<p><a name="JGoText_setTextColor"></a><tt>void setTextColor(int RGBColor)</tt></p>
+		<p>Changes the text color.</p>
+	</li>
+</ul>
+
+<!-- BasicList -->
+<h4><a name="MethodsList"></a>List Methods</h4>
+
+<p>
+	<tt>listtype</tt> below is the type of the values in the list, e.g. for a Boolean List it is bool.
+</p>
+
+<ul>
+	<li>
+		<p><a name="BasicList_add"></a><tt>void add(listtype val)</tt></p>
+		<p>Adds an element at the end of the list.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_add_2"></a><tt>void add(int position, listtype val)</tt></p>
+		<p>
+			Adds an element at the specified position in the list.
+			The first element in the list corresponds to position 0.
+		</p>
+	</li>
+	<li>
+		<p><a name="BasicList_addFirst"></a><tt>void addFirst(listtype val)</tt></p>
+		<p>Adds an element at the beginning of the list.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_append"></a><tt>void append(list other)</tt></p>
+		<p>Append <tt>other</tt> at the end of the list.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_clear"></a><tt>void clear()</tt></p>
+		<p>Empties the list.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_contains"></a><tt>bool contains(listtype value)</tt></p>
+		<p>Returns true if the list contains an element equal to <tt>value</tt>, false otherwise.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_get"></a><tt>listtype get(int position)</tt></p>
+		<p>Returns the value at the given position.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_indexOf"></a><tt>int indexOf(listtype value)</tt></p>
+		<p>
+			Returns the index of the first occurrence of <tt>value</tt> in the list.
+			Returns -1 if the value is not found.
+		</p>
+	</li>
+	<li>
+		<p><a name="BasicList_isEmpty"></a><tt>void isEmpty()</tt></p>
+		<p>Returns true if the list is empty, false otherwise.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_remove"></a><tt>void remove(int position)</tt></p>
+		<p>Removes the value at the given position from the list.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_set"></a><tt>void set(int position, listtype value)</tt></p>
+		<p>Sets a new value for the element at the given position.</p>
+	</li>
+	<li>
+		<p><a name="BasicList_size"></a><tt>int size()</tt></p>
+		<p>Returns the number of elements in the list.</p>
+	</li>
+</ul>
+
+<!-- InternalVariable -->
+<h4><a name="MethodsVariable"></a>Variable Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="InternalVariable_isUpdated"></a><tt>bool isUpdated()</tt></p>
+		<p>Returns true if Automatic Update is enabled.</p>
+	</li>
+	<li>
+		<p><a name="InternalVariable_setUpdated"></a><tt>void setUpdated(bool value)</tt></p>
+		<p>
+			Turns Automatic Update on or off.
+		</p>
+	</li>
+</ul>
+
+<!-- Hierarchical -->
+<h4><a name="MethodsWorkspace"></a>Workspace Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="Hierarchical_getWorkspaceColor"></a><tt>int getWorkspaceColor()</tt></p>
+		<p>Returns the color of the workspace.</p>
+	</li>
+	<li>
+		<p><a name="Hierarchical_hideWorkspace"></a><tt>void hideWorkspace()</tt></p>
+		<p>Hides the workspace.</p>
+	</li>
+	<li>
+		<p><a name="Hierarchical_setWorkspaceColor"></a><tt>void setWorkspaceColor(int color)</tt></p>
+		<p>Set the color of the workspace.</p>
+	</li>
+	<li>
+		<p><a name="Hierarchical_showWorkspace"></a><tt>void showWorkspace()</tt></p>
+		<p>Shows the workspace.</p>
+	</li>
+	<li>
+		<p><a name="Hierarchical_showWorkspaceAt"></a><tt>void showWorkspace(int x, int y)</tt></p>
+		<p>Shows the workspace at a specific location.</p>
+	</li>
+</ul>
+
+<!-- Workspace -->
+<h4><a name="MethodsWorkspaceExecution"></a>Workspace Execution Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="Workspace_getTickTime"></a><tt>int getTickTime()</tt></p>
+		<p>
+			Returns the scan cycle time of the workspace in milliseconds.
+			Works on top-level workspaces and workspace objects.
+			See also the function <a href="LangRef_TextLang_Functions.html#getTickTime">getTickTime()</a> which works on all workspaces.
+		</p>
+	</li>
+	<li>
+		<p><a name="Workspace_sampleAll"></a><tt>void sampleAll()</tt></p>
+		<p>
+			Trigger a sampling of all digital and analog inputs in the application that are not cyclically updated.
+			Only works for top-level workspaces.
+		</p>
+	</li>
+</ul>
+
+<!-- XMLMessageIn || XMLMessageOut -->
+<h4><a name="MethodsXMLCommon"></a>XML Common Methods</h4>
+
+<p>
+	For XML Message In the values are those of the most recently received message.
+	For XML Message Out it is the currently configured values.
+</p>
+
+<ul>
+	<li>
+		<p><a name="XMLMessageX_getHandle"></a><tt>int getHandle()</tt></p>
+		<p>Returns the handle.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageX_getMustReply"></a><tt>string getMustReply()</tt></p>
+		<p>Returns the MustReply attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageX_getOrigin"></a><tt>string getOrigin()</tt></p>
+		<p>Returns the origin (the sender).</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageX_getType"></a><tt>string getType()</tt></p>
+		<p>Returns the CCOM type.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageX_getXML"></a><tt>string getXML()</tt></p>
+		<p>XML Message In: Returns the XML string of the most recently received message including the CCOM envelope.</p>
+		<p>XML Message Out: Generates a new XML message string excluding the CCOM envelope and returns it.</p>
+	</li>
+</ul>
+
+<!-- XMLMessageOut only -->
+<h4><a name="MethodsXMLOut"></a>XML Out Methods</h4>
+
+<ul>
+	<li>
+		<p><a name="XMLMessageOut_getDestination"></a><tt>string getDestination()</tt></p>
+		<p>Returns the value of the topic/destination attribute. The same as <tt>getTopic</tt>.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_getPublish"></a><tt>bool getPublish()</tt></p>
+		<p>Returns the value publish/send attribute. True means publish.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_getSendHandle"></a><tt>int getSendHandle()</tt></p>
+		<p>Returns the handle assigned to the most recent message being sent.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_getTopic"></a><tt>string getTopic()</tt></p>
+		<p>Returns the value of the topic/destination attribute. The same as <tt>getDestination()</tt>.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_outputMessage"></a><tt>void outputMessage()</tt></p>
+		<p>Equivalent either to sendMessage or publishMessage depending on the value of the publish attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_publishMessage"></a><tt>void publishMessage()</tt></p>
+		<p>Publishes the message under the topic given by the topic/destination attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_sendMessage"></a><tt>void sendMessage()</tt></p>
+		<p>Sends the message to the destination given by the topic/destination attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setDestination"></a><tt>void setDestination(string value)</tt></p>
+		<p>Sets the value of the topic/destination attribute. The same as <tt>setTopic()</tt>.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setHandle"></a><tt>void setHandle(int value)</tt></p>
+		<p>Sets the value of the Handle attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setMustReply"></a><tt>void setMustReply(string value)</tt></p>
+		<p>Sets the value of the MustReply attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setOrigin"></a><tt>void setOrigin(string value)</tt></p>
+		<p>Sets the value of the Origin attribute.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setPublish"></a><tt>void setPublish(bool value)</tt></p>
+		<p>Sets the value of the publish/send attribute. True means publish.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setTopic"></a><tt>void setTopic(string value)</tt></p>
+		<p>Sets the value of the topic/destination attribute. The same as <tt>setDestination()</tt>.</p>
+	</li>
+	<li>
+		<p><a name="XMLMessageOut_setType"></a><tt>void setType(string value)</tt></p>
+		<p>Sets the value of the Type attribute.</p>
+	</li>
+</ul>
+
+<h4>Other Methods</h4>
+
+<ul>
+	<!-- TODO: Remove or document evaluate()? Seems to be some socket procel thing... -->
+	<li> <!-- InputVariable -->
+		<p><a name="InputVariable_sample"></a><tt>real sample()</tt></p>
+		<p>
+			Triggers sampling of an input. The read value is returned.
+			Digital inputs return 1.0 if true and 0.0 if false.
+			Available for inputs.
+		</p>
+	</li>
+	<li> <!-- WorkspaceObject -->
+		<p><a name="WorkspaceObject_setEnabled"></a><tt>void setEnabled(bool enabled)</tt></p>
+		<p>
+			Sets the enabled flag for a workspace object.
+			Available for Workspace Objects.
+		</p>
+	</li>
+	<li> <!-- GCRectangle || GCEllipse -->
+		<p><a name="GUIX_remove"></a><tt>void remove()</tt></p>
+		<p>Deletes the object. Available for Rectangle and Ellipse.</p>
+	</li>
+	<li> <!-- Procedure -->
+		<p><a name="Procedure_spawn"></a><tt>void spawn(string parameters)</tt></p>
+		<p>
+			Calls a procedure in the same way as a Process Step.
+			Call parameters are specified in <tt>parameters</tt> using the usual syntax.
+			The caller's context is used for parameter evaluation.
+			Available for Procedure.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

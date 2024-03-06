@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Editor - Execute Menu</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Editor - Execute Menu</h1>
+
+<hr>
+
+<ul>
+	<li>
+		<p><a name="Compile"></a><b>Compile</b></p>
+		<p>
+			Compiles the current application.
+			Compilation error and warnings are shown in the message list.
+		</p>
+	</li>
+	<li>
+		<p><a name="CompileAll"></a><b>Compile All</b></p>
+		<p>Compiles all applications that are not currently executing.</p>
+	</li>
+	<li>
+		<p><a name="Execute"></a><b>Execute</b></p>
+		<p>
+			Start the execution of the current application. It is only possible to
+			start execution if the application has been compiled without errors.
+			During execution it is not possible to drag-and-drop from the palette
+			onto the workspace and the undo history is switched off.
+			An executing workspace has its icon changed to an arrow icon
+			<img src="Figures/runner5.jpeg" alt="Running Workspace">.
+		</p>
+	</li>
+	<li>
+		<p><a name="ExecuteAll"></a><b>Execute All</b></p>
+		<p>
+			Start the execution of all successfully compiled applications that are
+			not already executing.
+		</p>
+	<li>
+		<p><a name="Stop"></a><b>Stop</b></p>
+		<p>
+			Stop the execution of the current application.
+		</p>
+	</li>
+	<li>
+		<p><a name="StopAll"></a><b>Stop All</b></p>
+		<p>
+			Stop the execution of all executing applications.
+		</p>
+	</li>
+	<li>
+		<p><a name="Step"></a><b>Step</b></p>
+		<p>
+			Execute the current (paused) application one scan cycle.
+		</p>
+	</li>
+	<li>
+		<p><a name="Pause"></a><b>Pause</b></p>
+		<p>
+			Pause the execution of the current application.
+		</p>
+	</li>
+	<li>
+		<p><a name="Resume"></a><b>Resume</b></p>
+		<p>
+			Resume the execution of the current application.
+		</p>
+	</li>
+	<li>
+		<p><a name="ShutDownClient"></a><b>Shut Down Socket</b></p>
+		<p>
+			If the current application is a connected Socket IO client, close its current socket connection.
+			If the current application is a running Socket IO server, shut down its server.
+		</p>
+	</li>
+</ul>
+
+</body>
+</html>
+

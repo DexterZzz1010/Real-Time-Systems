@@ -1,0 +1,124 @@
+/* General formatting */
+
+body
+{
+	font-family: sans-serif;
+/*	background-color: #e8f0ff;*/
+	color: #000000;
+	max-width: 1280px;
+}
+
+h1
+{
+	color: #303060;
+	font-weight: bold;
+}
+
+h2
+{
+	color: #303060;
+}
+
+h3
+{
+	color: #303060;
+}
+
+h4
+{
+	color: #303060;
+}
+
+hr
+{
+	clear: both;
+}
+
+a
+{
+	color: #3366cc;
+	white-space: nowrap;
+}
+
+a:hover
+{
+	color: #ff7700;
+}
+
+th
+{
+	text-align: left;
+}
+
+input:focus, select:focus, textarea:focus, a:focus
+{
+	outline-color: #90c0ff;
+	outline-style: solid;
+	outline-width: 0.15em;
+}
+
+img
+{
+	border: 1px solid;
+}
+
+tt
+{
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+pre
+{
+	font-weight: bold;
+}
+
+/* Menu layout */
+
+.menu_item
+{
+}
+
+.menu_item_active
+{
+	font-weight: bold;
+}
+
+.menu_top_level
+{
+	margin-top: 0em;
+	margin-left: 0.25em;
+}
+
+.menu_other_level
+{
+	margin-bottom: 0em;
+	margin-top: 0em;
+	margin-left: 1.5em;
+	padding-top: 0em;
+}
+
+.menu_dd
+{
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.menu_dt
+{
+	height: 0px;
+}
+
+@media print
+{
+	body
+	{
+		background-color: #ffffff;
+	}
+	
+	h1
+	{
+		color: #000000;
+	}
+}
+

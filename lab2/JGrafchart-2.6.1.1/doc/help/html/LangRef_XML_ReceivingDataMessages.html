@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Language Reference - XML - Receiving Data Messages</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Language Reference - XML - Receiving Data Messages</h1>
+
+<hr>
+
+<p>
+All XML Messages are received using XML Message In objects.
+An XML Message In object will receive an XML Message if the application
+is executing and the identifier of the XML Message In object is equal
+to the main tag name of the message. (If the identifier has no value
+the local name of the XML Message In is used instead). A special case
+exists for messages with the main tag name ChemContentMessage. If these
+messages contain a Subject element they will only be received in an XML
+Message In object if the value of the subject attribute of the XML Message
+In is equal to the value of the Subject element.
+</p>
+
+<p>
+Multiple XML Message In objects may (and most likely will) receive
+the same message. When an XML Message In object is received two things
+occur:
+</p>
+
+<ol>
+	<li>
+		All variables inside the XML Message In object are initialised
+		to their initial values (if they have any initial values).
+	</li>
+	<li>
+		The XML structure in the message is decoded (using the DOM
+		XML parser) and mapped to the corresponding element/attribute variables
+		within the XML Message In object. The mapping is done according to best
+		effort. This means that elements in the message for which there are
+		no corresponding element/attribute variables are ignored. It also means
+		that element/attribute variables for which there are no corresponding
+		XML elements/attributes will not be assigned any new value. The initialisation
+		of all variables is used to be able to detect if a variable really has
+		been assigned a new value from the message.
+	</li>
+</ol>
+
+</body>
+</html>
+

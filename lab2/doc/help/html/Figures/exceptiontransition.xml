@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GCDocument color="-1" dimTicks="25" dpwsInterface="" dpwsPort="-1" height="600" horizontalScrollBar="1" modifiable="1" name="J7" saveVersion="6" scale="1.0" simulationMode="1" socketHost="" socketPort="-1" threadSpeed="40" tokenLuminance="0" verticalScrollBar="1" viewPositionX="-29" viewPositionY="25" width="555" x="0" y="0">
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="135" y="197"/>
+    <Stroke x="176" y="197"/>
+  </GCStroke>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="258" y="165"/>
+    <Stroke x="199" y="196"/>
+  </GCStroke>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="124" y="256"/>
+    <Stroke x="196" y="219"/>
+  </GCStroke>
+  <ExceptionTransition actionText="pumpOff" conditionVisible="1" height="30" id="6e68660c-f613-4689-8663-c9305ba16d6e" priority="1" width="15" x="181" y="183"/>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Output port" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="134" x="-6" y="184"/>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Input port" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="114" x="262" y="151"/>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Condition" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="109" x="9" y="243"/>
+  <FreeText alignment="1" autoResize="1" backgroundColor="-1" bold="1" clipping="0" draggable="1" editOnSingleClick="1" editable="1" fontName="SansSerif" fontSize="20" height="24" italic="0" multiline="0" name="" resizable="1" selectBackground="0" selectable="1" strikeThrough="0" text="Priority" textColor="-16777216" transparent="1" twoDScale="0" underline="0" visible="1" width="86" x="196" y="114"/>
+  <GCStroke arrowEnd="1" arrowStart="0" cubic="0" draggable="1" name="" penColor="-16777216" penStyle="65535" penWidth="1" resizable="1" selectable="1" visible="1">
+    <Stroke x="232" y="143"/>
+    <Stroke x="204" y="179"/>
+  </GCStroke>
+</GCDocument>

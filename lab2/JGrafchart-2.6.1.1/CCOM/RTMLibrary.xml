@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GCDocument name="RTM" threadSpeed="40" simulationMode="1" tokenLuminance="0" dimTicks="25" boundsHeight="752.0" boundsWidth="597.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1" x="5.0" y="4.0" socketHost="" socketPort="-1" modifiable="1" horizontalScrollBar="1" verticalScrollBar="1">
+  <FreeText name="" x="20.0" y="10.0" height="47" width="426" fontSize="36" text="Generic RTM Procedures" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GCStroke name="" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="2" fillColor="-16777216" fillStyle="65535" arrowEnd="0" arrowStart="0" cubic="0">
+    <Stroke x="20" y="70" />
+    <Stroke x="466" y="70" />
+  </GCStroke>
+  <FreeText name="" x="20.0" y="90.0" height="26" width="426" fontSize="20" text="Are called from RTM. Should be implemented" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-13421569" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="20.0" y="120.0" height="26" width="253" fontSize="20" text="by the different CHEM TBs" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-13421569" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GrafcetProcedure x="64.0" y="190.0" height="60.0" width="60.0" name="StartToolbox" threadSpeed="40" simulationMode="1">
+    <GCDocument x="216.0" y="55.0" boundsHeight="665.0" boundsWidth="660.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+      <ExitStep id="S449" x="270.0" y="370.0" height="85.0" width="170.0" name="S2" useIcon="0" fileName="" actionText=";" actionBlockVisible="0" />
+      <EnterStep id="S450" x="270.0" y="90.0" height="85.0" width="170.0" name="S1" useIcon="0" fileName="" actionText="S Rpc.setDestination(TB);
+S Rpc.sendMessage();
+S Handle = Rpc.getSendHandle();" actionBlockVisible="1" />
+      <XMLMessageOut height="86.0" x="40.0" y="30.0" width="60.0" name="Rpc" identifier="" publish="0" destination="" type="RpcInvocation" origin="RTM" mustReply="yes" handle="0">
+        <GCDocument x="167.0" y="158.0" boundsHeight="188.0" boundsWidth="319.0" scale="1.0" color="-1">
+          <StringVariable height="61.0" x="60.0" y="40.0" width="65.0" name="RpcName" value="RTMStartToolbox" initialValue="" />
+        </GCDocument>
+      </XMLMessageOut>
+      <XMLMessageIn height="86.0" x="40.0" y="130.0" width="60.0" name="RpcResponse" identifier="" subject="" topic="" type="" origin="" mustReply="" handle="0" grafcetProcedure="" parameters="" useProcedure="0">
+        <GCDocument x="385.0" y="157.0" boundsHeight="237.0" boundsWidth="297.0" scale="1.0" color="-1">
+          <WorkspaceObject x="36.0" y="20.0" height="60.0" width="60.0" name="Rpc_Params" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+            <GCDocument x="105.0" y="58.0" boundsHeight="234.0" boundsWidth="317.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+              <WorkspaceObject x="56.0" y="50.0" height="60.0" width="60.0" name="Rpc_Param" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                <GCDocument x="197.0" y="230.0" boundsHeight="216.0" boundsWidth="297.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                  <WorkspaceObject x="100.0" y="40.0" height="60.0" width="60.0" name="value" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                    <GCDocument x="238.0" y="243.0" boundsHeight="191.0" boundsWidth="291.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                      <StringVariable height="61.0" x="60.0" y="30.0" width="65.0" name="string" value="LundArea2" initialValue="" />
+                    </GCDocument>
+                  </WorkspaceObject>
+                </GCDocument>
+              </WorkspaceObject>
+            </GCDocument>
+          </WorkspaceObject>
+        </GCDocument>
+      </XMLMessageIn>
+      <IntegerVariable height="61.0" x="40.0" y="240.0" width="65.0" name="Handle" value="0" initialValue="" />
+      <GCTransition id="T357" x="255.0" y="200.0" height="25.0" width="30.0" actionText="(RpcResponse.getHandle() == Handle) &amp; (Handle != 0)" conditionVisible="1" />
+      <GCStep id="S451" x="270.0" y="250.0" height="70.0" width="200.0" name="" useIcon="0" fileName="" actionText="S Status = RpcResponse.Rpc_Params.Rpc_Param.value.string;" actionBlockVisible="1" />
+      <GCTransition id="T358" x="255.0" y="330.0" height="25.0" width="30.0" actionText="1" conditionVisible="1" />
+      <StringVariable height="61.0" x="40.0" y="320.0" width="65.0" name="TB" value="" initialValue="" />
+      <StringVariable height="61.0" x="40.0" y="390.0" width="65.0" name="Status" value="" initialValue="" />
+      <GCLink fromObject="T358" toObject="S449">
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+      </GCLink>
+      <GCLink fromObject="S451" toObject="T358">
+        <Stroke x="270" y="315" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="330" />
+      </GCLink>
+      <GCLink fromObject="T357" toObject="S451">
+        <Stroke x="270" y="225" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="245" />
+      </GCLink>
+      <GCLink fromObject="S450" toObject="T357">
+        <Stroke x="270" y="155" />
+        <Stroke x="270" y="165" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="190" />
+        <Stroke x="270" y="200" />
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <GCRectangle name="" x="160.0" y="180.0" height="96.0" width="276.0" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-4144960" fillStyle="65535" />
+  <FreeText name="" x="200.0" y="250.0" height="21" width="198" fontSize="16" text="Status - completion status" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="230.0" height="21" width="220" fontSize="16" text="Out Parameters (Call by Ref):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="190.0" height="21" width="224" fontSize="16" text="In Parameters (Call by Value):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="200.0" y="210.0" height="21" width="139" fontSize="16" text="TB - toolbox name" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GrafcetProcedure x="64.0" y="330.0" height="60.0" width="60.0" name="StopToolbox" threadSpeed="40" simulationMode="1">
+    <GCDocument x="243.0" y="227.0" boundsHeight="588.0" boundsWidth="612.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+      <ExitStep id="S452" x="270.0" y="370.0" height="85.0" width="170.0" name="S2" useIcon="0" fileName="" actionText=";" actionBlockVisible="0" />
+      <EnterStep id="S453" x="270.0" y="90.0" height="85.0" width="170.0" name="S1" useIcon="0" fileName="" actionText="S Rpc.setDestination(TB);
+S Rpc.sendMessage();
+S Handle = Rpc.getSendHandle();" actionBlockVisible="1" />
+      <XMLMessageOut height="86.0" x="40.0" y="30.0" width="60.0" name="Rpc" identifier="" publish="0" destination="" type="RpcInvocation" origin="RTM" mustReply="yes" handle="0">
+        <GCDocument x="167.0" y="158.0" boundsHeight="188.0" boundsWidth="319.0" scale="1.0" color="-1">
+          <StringVariable height="61.0" x="60.0" y="40.0" width="65.0" name="RpcName" value="RTMStopToolbox" initialValue="" />
+        </GCDocument>
+      </XMLMessageOut>
+      <XMLMessageIn height="86.0" x="40.0" y="130.0" width="60.0" name="RpcResponse" identifier="" subject="" topic="" type="" origin="" mustReply="" handle="0" grafcetProcedure="" parameters="" useProcedure="0">
+        <GCDocument x="385.0" y="157.0" boundsHeight="237.0" boundsWidth="297.0" scale="1.0" color="-1">
+          <WorkspaceObject x="36.0" y="20.0" height="60.0" width="60.0" name="Rpc_Params" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+            <GCDocument x="105.0" y="58.0" boundsHeight="234.0" boundsWidth="317.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+              <WorkspaceObject x="56.0" y="50.0" height="60.0" width="60.0" name="Rpc_Param" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                <GCDocument x="197.0" y="230.0" boundsHeight="216.0" boundsWidth="297.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                  <WorkspaceObject x="100.0" y="40.0" height="60.0" width="60.0" name="value" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                    <GCDocument x="238.0" y="243.0" boundsHeight="191.0" boundsWidth="291.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                      <StringVariable height="61.0" x="60.0" y="30.0" width="65.0" name="string" value="LundArea2" initialValue="" />
+                    </GCDocument>
+                  </WorkspaceObject>
+                </GCDocument>
+              </WorkspaceObject>
+            </GCDocument>
+          </WorkspaceObject>
+        </GCDocument>
+      </XMLMessageIn>
+      <IntegerVariable height="61.0" x="40.0" y="240.0" width="65.0" name="Handle" value="0" initialValue="" />
+      <GCTransition id="T359" x="255.0" y="200.0" height="25.0" width="30.0" actionText="(RpcResponse.getHandle() == Handle) &amp; (Handle != 0)" conditionVisible="1" />
+      <GCStep id="S454" x="270.0" y="250.0" height="70.0" width="200.0" name="" useIcon="0" fileName="" actionText="S Status = RpcResponse.Rpc_Params.Rpc_Param.value.string;" actionBlockVisible="1" />
+      <GCTransition id="T360" x="255.0" y="330.0" height="25.0" width="30.0" actionText="1" conditionVisible="1" />
+      <StringVariable height="61.0" x="40.0" y="320.0" width="65.0" name="TB" value="" initialValue="" />
+      <StringVariable height="61.0" x="40.0" y="390.0" width="65.0" name="Status" value="" initialValue="" />
+      <GCLink fromObject="T360" toObject="S452">
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+      </GCLink>
+      <GCLink fromObject="S454" toObject="T360">
+        <Stroke x="270" y="315" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="330" />
+      </GCLink>
+      <GCLink fromObject="T359" toObject="S454">
+        <Stroke x="270" y="225" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="245" />
+      </GCLink>
+      <GCLink fromObject="S453" toObject="T359">
+        <Stroke x="270" y="155" />
+        <Stroke x="270" y="165" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="190" />
+        <Stroke x="270" y="200" />
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <GCRectangle name="" x="160.0" y="330.0" height="96.0" width="276.0" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-4144960" fillStyle="65535" />
+  <FreeText name="" x="200.0" y="400.0" height="21" width="198" fontSize="16" text="Status - completion status" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="380.0" height="21" width="220" fontSize="16" text="Out Parameters (Call by Ref):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="340.0" height="21" width="224" fontSize="16" text="In Parameters (Call by Value):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="200.0" y="360.0" height="21" width="139" fontSize="16" text="TB - toolbox name" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GrafcetProcedure x="59.0" y="480.0" height="60.0" width="60.0" name="PauseToolbox" threadSpeed="40" simulationMode="1">
+    <GCDocument x="249.0" y="160.0" boundsHeight="400.0" boundsWidth="400.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+      <ExitStep id="S455" x="270.0" y="370.0" height="85.0" width="170.0" name="S2" useIcon="0" fileName="" actionText=";" actionBlockVisible="0" />
+      <EnterStep id="S456" x="270.0" y="90.0" height="85.0" width="170.0" name="S1" useIcon="0" fileName="" actionText="S Rpc.setDestination(TB);
+S Rpc.sendMessage();
+S Handle = Rpc.getSendHandle();" actionBlockVisible="1" />
+      <XMLMessageOut height="86.0" x="40.0" y="30.0" width="60.0" name="Rpc" identifier="" publish="0" destination="" type="RpcInvocation" origin="RTM" mustReply="yes" handle="0">
+        <GCDocument x="167.0" y="158.0" boundsHeight="188.0" boundsWidth="319.0" scale="1.0" color="-1">
+          <StringVariable height="61.0" x="60.0" y="40.0" width="65.0" name="RpcName" value="RTMPauseToolbox" initialValue="" />
+        </GCDocument>
+      </XMLMessageOut>
+      <XMLMessageIn height="86.0" x="40.0" y="130.0" width="60.0" name="RpcResponse" identifier="" subject="" topic="" type="" origin="" mustReply="" handle="0" grafcetProcedure="" parameters="" useProcedure="0">
+        <GCDocument x="385.0" y="157.0" boundsHeight="237.0" boundsWidth="297.0" scale="1.0" color="-1">
+          <WorkspaceObject x="36.0" y="20.0" height="60.0" width="60.0" name="Rpc_Params" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+            <GCDocument x="105.0" y="58.0" boundsHeight="234.0" boundsWidth="317.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+              <WorkspaceObject x="56.0" y="50.0" height="60.0" width="60.0" name="Rpc_Param" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                <GCDocument x="197.0" y="230.0" boundsHeight="216.0" boundsWidth="297.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                  <WorkspaceObject x="100.0" y="40.0" height="60.0" width="60.0" name="value" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                    <GCDocument x="238.0" y="243.0" boundsHeight="191.0" boundsWidth="291.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                      <StringVariable height="61.0" x="60.0" y="30.0" width="65.0" name="string" value="LundArea2" initialValue="" />
+                    </GCDocument>
+                  </WorkspaceObject>
+                </GCDocument>
+              </WorkspaceObject>
+            </GCDocument>
+          </WorkspaceObject>
+        </GCDocument>
+      </XMLMessageIn>
+      <IntegerVariable height="61.0" x="40.0" y="240.0" width="65.0" name="Handle" value="0" initialValue="" />
+      <GCTransition id="T361" x="255.0" y="200.0" height="25.0" width="30.0" actionText="(RpcResponse.getHandle() == Handle) &amp; (Handle != 0)" conditionVisible="1" />
+      <GCStep id="S457" x="270.0" y="250.0" height="70.0" width="200.0" name="" useIcon="0" fileName="" actionText="S Status = RpcResponse.Rpc_Params.Rpc_Param.value.string;" actionBlockVisible="1" />
+      <GCTransition id="T362" x="255.0" y="330.0" height="25.0" width="30.0" actionText="1" conditionVisible="1" />
+      <StringVariable height="61.0" x="40.0" y="320.0" width="65.0" name="TB" value="" initialValue="" />
+      <StringVariable height="61.0" x="40.0" y="390.0" width="65.0" name="Status" value="" initialValue="" />
+      <GCLink fromObject="T362" toObject="S455">
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+      </GCLink>
+      <GCLink fromObject="S457" toObject="T362">
+        <Stroke x="270" y="315" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="330" />
+      </GCLink>
+      <GCLink fromObject="T361" toObject="S457">
+        <Stroke x="270" y="225" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="245" />
+      </GCLink>
+      <GCLink fromObject="S456" toObject="T361">
+        <Stroke x="270" y="155" />
+        <Stroke x="270" y="165" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="190" />
+        <Stroke x="270" y="200" />
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <GCRectangle name="" x="160.0" y="480.0" height="96.0" width="276.0" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-4144960" fillStyle="65535" />
+  <FreeText name="" x="200.0" y="550.0" height="21" width="198" fontSize="16" text="Status - completion status" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="530.0" height="21" width="220" fontSize="16" text="Out Parameters (Call by Ref):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="490.0" height="21" width="224" fontSize="16" text="In Parameters (Call by Value):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="200.0" y="510.0" height="21" width="139" fontSize="16" text="TB - toolbox name" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <GrafcetProcedure x="65.0" y="630.0" height="60.0" width="60.0" name="ResumeToolbox" threadSpeed="40" simulationMode="1">
+    <GCDocument x="276.0" y="207.0" boundsHeight="400.0" boundsWidth="400.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+      <ExitStep id="S458" x="270.0" y="370.0" height="85.0" width="170.0" name="S2" useIcon="0" fileName="" actionText=";" actionBlockVisible="0" />
+      <EnterStep id="S459" x="270.0" y="90.0" height="85.0" width="170.0" name="S1" useIcon="0" fileName="" actionText="S Rpc.setDestination(TB);
+S Rpc.sendMessage();
+S Handle = Rpc.getSendHandle();" actionBlockVisible="1" />
+      <XMLMessageOut height="86.0" x="40.0" y="30.0" width="60.0" name="Rpc" identifier="" publish="0" destination="" type="RpcInvocation" origin="RTM" mustReply="yes" handle="0">
+        <GCDocument x="167.0" y="158.0" boundsHeight="188.0" boundsWidth="319.0" scale="1.0" color="-1">
+          <StringVariable height="61.0" x="60.0" y="40.0" width="65.0" name="RpcName" value="RTMResumeToolbox" initialValue="" />
+        </GCDocument>
+      </XMLMessageOut>
+      <XMLMessageIn height="86.0" x="40.0" y="130.0" width="60.0" name="RpcResponse" identifier="" subject="" topic="" type="" origin="" mustReply="" handle="0" grafcetProcedure="" parameters="" useProcedure="0">
+        <GCDocument x="385.0" y="157.0" boundsHeight="237.0" boundsWidth="297.0" scale="1.0" color="-1">
+          <WorkspaceObject x="36.0" y="20.0" height="60.0" width="60.0" name="Rpc_Params" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+            <GCDocument x="105.0" y="58.0" boundsHeight="234.0" boundsWidth="317.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+              <WorkspaceObject x="56.0" y="50.0" height="60.0" width="60.0" name="Rpc_Param" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                <GCDocument x="197.0" y="230.0" boundsHeight="216.0" boundsWidth="297.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                  <WorkspaceObject x="100.0" y="40.0" height="60.0" width="60.0" name="value" ownerClass="" enabled="1" scanCycle="1" useIcon="0" fileName="" horizontalScrollBar="1" verticalScrollBar="1">
+                    <GCDocument x="238.0" y="243.0" boundsHeight="191.0" boundsWidth="291.0" scale="1.0" viewPositionX="0.0" viewPositionY="0.0" color="-1">
+                      <StringVariable height="61.0" x="60.0" y="30.0" width="65.0" name="string" value="LundArea2" initialValue="" />
+                    </GCDocument>
+                  </WorkspaceObject>
+                </GCDocument>
+              </WorkspaceObject>
+            </GCDocument>
+          </WorkspaceObject>
+        </GCDocument>
+      </XMLMessageIn>
+      <IntegerVariable height="61.0" x="40.0" y="240.0" width="65.0" name="Handle" value="0" initialValue="" />
+      <GCTransition id="T363" x="255.0" y="200.0" height="25.0" width="30.0" actionText="(RpcResponse.getHandle() == Handle) &amp; (Handle != 0)" conditionVisible="1" />
+      <GCStep id="S460" x="270.0" y="250.0" height="70.0" width="200.0" name="" useIcon="0" fileName="" actionText="S Status = RpcResponse.Rpc_Params.Rpc_Param.value.string;" actionBlockVisible="1" />
+      <GCTransition id="T364" x="255.0" y="330.0" height="25.0" width="30.0" actionText="1" conditionVisible="1" />
+      <StringVariable height="61.0" x="40.0" y="320.0" width="65.0" name="TB" value="" initialValue="" />
+      <StringVariable height="61.0" x="40.0" y="390.0" width="65.0" name="Status" value="" initialValue="" />
+      <GCLink fromObject="T364" toObject="S458">
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="365" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="355" />
+        <Stroke x="270" y="365" />
+      </GCLink>
+      <GCLink fromObject="S460" toObject="T364">
+        <Stroke x="270" y="315" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="325" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="320" />
+        <Stroke x="270" y="330" />
+      </GCLink>
+      <GCLink fromObject="T363" toObject="S460">
+        <Stroke x="270" y="225" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="235" />
+        <Stroke x="270" y="245" />
+      </GCLink>
+      <GCLink fromObject="S459" toObject="T363">
+        <Stroke x="270" y="155" />
+        <Stroke x="270" y="165" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="177" />
+        <Stroke x="270" y="190" />
+        <Stroke x="270" y="200" />
+      </GCLink>
+    </GCDocument>
+  </GrafcetProcedure>
+  <GCRectangle name="" x="160.0" y="630.0" height="96.0" width="276.0" visible="1" selectable="1" resizable="1" draggable="1" penColor="-16777216" penStyle="65535" penWidth="1" fillColor="-4144960" fillStyle="65535" />
+  <FreeText name="" x="200.0" y="700.0" height="21" width="198" fontSize="16" text="Status - completion status" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="680.0" height="21" width="220" fontSize="16" text="Out Parameters (Call by Ref):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="170.0" y="640.0" height="21" width="224" fontSize="16" text="In Parameters (Call by Value):" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+  <FreeText name="" x="200.0" y="660.0" height="21" width="139" fontSize="16" text="TB - toolbox name" fontName="SansSerif" bold="1" underline="0" italic="0" alignment="0" multiline="0" editable="1" visible="1" selectable="1" resizable="1" draggable="1" twoDScale="0" autoResize="1" clipping="0" editOnSingleClick="1" strikeThrough="0" textColor="-16777216" backgroundColor="-1" transparent="1" selectBackground="0" />
+</GCDocument>
+

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC
+	"-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Libraries - ControlLib</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Libraries - ControlLib</h1>
+
+<hr>
+
+<p>
+ControlLib contains various automatic control related procedures.
+</p>
+
+<h2><a name="PID"></a>PID</h2>
+
+<p>
+	The PID procedure is a PID implementation on velocity form with support for tracking, feedforward, auto/manual mode, setpoint weighting, maximum derivative gain, dynamic execution time, and bumpless parameter and mode changes.
+</p>
+
+<table>
+	<tr>
+		<th></th>
+		<th>Datatype</th>
+		<th>Direction</th>
+		<th>Default</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td colspan='4'><i>Signals</i></td>
+	</tr>
+	<tr>
+		<th>PV</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Process Value, the measurement value for the process.
+</td>
+	</tr>
+	<tr>
+		<th>SP</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>SetPoint, the reference value.</td>
+	</tr>
+	<tr>
+		<th>TR</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>TRacking signal, the actually actuated control signal in the previous scan cycle.</td>
+	</tr>
+	<tr>
+		<th>MV</th>
+		<td>Real</td>
+		<td>out</td>
+		<td>-</td>
+		<td>Manipulated Variable, the control signal.</td>
+	</tr>
+	<tr>
+		<th>FF</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>FeedForward, an external signal added to the control signal.</td>
+	</tr>
+	<tr>
+		<th>Man</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Manual, the control signal when in manual mode.</td>
+	</tr>
+	<tr>
+		<td colspan='4'><i>Controller Parameters</i></td>
+	</tr>
+	<tr>
+		<th>K</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>1</td>
+		<td>Controller gain.</td>
+	</tr>
+	<tr>
+		<th>Ti</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>20</td>
+		<td>Controller integral time.</td>
+	</tr>
+	<tr>
+		<th>Td</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Controller derivative time.</td>
+	</tr>
+	<tr>
+		<th>Nd</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>8</td>
+		<td>Maximum derivative gain. Usually called N but that is a reserved word in JGrafchart.</td>
+	</tr>
+	<tr>
+		<th>b</th>
+		<td>Real</td>
+		<td>in</td>
+		<td>1</td>
+		<td>Setpoint weight for the P-part.</td>
+	</tr>
+	<tr>
+		<th>execFreq</th>
+		<td>Int</td>
+		<td>in</td>
+		<td>1</td>
+		<td>Execution Frequency, the PID controller sample time is <tt>execFreq</tt> times the calling Grafchart application's scan cycle time.</td>
+	</tr>
+	<tr>
+		<td colspan='4'><i>Interaction</i></td>
+	</tr>
+	<tr>
+		<th>useFF</th>
+		<td>Bool</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Signal to turn feedforward on/off.</td>
+	</tr>
+	<tr>
+		<th>manualMode</th>
+		<td>Bool</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Signal to turn manual mode on/off.</td>
+	</tr>
+	<tr>
+		<th>stop</th>
+		<td>Bool</td>
+		<td>in</td>
+		<td>0</td>
+		<td>Signal to terminate the procedure call and thus stop executing the PID controller.</td>
+	</tr>
+</table>
+
+<h2><a name="PID_Pos"></a>PID_Pos</h2>
+
+<p>
+	The PID_Pos procedure is a PID implementation on positional form with support for tracking, setpoint weighting, maximum derivative gain, and dynamic execution time. The parameters are the same as for the PID procedure except that those related to feedforward and auto/manual mode are missing.
+</p>
+
+</body>
+</html>
